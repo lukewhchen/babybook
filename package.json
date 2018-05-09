@@ -12,6 +12,9 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-router": "^2.1.2",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.11.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -26,7 +29,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "webpack": "webpack --watch"
   },
   "repository": {
     "type": "git",
