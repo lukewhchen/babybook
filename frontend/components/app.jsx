@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => (
   <div>
-    <h1>Test from app.jsx</h1>
+    <h1>Wow!! root & app components working</h1>
   </div>
 );
 
