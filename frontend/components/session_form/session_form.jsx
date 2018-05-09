@@ -32,20 +32,21 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <br/>
           <label>email:
             <input onChange={this.update('email')}
               type='text' value={this.state.email} />
-          </label>
+          </label><br/><br/>
           <label>Password:
             <input onChange={this.update('password')}
               type='password' value={this.state.password} />
           </label>
-          <input type="submit" value={this.props.formType} />
+          <button onClick={this.handleSubmit}>Log In</button>
         </form>
       </div>
     );
   }
 }
-
-
+// original one but change to <button>
+// <input type="submit" value={this.props.formType} />
 export default withRouter(SessionForm);
