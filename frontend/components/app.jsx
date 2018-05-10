@@ -8,14 +8,16 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <header>
+    <header id='bb-header'>
         <h1>babybook</h1>
       <GreetingContainer />
     </header>
-    <Switch>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    </Switch>
+    <nav id='bb-login'>
+      <Switch>
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      </Switch>
+    </nav>
   </div>
 );
 

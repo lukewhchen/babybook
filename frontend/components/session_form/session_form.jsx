@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
   render () {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className='login-form' onSubmit={this.handleSubmit}>
 
           <label>Email:
             <input className="email-input" onChange={this.update('email')}
