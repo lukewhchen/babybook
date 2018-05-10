@@ -47,7 +47,7 @@ class ASignupForm extends React.Component {
                 placeholder='Password'
                 ref={(input) => this.password = input}></input>
 
-          <div>
+              <div className="gender-selector">
             <select defaultValue='gender'
                     ref={(input) => this.gender = input}>
               <option disabled value='gender'>Gender</option>

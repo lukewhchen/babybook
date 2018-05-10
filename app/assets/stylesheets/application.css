@@ -34,8 +34,8 @@
    list-style: none;
  }
 
- div {
-  /* background-color: #F5F5F5; */
+ html {
+  background-color: #F5F5F5;
  }
 
  #bb-header {
@@ -43,6 +43,13 @@
    height: 80px;
    color: white;
    border-bottom: 1px solid black;
+ }
+
+ #bb-header h1 {
+   position: relative;
+   top: 25px;
+   font-size: 40px;
+   margin-left: 120px;
  }
 
  #bb-header input {
@@ -85,27 +92,47 @@
 
  #left-side-login {
    float: left;
+   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    background-color: #F5F5F5;
-   width: 50%;
+   width: 55%;
    color: black;
-   /* border-right: 1px solid black; */
+   min-height: 500px;
+ }
+
+ #left-side-login h2{
+   font-size: 26px;
+   display: inline-block;
+   color: black;
+   margin: 60px 130px;
+ }
+
+ #left-side-login ul{
+   font-size: 18px;
+   display: inline-block;
+   color: black;
+   margin: 30px 90px;
+ }
+
+ #left-side-login li{
+   padding-bottom: 40px;
  }
 
  #right-side-login {
    float: right;
    background-color: #F5F5F5;
-   width: 50%;
+   width: 45%;
    color: white;
-   /* border-right: 1px solid black; */
+   min-height: 500px;
+   padding-top: 20px;
  }
 
  #footer {
    clear: both;
-   color: #A9A9A9;
-   /* background-color: #E0FFFF; */
+   color: #1E90FF;
+   background-color: white;
    text-align: center;
    padding-top: 50px;
-   /* line-height: 100px; */
+   min-height: 200px;
  }
 
  .login-form {
@@ -173,4 +200,9 @@
    text-shadow: 0 1px 2px rgba(0,0,,0,.5);
    border: 1px solid black;
    margin-top: 10px;
+ }
+
+ .gender-selector {
+   width: 30px;
+   height: 30px;
  }

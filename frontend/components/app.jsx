@@ -22,7 +22,12 @@ const App = () => (
     </nav>
 
     <div id='left-side-login'>
-      <h2>left side</h2>
+      <h2>Connect with friends and the world around you on Babybook.</h2>
+      <ul>
+        <li><strong>See photos and updates</strong> from friends in News Feed.</li>
+        <li><strong>Share what's new</strong> in your life on your Timeline.</li>
+        <li><strong>Find more</strong> of what you're looking for with Facebook Search.</li>
+      </ul>
     </div>
 
     <div id='right-side-login'>
