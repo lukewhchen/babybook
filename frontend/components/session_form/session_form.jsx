@@ -43,12 +43,11 @@ class SessionForm extends React.Component {
               type='password' value={this.state.password} />
           </label>
 
-          <button className="login-button" onClick={this.handleSubmit}>Log In</button>
+          <button className="login-button">Log In</button>
         </form>
       </div>
     );
   }
 }
-// original one but change to <button>
-// <input type="submit" value={this.props.formType} />
+
 export default withRouter(SessionForm);

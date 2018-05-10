@@ -15,11 +15,7 @@ const App = () => (
 
     <nav id='bb-login'>
       <GreetingContainer />
-      <Switch>
-        <AuthRoute exact path="/" component={LoginFormContainer} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      </Switch>
+      <LoginFormContainer />
     </nav>
 
     <div id='left-side-login'>

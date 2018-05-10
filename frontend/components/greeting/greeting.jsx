@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
 
   const sessionLinks = () => (
-    <nav></nav>
+    <nav>
+    </nav>
   );
 
   const personalGreeting = () => (

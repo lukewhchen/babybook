@@ -21,3 +21,9 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps, mapDispatchToProps
 )(SessionForm);
+
+// original design connect with session form
+// provide signup function
+// but i created another_signup_form_container
+// focus on signup function only
+// so this file is useless now? 
