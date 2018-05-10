@@ -18,6 +18,12 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>
     </nav>
+    <div id='left-side-login'>
+      <h2>left side</h2>
+    </div>
+    <div id='right-side-login'>
+      <h2>Sign up form</h2>
+    </div>
   </div>
 );
 

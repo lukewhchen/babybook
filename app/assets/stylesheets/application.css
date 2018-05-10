@@ -79,6 +79,25 @@
    height: 20px;
  }
 
+ #left-side-login {
+   display: block;
+   background-color: gray;
+   height: 800px;
+   width: 50%;
+   color: white;
+   border-right: 1px solid black;
+ }
+
+ #right-side-login {
+   display: block;
+   background-color: gray;
+   float: right;
+   height: 800px;
+   width: 50%;
+   color: white;
+   border-right: 1px solid black;
+ }
+
  .login-form {
    position: relative;
  }
