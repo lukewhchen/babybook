@@ -9,9 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <Link to="/">
-        <h1>Welcome to BabyBook</h1>
-      </Link>
+        <h1>babybook</h1>
       <GreetingContainer />
     </header>
     <Switch>
@@ -22,3 +20,7 @@ const App = () => (
 );
 
 export default App;
+
+
+      // <Link to="/">
+      // </Link>
