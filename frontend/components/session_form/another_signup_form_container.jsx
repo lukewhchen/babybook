@@ -27,7 +27,7 @@ class ASignupForm extends React.Component {
 
   render(){
     return(
-      <div id="another_signup_form_container">
+      <div id="a_signup_form">
         <h2>Sign Up</h2>
         <h4>It's free and always will be.</h4>
         <form onSubmit={this.handleSubmit}>
@@ -56,7 +56,7 @@ class ASignupForm extends React.Component {
             </select>
           </div>
 
-          <button id='signup-button'>Create Account</button>
+          <button id='signup-button'>Sign Up</button>
         </form>
       </div>
     );
