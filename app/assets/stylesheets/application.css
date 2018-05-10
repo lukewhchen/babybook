@@ -50,6 +50,7 @@
    top: 25px;
    font-size: 40px;
    margin-left: 120px;
+   z-index: 9999;
  }
 
  #bb-header input {
@@ -140,8 +141,10 @@
  }
 
  .login-form {
+   display: flex;
    position: relative;
    right: 50px;
+   top : 5px;
  }
 
  .login-button {
