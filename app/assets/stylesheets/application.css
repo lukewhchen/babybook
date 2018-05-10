@@ -35,7 +35,7 @@
  }
 
  html {
-  background-color: #F5F5F5;
+  background-color: #edf0f5;
  }
 
  #bb-header {
@@ -71,29 +71,33 @@
 
  #bb-login {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 50px;
   display: block;
   float: right;
   background-color: inherit;
-  overflow:hidden;
  }
 
  #bb-login label {
+   top: 20px;
    color: white;
+   font-size: 18px;
  }
 
 
  #bb-login input {
+   font-size: 14px;
    color: black;
    background-color: white;
    height: 20px;
+   margin-right: 10px;
+   margin-left: 5px;
  }
 
  #left-side-login {
    float: left;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-   background-color: #F5F5F5;
+   background-color: transparent;
    width: 55%;
    color: black;
    min-height: 500px;
@@ -119,7 +123,7 @@
 
  #right-side-login {
    float: right;
-   background-color: #F5F5F5;
+   background-color: transparent;
    width: 45%;
    color: white;
    min-height: 500px;
@@ -137,17 +141,31 @@
 
  .login-form {
    position: relative;
+   right: 50px;
  }
 
  .login-button {
    color: white;
-   background-color: #4365af;
+   background-color: #4267b2;
    border: 1px solid #2a477b;
    padding: 4px 7px;
-   height: 25px;
+   height: 20px;
  }
 
- .login-button:hover {
+ .logout-button {
+   color: white;
+   background-color: #4267b2;
+   border: 1px solid #2a477b;
+   padding: 4px 7px;
+   height: 20px;
+ }
+
+ .login-button :hover {
+   background-color: #2a477b;
+   cursor: pointer;
+ }
+
+ .logout-button :hover {
    background-color: #2a477b;
    cursor: pointer;
  }
@@ -155,7 +173,7 @@
  #a_signup_form {
    margin-top: 10px;
    color: black;
-   background-color: #F5F5F5;
+   background-color: transparent;
    font-size: 26px;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    letter-spacing: normal;

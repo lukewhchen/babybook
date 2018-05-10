@@ -11,11 +11,12 @@ const App = () => (
   <div>
     <header id='bb-header'>
         <h1>babybook</h1>
-      <GreetingContainer />
     </header>
 
     <nav id='bb-login'>
+      <GreetingContainer />
       <Switch>
+        <AuthRoute exact path="/" component={LoginFormContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>

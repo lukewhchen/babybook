@@ -4,16 +4,11 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
 
   const sessionLinks = () => (
-    <nav>
-      <Link to="/login">Login</Link>
-      <br/>
-      <Link to="/signup">Sign up!</Link>
-    </nav>
+    <nav></nav>
   );
 
   const personalGreeting = () => (
-    <div>
-      <h2>Hi, {currentUser.first_name}!</h2>
+    <div className='logout-button'>
       <button onClick={logout}>Log Out</button>
     </div>
   );
@@ -22,3 +17,8 @@ const Greeting = ({ currentUser, logout }) => {
 };
 
 export default Greeting;
+
+// this one put insdie sessionLinks original
+// <Link to="/login">Login</Link>
+// <br/>
+// <Link to="/signup">Sign up!</Link>
