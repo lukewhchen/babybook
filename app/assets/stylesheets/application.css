@@ -80,22 +80,25 @@
  }
 
  #left-side-login {
-   display: block;
-   background-color: gray;
-   height: 800px;
-   width: 50%;
+   float: left;
+   background-color: pink;
+   width: 49%;
    color: white;
-   border-right: 1px solid black;
+   /* border-right: 1px solid black; */
  }
 
  #right-side-login {
-   display: block;
-   background-color: gray;
    float: right;
-   height: 800px;
+   background-color: pink;
    width: 50%;
    color: white;
-   border-right: 1px solid black;
+   /* border-right: 1px solid black; */
+ }
+
+ #footer {
+   clear: both;
+   color: #C0C0C0;
+   background-color: #E0FFFF;
  }
 
  .login-form {

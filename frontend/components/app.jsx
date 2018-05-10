@@ -24,6 +24,9 @@ const App = () => (
     <div id='right-side-login'>
       <h2>Sign up form</h2>
     </div>
+    <div id='footer'>
+      <p>babybook @ 2018 developed by Luke Chen</p>
+    </div>
   </div>
 );
 
