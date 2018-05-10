@@ -34,6 +34,8 @@
    list-style: none;
  }
 
+
+
  #bb-header {
    background-color: #3b5998;
    height: 80px;
@@ -99,6 +101,8 @@
    clear: both;
    color: #C0C0C0;
    background-color: #E0FFFF;
+   text-align: center;
+   /* line-height: 100px; */
  }
 
  .login-form {
