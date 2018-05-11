@@ -7,11 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create!(email: 'luke@gmail.com', first_name: 'Luke', last_name: 'Chen', password:'123456')
-User.create!(email: 'meiyao@gmail.com', first_name: 'MeiYao', last_name: 'Lin', password:'234567')
-User.create!(email: 'emma@gmail.com', first_name: 'Emma', last_name: 'Chen', password:'345678')
-User.create!(email: 'jordan@gmail.com', first_name: 'Michale', last_name: 'Jordan', password:'456789')
-User.create!(email: 'kobe@gmail.com', first_name: 'Kobe', last_name: 'Bryant', password:'987654')
-User.create!(email: 'john@gmail.com', first_name: 'John', last_name: 'Snow', password:'876543')
-User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name: 'Swift', password:'765432')
-User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321')
+luke = User.create!(email: 'luke@gmail.com', first_name: 'Luke', last_name: 'Chen', password:'123456')
+meiyao = User.create!(email: 'meiyao@gmail.com', first_name: 'MeiYao', last_name: 'Lin', password:'234567')
+emma = User.create!(email: 'emma@gmail.com', first_name: 'Emma', last_name: 'Chen', password:'345678')
+jordan = User.create!(email: 'jordan@gmail.com', first_name: 'Michale', last_name: 'Jordan', password:'456789')
+kobe = User.create!(email: 'kobe@gmail.com', first_name: 'Kobe', last_name: 'Bryant', password:'987654')
+jon = User.create!(email: 'jon@gmail.com', first_name: 'Jon', last_name: 'Snow', password:'876543')
+taylor = User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name: 'Swift', password:'765432')
+mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321')
+
+
+Post.destroy_all
+Post.create!(body: "When Do Babies Talk?" ,author_id:luke.id )
+Post.create!(body: "9 Ways to Help Your Child's Language Development" ,author_id:meiyao.id )
+Post.create!(body: "Do Tech Toys Hurt Baby's Language Development?" ,author_id:emma.id )
+Post.create!(body: "Hear This Baby Say Hello -- at 7 Weeks Old!" ,author_id:jordan.id )
+Post.create!(body: "26 Baby Shower Games" ,author_id:kobe.id )
+Post.create!(body: "You Know Nothing!" ,author_id:jon.id )
+Post.create!(body: "Taylor Swift CONFIRMS Mystery Baby Voice in Gorgeous" ,author_id:taylor.id )
+Post.create!(body: "Mark welcome second baby girl" ,author_id:mark.id )
