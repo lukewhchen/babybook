@@ -15,7 +15,7 @@ import Welcome from './greeting/welcome';
 // inside <div left-side-login> add <Route ... postShowContainer>
 const App = () => (
   <div>
-    <Welcome />
+    <AuthRoute path="/" component={Welcome} />
   </div>
 );
 
