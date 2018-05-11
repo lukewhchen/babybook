@@ -5,10 +5,9 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import ASignupFormContainer from './session_form/another_signup_form_container';
+
 import postShowContainer from './post_form/post_show_container';
-import FooterMessage from './greeting/footer_message';
-import InfoMessage from './greeting/info_message';
+import Welcome from './greeting/welcome';
 // this should be separate to different components to handle
 // not just write here...       <LoginFormContainer />
 // change inside <nav> to   <AuthRoute exact path='/' component={LoginFormContainer}/>
@@ -23,15 +22,12 @@ const App = () => (
     </header>
 
     <nav id='bb-login'>
-      <Switch>
-        <AuthRoute exact path='/' component={LoginFormContainer}/>
-      </Switch>
+      <AuthRoute exact path='/' component={LoginFormContainer}/>
       <GreetingContainer />
     </nav>
 
-    <InfoMessage />
-    <ASignupFormContainer />
-    <FooterMessage />
+
+    <Welcome />
 
   </div>
 );
