@@ -4,21 +4,24 @@ import React from 'react';
 // import { ProtectedRoute } from '../../util/route_util';
 
 
-const postShow = ({ posts, post, fetchPosts, fetchPost}) => {
-  // componentDidMount() {
-  //
-  // };
 
-  return (
-    <div>
-      <ul>
-        {posts.map((post, idx) => {
-          return <li key={idx}>{post.body}</li>;
-        })}
-      </ul>
-    </div>
-  );
-};
+class postShow extends React.Component {
+
+  componentDidMount() {
+    const { posts, post, fetchPosts, fetchPost } = this.props;
+  }
+
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.props.post}
+        </ul>
+      </div>
+    );
+  }
+}
+
 
 
 export default postShow;

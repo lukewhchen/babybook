@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchPosts, fetchPost } from '../../actions/bench_actions';
+import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import postShow from './post_show';
 
 const mapStateToProps = (state, ownProps) => {

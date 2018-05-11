@@ -7,6 +7,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ASignupFormContainer from './session_form/another_signup_form_container';
 import postShowContainer from './post_form/post_show_container';
+import FooterMessage from './greeting/footer_message';
 // this should be separate to different components to handle
 // not just write here...       <LoginFormContainer />
 // change inside <nav> to   <AuthRoute exact path='/' component={LoginFormContainer}/>
@@ -41,9 +42,7 @@ const App = () => (
       <ASignupFormContainer />
     </div>
 
-    <div id='footer'>
-      <p>babybook @ 2018 developed by Luke Chen</p>
-    </div>
+    <FooterMessage/>
 
   </div>
 );
