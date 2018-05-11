@@ -27,37 +27,39 @@ class ASignupForm extends React.Component {
 
   render(){
     return(
-      <div id="a_signup_form">
-        <h2>Sign Up</h2>
-        <h4>It's free and always will be.</h4>
-        <form onSubmit={this.handleSubmit}>
-          <span>
+      <div id='right-side-login'>
+        <div id="a_signup_form">
+          <h2>Sign Up</h2>
+          <h4>It's free and always will be.</h4>
+          <form onSubmit={this.handleSubmit}>
+            <span>
+              <input type='text'
+                    placeholder='First name'
+                    ref={(input) => this.first_name = input}></input>
+              <input type='text'
+                    placeholder='Last name'
+                    ref={(input) => this.last_name = input}></input>
+            </span>
+
             <input type='text'
-                  placeholder='First name'
-                  ref={(input) => this.first_name = input}></input>
-            <input type='text'
-                  placeholder='Last name'
-                  ref={(input) => this.last_name = input}></input>
-          </span>
+                  placeholder='Email address'
+                  ref={(input) => this.email = input}></input>
+            <input type='password'
+                  placeholder='Password'
+                  ref={(input) => this.password = input}></input>
 
-          <input type='text'
-                placeholder='Email address'
-                ref={(input) => this.email = input}></input>
-          <input type='password'
-                placeholder='Password'
-                ref={(input) => this.password = input}></input>
+                <div className="gender-selector">
+              <select defaultValue='gender'
+                      ref={(input) => this.gender = input}>
+                <option disabled value='gender'>Gender</option>
+                <option value='male'>Male</option>
+                <option value='female'>Female</option>
+              </select>
+            </div>
 
-              <div className="gender-selector">
-            <select defaultValue='gender'
-                    ref={(input) => this.gender = input}>
-              <option disabled value='gender'>Gender</option>
-              <option value='male'>Male</option>
-              <option value='female'>Female</option>
-            </select>
-          </div>
-
-          <button id='signup-button'>Sign Up</button>
-        </form>
+            <button id='signup-button'>Sign Up</button>
+          </form>
+        </div>
       </div>
     );
   }

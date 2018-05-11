@@ -38,9 +38,9 @@ const App = () => (
       <Route exact path="/users/show" component={ postShowContainer }/>;
     </div>
 
-    <div id='right-side-login'>
+
       <ASignupFormContainer />
-    </div>
+
 
     <FooterMessage/>
 
