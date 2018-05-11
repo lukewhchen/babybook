@@ -163,12 +163,12 @@
    height: 20px;
  }
 
- .login-button :hover {
+ .login-button:hover {
    background-color: #2a477b;
    cursor: pointer;
  }
 
- .logout-button :hover {
+ .logout-button:hover {
    background-color: #2a477b;
    cursor: pointer;
  }
