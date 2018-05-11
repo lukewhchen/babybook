@@ -7,10 +7,14 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ASignupFormContainer from './session_form/another_signup_form_container';
 
+// this should be separate to different components to handle
+// not just write here...
 const App = () => (
   <div>
     <header id='bb-header'>
+      <Link to="/">
         <h1>babybook</h1>
+      </Link>
     </header>
 
     <nav id='bb-login'>

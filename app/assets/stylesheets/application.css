@@ -50,7 +50,7 @@
    top: 25px;
    font-size: 40px;
    margin-left: 120px;
-   z-index: 9999;
+   text-decoration: none;
  }
 
  #bb-header input {
