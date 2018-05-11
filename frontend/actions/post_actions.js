@@ -1,4 +1,4 @@
-import * as PostAPIUtil from '../util/post_api_util';
+import * as PostAPIUtil from '../util/post_util';
 import { receiveErrors } from './session_actions';
 
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
