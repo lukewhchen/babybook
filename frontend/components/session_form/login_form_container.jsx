@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
 
+// don't need navLink to redirect...
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,

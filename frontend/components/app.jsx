@@ -8,7 +8,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ASignupFormContainer from './session_form/another_signup_form_container';
 
 // this should be separate to different components to handle
-// not just write here...
+// not just write here...       <LoginFormContainer />
+// change inside <nav> to   <AuthRoute exact path='/' component={LoginFormContainer}/>
+// ok url change to /users (but page did not change...)
 const App = () => (
   <div>
     <header id='bb-header'>
@@ -18,8 +20,10 @@ const App = () => (
     </header>
 
     <nav id='bb-login'>
+      <Switch>
+        <AuthRoute exact path='/' component={LoginFormContainer}/>
+      </Switch>
       <GreetingContainer />
-      <LoginFormContainer />
     </nav>
 
     <div id='left-side-login'>

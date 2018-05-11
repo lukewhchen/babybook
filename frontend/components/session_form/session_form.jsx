@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form className='login-form' onSubmit={this.handleSubmit}>
-
+          {this.renderErrors()}
           <label>Email:
             <input className="email-input" onChange={this.update('email')}
               type='text' value={this.state.email} />
