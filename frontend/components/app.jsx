@@ -6,11 +6,12 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ASignupFormContainer from './session_form/another_signup_form_container';
-
+import postShowContainer from './post_form/post_show_container';
 // this should be separate to different components to handle
 // not just write here...       <LoginFormContainer />
 // change inside <nav> to   <AuthRoute exact path='/' component={LoginFormContainer}/>
 // ok url change to /users (but page did not change...)
+// inside <div left-side-login> add <Route ... postShowContainer>
 const App = () => (
   <div>
     <header id='bb-header'>
@@ -33,6 +34,7 @@ const App = () => (
         <li><strong>Share what's new</strong> in your life on your Timeline.</li>
         <li><strong>Find more</strong> of what you're looking for with Facebook Search.</li>
       </ul>
+      <Route exact path="/users/show" component={ postShowContainer }/>;
     </div>
 
     <div id='right-side-login'>

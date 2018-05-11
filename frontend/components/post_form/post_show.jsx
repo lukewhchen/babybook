@@ -5,6 +5,10 @@ import React from 'react';
 
 
 const postShow = ({ posts, post, fetchPosts, fetchPost}) => {
+  // componentDidMount() {
+  //
+  // };
+
   return (
     <div>
       <ul>
