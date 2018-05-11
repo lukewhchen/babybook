@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ASignupFormContainer from './session_form/another_signup_form_container';
 import postShowContainer from './post_form/post_show_container';
 import FooterMessage from './greeting/footer_message';
+import InfoMessage from './greeting/info_message';
 // this should be separate to different components to handle
 // not just write here...       <LoginFormContainer />
 // change inside <nav> to   <AuthRoute exact path='/' component={LoginFormContainer}/>
@@ -28,21 +29,9 @@ const App = () => (
       <GreetingContainer />
     </nav>
 
-    <div id='left-side-login'>
-      <h2>Connect with friends and the world around you on Babybook.</h2>
-      <ul>
-        <li><strong>See photos and updates</strong> from friends in News Feed.</li>
-        <li><strong>Share what's new</strong> in your life on your Timeline.</li>
-        <li><strong>Find more</strong> of what you're looking for with Facebook Search.</li>
-      </ul>
-      <Route exact path="/users/show" component={ postShowContainer }/>;
-    </div>
-
-
-      <ASignupFormContainer />
-
-
-    <FooterMessage/>
+    <InfoMessage />
+    <ASignupFormContainer />
+    <FooterMessage />
 
   </div>
 );

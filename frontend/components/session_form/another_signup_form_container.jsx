@@ -26,6 +26,7 @@ class ASignupForm extends React.Component {
   }
 
   render(){
+
     return(
       <div id='right-side-login'>
         <div id="a_signup_form">
