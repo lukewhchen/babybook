@@ -2,7 +2,12 @@ class Api::UsersController < ApplicationController
   before_action :ensure_logged_in, only: [:index, :show, :update]
 
   def index
-    @user = User.all
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render :show
   end
 
   def create
@@ -14,6 +19,14 @@ class Api::UsersController < ApplicationController
     else
       render json: @user.errors.full_messages, status: 422
     end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      render :show
+    else
+      render json: @user.errors.full_messages, status: 422
   end
 
   private
