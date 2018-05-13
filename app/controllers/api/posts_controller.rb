@@ -27,6 +27,7 @@ class Api::PostsController < ApplicationController
       render :post
     else
       render json: @post.errors.full_messages, status: 422
+    end
   end
 
   def destroy
