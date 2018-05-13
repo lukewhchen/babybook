@@ -7,8 +7,8 @@ import Feed from './post_form/feed';
 
 const App = () => (
   <div>
-    <Route exact path="/" component={Welcome} />
-    <Route exact path='/posts' component={PostShowContainer} />
+    <AuthRoute exact path="/" component={Welcome} />
+    <ProtectedRoute exact path='/posts' component={PostShowContainer} />
   </div>
 );
 
