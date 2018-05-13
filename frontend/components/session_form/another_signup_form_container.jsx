@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class ASignupForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = { first_name: "", last_name: "", email: "", password: "" };
+    this.state = { first_name: "", last_name: "", email: "", password: "", gender: null };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createUserObject = this.createUserObject.bind(this);
   }
@@ -14,7 +14,7 @@ class ASignupForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const user = this.createUserObject();
-    this.props.processForm(user);
+    this.props.signup(user);
   }
 
   createUserObject(){
@@ -22,7 +22,8 @@ class ASignupForm extends React.Component {
     const last_name = this.last_name.value;
     const email = this.email.value;
     const password = this.password.value;
-    return { first_name, last_name, email, password };
+    const gender = this.gender.value;
+    return { first_name, last_name, email, password, gender };
   }
 
   render(){
@@ -66,17 +67,15 @@ class ASignupForm extends React.Component {
   }
 }
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ( state ) => {
   return {
-    errors: errors.session,
-    fromType: 'signup',
-    navLink: <Link to="/login">Log In Here</Link>
+    errors: state.errors.signup
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return ({
-    processForm: (user) => dispatch(signup(user))
+    signup: (user) => dispatch(signup(user))
   });
 };
 

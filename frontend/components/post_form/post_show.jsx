@@ -8,7 +8,7 @@ import React from 'react';
 class postShow extends React.Component {
 
   componentDidMount() {
-    const { posts, post, fetchPosts, fetchPost } = this.props;
+    this.props.fetchPost(this.props.postId);
   }
 
   render() {

@@ -12,8 +12,3 @@ export default FooterMessage;
 // please using const AA..
 // and export default AA...
 // NOT export const AA (can't work)
-
-
-// <Route exact path='/' render={ () => {
-//         return <div id='footer'><FooterMessage /></div>
-//       }} />

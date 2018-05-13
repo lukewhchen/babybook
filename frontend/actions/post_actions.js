@@ -5,53 +5,51 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
-const receivePosts = posts => ({
+const receivePosts = payload => ({
   type: RECEIVE_POSTS,
-  posts
+  posts: payload.posts,
+  authors: payload.authors
 });
 
-const receivePost = post => ({
+const receivePost = payload => ({
   type: RECEIVE_POST,
-  post
+  post: payload.post,
+  author: payload.author
 });
 
-const removePost = post => ({
+const removePost = payload => ({
   type: REMOVE_POST,
-  post
+  post: payload.post,
+  author: payload.author
 });
 
 
 export const fetchPosts = userId => dispatch => {
   return PostAPIUtil.fetchPosts(userId).then(
-    posts => dispatch(receivePosts(posts)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    payload => dispatch(receivePosts(payload))
   );
 };
 
 export const fetchPost = postId => dispatch => {
   return PostAPIUtil.fetchPost(postId).then(
-    post => dispatch(receivePost(post)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    payload => dispatch(receivePost(payload))
   );
 };
 
 export const createPost = post => dispatch => {
   return PostAPIUtil.createPost(post).then(
-    post => dispatch(receivePost(post)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    payload => dispatch(receivePost(payload))
   );
 };
 
 export const updatePost = post => dispatch => {
   return PostAPIUtil.updatePost(post).then(
-    post => dispatch(receivePost(post)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    payload => dispatch(receivePost(payload))
   );
 };
 
 export const deletePost = postId => dispatch => {
   return PostAPIUtil.deletePost(postId).then(
-    post => dispatch(removePost(post)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    payload => dispatch(removePost(payload))
   );
 };

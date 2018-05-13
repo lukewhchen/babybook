@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LoginFormContainer from '../session_form/login_form_container';
-import GreetingContainer from './greeting_container';
+import SessionForm from '../session_form/session_form';
 
 
 const HeadMessage = () => {
@@ -14,8 +13,7 @@ const HeadMessage = () => {
       </header>
 
       <nav id='bb-login'>
-        <LoginFormContainer />
-        <GreetingContainer />
+        <SessionForm />
       </nav>
     </div>
   );

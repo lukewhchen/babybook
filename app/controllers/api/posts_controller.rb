@@ -3,18 +3,19 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    render :index
   end
-
+# @posts = Post.all.includes(:author)
   def show
     @post = Post.find(params[:id])
+    render json: @post
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
-      @post.author = current_user
-      render :post
+      render :show
     else
       render json: @post.errors.full_messages, status: 422
     end

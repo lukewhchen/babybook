@@ -1,5 +1,14 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { login } from '../../actions/session_actions';
+
+const mapStateToProps = state => ({
+  errors: state.errors.login,
+});
+
+const mapDispatchToProps = dispatch => ({
+  login: user => (dispatch(login(user))),
+});
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -11,28 +20,18 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.login(this.state);
   }
 
   update(field) {
     return e => this.setState({ [field]: e.target.value });
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map( (err, idx) => (
-          <li key={idx}>{err}</li>
-        ))}
-      </ul>
-    );
-  }
 
   render () {
     return (
       <div>
         <form className='login-form' onSubmit={this.handleSubmit}>
-          {this.renderErrors()}
           <label>Email:
             <input className="email-input" onChange={this.update('email')}
               type='text' value={this.state.email} />
@@ -43,11 +42,11 @@ class SessionForm extends React.Component {
               type='password' value={this.state.password} />
           </label>
 
-          <button className="login-button">Log In</button>
+          <button className="login-button" onClick={this.handleSubmit}>Log In</button>
         </form>
       </div>
     );
   }
 }
 
-export default withRouter(SessionForm);
+export default connect(mapStateToProps ,mapDispatchToProps)(SessionForm);
