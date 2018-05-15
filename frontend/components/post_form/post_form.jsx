@@ -7,6 +7,10 @@ class PostForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchPost(this.props.match.params.postId) || { body: "", post_image_url: "" };
+  }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.post.id !== nextProps.post.id) this.setState(nextProps.post);
   }

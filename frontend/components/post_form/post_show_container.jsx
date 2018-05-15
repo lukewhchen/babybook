@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import PostShow from './post_show';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
+// import PostForm from './post_form';
+import NewPostForm from './new_post_form';
 
 class PostShowContainer extends React.Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
-
+          // <PostForm posts={this.props.posts}/>
   render() {
     const posts = this.props.posts.map(post => {
       return <PostShow key={post.id} post={post} />;
@@ -19,6 +21,7 @@ class PostShowContainer extends React.Component {
         <br/>
         <button className='logout-button' onClick={this.props.logout}>LOGOUT</button>
         <article>
+          <NewPostForm/>
           <h3>Here is your Posts...</h3>
           <ul>{posts}</ul>
         </article>

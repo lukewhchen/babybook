@@ -1,13 +1,16 @@
-import { connect } from 'react-redux';
 import React from 'react';
 import PostForm from './post_form';
+import { connect } from 'react-redux';
 import { fetchPost, updatePost } from '../actions/post_actions';
-import { selectPost } from '../selectors';
+// import { selectPost } from '../selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultPost = { body: '', post_image_url: '' };
-  const post = selectPost(ownProps.match.params.postId) || defaultPost;
-  return { post };
+  return {
+    post: state.entities.posts[ownProps.postId]
+  };
+  // const defaultPost = { body: '', post_image_url: '' };
+  // const post = selectPost(ownProps.match.params.postId) || defaultPost;
+  // return { post };
 };
 
 const mapDispatchToProps = dispatch => {

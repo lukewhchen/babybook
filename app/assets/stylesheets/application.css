@@ -20,18 +20,18 @@
  section, img, div, h2, p, form,
  fieldset, label, input, textarea,
  span, article, footer, time, small {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   outline: 0;
-   font: sans-serif;
-   color: inherit;
-   text-align: inherit;
-   text-decoration: inherit;
-   vertical-align: inherit;
-   box-sizing: inherit;
-   background: transparent;
-   list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: sans-serif;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  list-style: none;
  }
 
  html {
@@ -39,12 +39,25 @@
  }
 
  article {
-   display: block;
-   background-color: white;
-   width: 30%;
+  display: block;
+  background-color: white;
+  width: 30%;
+  position: relative;
+  left: 500px;
+  padding: 10px 40px;
+ }
+
+
+ textarea {
+   border: 1px dashed black;
+   height: 80px;
+   width: 450px;
+   resize: none;
    position: relative;
-   left: 500px;
-   padding: 10px 40px;
+   box-sizing: border-box;
+   padding: 10px;
+   padding-top: 15px;
+   font-size: 14px;
  }
 
 
