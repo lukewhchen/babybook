@@ -5,8 +5,9 @@ import { createPost } from '../../actions/post_actions';
 class NewPostForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { body: "", post_image_url: "" };
+    this.state = { body: "", imageFile: null, imageUrl: null };
     this.submit = this.submit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
   handleChange(field) {
@@ -15,18 +16,30 @@ class NewPostForm extends Component {
     };
   }
 
-  submit(e) {
-    e.preventDefault();
-    this.props.createPost(this.state);
+  updateFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () =>
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
-// hidtory.push
+
   // submit(e) {
   //   e.preventDefault();
-  //   this.props.createPost(Object.assign({}, this.state)).then(() => {
-  //     this.props.history.push("/posts");
-  //   });
+  //   this.props.createPost(this.state);
   // }
+
+  submit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("post[body]", this.state.body);
+    formData.append("post[image]", this.state.imageFile);
+    this.props.createPost(formData);
+  }
+
 
   render() {
     return (
@@ -34,8 +47,10 @@ class NewPostForm extends Component {
         <label>What is on your mind!</label>
         <br/>
         <textarea onChange={this.handleChange("body")} value={this.state.body}/>
+        <input type="file" onChange={this.updateFile}/>
 
         <button>Make Post!</button>
+        <img src={this.state.imageUrl}/>
       </form>
     );
   }

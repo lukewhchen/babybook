@@ -39,7 +39,7 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body, :post_image_url)
+    params.require(:post).permit(:body, :image)
   end
-
+# change :post_image_url to :image
 end
