@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import PostShow from './post_show';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
-// import PostForm from './post_form';
 import NewPostForm from './new_post_form';
+import MainPageHeader from '../welcome/main_page_header';
 
 class PostShowContainer extends React.Component {
   componentDidMount() {
@@ -17,6 +17,7 @@ class PostShowContainer extends React.Component {
     });
     return (
       <div>
+        <MainPageHeader/>
         <span>Hi {this.props.currentUser.fullName}</span>
         <br/>
         <button className='logout-button' onClick={this.props.logout}>LOGOUT</button>

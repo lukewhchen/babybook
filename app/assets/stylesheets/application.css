@@ -64,6 +64,36 @@
    font-size: 14px;
  }
 
+ span {
+   color: white;
+   position: relative;
+   top: -25px;
+   left: 800px;
+ }
+
+ #mp-header {
+   background-color: #3b5998;
+   height: 40px;
+   color: white;
+   border-bottom: 1px solid black;
+ }
+
+ #mp-header h1 {
+   background-color: white;
+   width: 25px;
+   height: 25px;
+   color: #3b5998;
+   position: relative;
+   top: 7px;
+   font-size: 26px;
+   text-align: center;
+   margin-left: 200px;
+   padding-left: 5px;
+   padding-right: 0px;
+   text-decoration: none;
+   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+   border-radius: 2px;
+ }
 
  #bb-header {
    background-color: #3b5998;
@@ -188,6 +218,9 @@
    border: 1px solid #2a477b;
    padding: 4px 7px;
    height: 20px;
+   position: relative;
+   top: -52px;
+   left: 1200px;
  }
 
  .login-button:hover {
