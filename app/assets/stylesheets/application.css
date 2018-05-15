@@ -34,6 +34,10 @@
   list-style: none;
  }
 
+ img {
+  width: 400px;
+ }
+
  html {
   background-color: #edf0f5;
  }
@@ -51,7 +55,7 @@
  textarea {
    border: 1px dashed black;
    height: 80px;
-   width: 450px;
+   width: 400px;
    resize: none;
    position: relative;
    box-sizing: border-box;
