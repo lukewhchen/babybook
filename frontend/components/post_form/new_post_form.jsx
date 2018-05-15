@@ -26,20 +26,15 @@ class NewPostForm extends Component {
     }
   }
 
-
-  // submit(e) {
-  //   e.preventDefault();
-  //   this.props.createPost(this.state);
-  // }
-
   submit(e) {
     e.preventDefault();
     const formData = new FormData();
     formData.append("post[body]", this.state.body);
     formData.append("post[image]", this.state.imageFile);
-    this.props.createPost(formData);
+    this.props.createPost(formData).then(() => {
+      this.setState({ body: "", imageFile: null, imageUrl: null });
+    });
   }
-
 
   render() {
     return (

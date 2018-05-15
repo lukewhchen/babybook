@@ -10,7 +10,7 @@ class PostShowContainer extends React.Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
-          // <PostForm posts={this.props.posts}/>
+
   render() {
     const posts = this.props.posts.map(post => {
       return <PostShow key={post.id} post={post} />;
@@ -29,7 +29,6 @@ class PostShowContainer extends React.Component {
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {

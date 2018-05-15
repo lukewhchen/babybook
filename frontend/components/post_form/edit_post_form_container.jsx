@@ -1,3 +1,4 @@
+// replace with new_post_form
 import React from 'react';
 import PostForm from './post_form';
 import { connect } from 'react-redux';
@@ -35,3 +36,4 @@ class EditPostForm extends React.Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);
+// replace with new_post_form

@@ -1,3 +1,4 @@
+// replace with new_post_form
 import PostForm from './post_form';
 import { connect } from 'react-redux';
 import { createPost } from '../actions/post_actions';
@@ -15,3 +16,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostForm);
+
+// replace with new_post_form
