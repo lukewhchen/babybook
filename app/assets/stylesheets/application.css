@@ -311,6 +311,30 @@
   margin-left: 5px;
  }
 
+ #left-side h3{
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  padding-top: 5px;
+ }
+
+ #right-side {
+  background-color: white;
+  height: 300px;
+  margin-left: 8px;
+  border-radius: 4px;
+  border: 1px solid #dfe1e5;
+  margin-top: 15px;
+  padding-left: 20px;
+ }
+
  i {
   color: #8abd53;
   font-size: 18px;

@@ -4,6 +4,8 @@ import PostItem from './post_item';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from './post_form';
+import LeftSidebar from './left_sidebar';
+import RightSidebar from './right_sidebar';
 
 class PostContainer extends React.Component {
   componentDidMount() {
@@ -30,8 +32,8 @@ class PostContainer extends React.Component {
               <ul>{posts}</ul>
             </main>
 
-            <nav className="HolyGrail-nav">Left Side</nav>
-            <aside className="HolyGrail-ads">Right Side</aside>
+            <nav className="HolyGrail-nav"><LeftSidebar/></nav>
+            <aside className="HolyGrail-ads"><RightSidebar/></aside>
           </div>
 
         </div>
