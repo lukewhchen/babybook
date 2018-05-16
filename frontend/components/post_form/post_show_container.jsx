@@ -18,7 +18,7 @@ class PostShowContainer extends React.Component {
     return (
       <div>
         <MainPageHeader/>
-        <h4>Hi {this.props.currentUser.fullName}</h4>
+        <div className="current-user">Hi {this.props.currentUser.fullName}</div>
         <br/>
         <button className='logout-button' onClick={this.props.logout}>LOGOUT</button>
           <div className="post-form">

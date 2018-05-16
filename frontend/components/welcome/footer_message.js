@@ -9,6 +9,3 @@ const FooterMessage = () => {
 };
 
 export default FooterMessage;
-// please using const AA..
-// and export default AA...
-// NOT export const AA (can't work)
