@@ -30,7 +30,9 @@ class NewPostForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("post[body]", this.state.body);
-    formData.append("post[image]", this.state.imageFile);
+    if (this.state.imageFile) {
+      formData.append("post[image]", this.state.imageFile);
+    }
     this.props.createPost(formData).then(() => {
       this.setState({ body: "", imageFile: null, imageUrl: null });
     });

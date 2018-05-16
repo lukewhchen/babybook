@@ -330,6 +330,7 @@
  }
 
  .new-post-form {
+
    position: relative;
    background-color: white;
    width: 500px;
@@ -338,7 +339,7 @@
    border: 1px solid #dfe1e5;
  }
 
-  .new-post-form div{
+  /* .new-post-form div{
      font-size: 13px;
      font-weight: 600;
      color: #4b4f56;
@@ -355,7 +356,7 @@
      border-top: 1px solid #dfe1e5;
      height: 31px;
      border-radius: 0 0 4px 4px;
-  }
+  } */
 
   .new-post-form textarea {
      height: 81px;
@@ -392,6 +393,8 @@
   }
 
   .post-form {
+    display: flex;
+    align-items: flex-start;
     height: 200px;
     width: 550px;
     margin-top: 15px;
