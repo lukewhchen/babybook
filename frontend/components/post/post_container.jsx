@@ -4,7 +4,6 @@ import PostItem from './post_item';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from './post_form';
-// import MainPageHeader from '../welcome/main_page_header';
 
 class PostContainer extends React.Component {
   componentDidMount() {
@@ -17,25 +16,25 @@ class PostContainer extends React.Component {
       return <PostItem key={post.id} post={post} />;
     });
     return (
-      <body className="HolyGrail">
+        <div className="HolyGrail">
 
-        <header>
-          <div>b</div>
-          <div>Hi {this.props.currentUser.fullName}</div>
-          <button onClick={this.props.logout}>LOGOUT</button>
-        </header>
+          <header>
+            <div id="mp-header">b</div>
+            <div className="current-user">Hi {this.props.currentUser.fullName}</div>
+            <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
+          </header>
 
-        <div className="HolyGrail-body">
-          <main className="HolyGrail-content">
-            <PostForm />
-            <article><ul>{posts}</ul></article>
-          </main>
+          <div className="HolyGrail-body">
+            <main className="HolyGrail-content">
+              <PostForm />
+              <ul>{posts}</ul>
+            </main>
 
-          <nav className="HolyGrail-nav">Left Side</nav>
-          <aside className="HolyGrail-ads">Right Side</aside>
+            <nav className="HolyGrail-nav">Left Side</nav>
+            <aside className="HolyGrail-ads">Right Side</aside>
+          </div>
+
         </div>
-
-      </body>
     );
   }
 }

@@ -30,7 +30,7 @@ class SignupForm extends React.Component {
 
     return(
       <div id='right-side-login'>
-        <div id="a_signup_form">
+        <div id="signup_form">
           <h2>Sign Up</h2>
           <h4>It's free and always will be.</h4>
           <form onSubmit={this.handleSubmit}>

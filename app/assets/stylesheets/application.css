@@ -42,25 +42,6 @@
   background-color: #edf0f5;
  }
 
- article {
-  display: block;
-  background-color: transparent;
-  width: 30%;
-  position: relative;
-  left: 500px;
-  padding: 10px 40px;
-  border-radius: 5px;
- }
-
- .post-form {
-  display: block;
-  background-color: white;
-  width: 30%;
-  position: relative;
-  left: 500px;
-  padding: 10px 40px;
- }
-
  textarea {
    border: 1px dashed black;
    height: 80px;
@@ -74,19 +55,12 @@
  }
 
  #mp-header {
-   background-color: #3b5998;
-   height: 40px;
-   color: white;
-   border-bottom: 1px solid black;
- }
-
- #mp-header h1 {
    background-color: white;
    width: 25px;
-   height: 25px;
+   height: 30px;
    color: #3b5998;
    position: relative;
-   top: 7px;
+   top: 10px;
    font-size: 26px;
    text-align: center;
    margin-left: 200px;
@@ -95,6 +69,7 @@
    text-decoration: none;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    border-radius: 2px;
+   font-weight: bold;
  }
 
  #bb-header {
@@ -160,7 +135,7 @@
    background-color: transparent;
    width: 50%;
    color: black;
-   min-height: 500px;
+   min-height: 700px;
  }
 
  #left-side-login h2{
@@ -186,7 +161,7 @@
    background-color: transparent;
    width: 45%;
    color: white;
-   min-height: 500px;
+   min-height: 700px;
    padding-top: 20px;
  }
 
@@ -197,6 +172,7 @@
    text-align: center;
    padding-top: 50px;
    min-height: 200px;
+   font-size: 20px;
  }
 
  .login-form {
@@ -214,14 +190,20 @@
    height: 20px;
  }
 
+ .login-button:hover {
+   background-color: #2a477b;
+   cursor: pointer;
+ }
+
  .current-user {
    display: block;
    color: white;
    position: relative;
-   width: 100px;
-   top: -30px;
+   width: 150px;
+   top: -10px;
    left: 700px;
    font-size: 16px;
+   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
  }
 
  .logout-button {
@@ -230,26 +212,10 @@
    border: 1px solid #2a477b;
    padding: 4px 7px;
    height: 20px;
+   width: 50px;
    position: relative;
    left: 1000px;
-   top: -70px;
- }
-
- .login-button:hover {
-   background-color: #2a477b;
-   cursor: pointer;
- }
-
-
- .post-button {
-   color: white;
-   background-color: #4267b2;
-   border: 1px solid #2a477b;
-   padding: 4px 7px;
-   height: 5px;
-   position: relative;
-   top: -25px;
-   left: 450px;
+   top: -40px;
  }
 
  .logout-button:hover {
@@ -257,7 +223,28 @@
    cursor: pointer;
  }
 
- #a_signup_form {
+
+ .post-button {
+   position: relative;
+   color: white;
+   background-color: #4267b2;
+   border: 1px solid #2a477b;
+   padding: 5px 7px;
+   font-size: 12px;
+   border-radius: 3px;
+   top: -25px;
+   left: 550px;
+   height: 25px;
+   width: 40px;
+   font-size: 20px;
+ }
+
+ .post-button:hover {
+   background-color: #2a477b;
+   cursor: pointer;
+ }
+
+ #signup_form {
    margin-top: 10px;
    color: black;
    background-color: transparent;
@@ -267,7 +254,7 @@
    text-rendering: optimizelegibility;
  }
 
- #a_signup_form h4{
+ #signup_form h4{
    margin-top: 10px;
    color: black;
    font-size: 18px;
@@ -275,7 +262,7 @@
 
  }
 
- #a_signup_form input {
+ #signup_form input {
    display: inline-block;
    font-size: 18px;
    border-color: #BDC7D8;
@@ -330,17 +317,17 @@
  }
 
  .new-post-form {
-   position: relative;
    background-color: white;
-   width: 500px;
-   height: 155px;
+   width: 620px;
+   height: 200px;
+   margin-top: 10px;
    border-radius: 4px;
    border: 1px solid #dfe1e5;
  }
 
   .new-post-form textarea {
-     height: 81px;
-     width: 454px;
+     height: 120px;
+     width: 450px;
      border: none;
      resize: none;
      position: relative;
@@ -349,21 +336,7 @@
      padding: 10px;
      padding-top: 15px;
      font-size: 14px;
-  }
-
-  .new-post-form button {
-     position: relative;
-     bottom: 26px;
-     right: -428px;;
      border: 1px solid #dfe1e5;
-     background-color: #4365af;
-     color: white;
-     height: 25px;
-     margin-right: 7px;
-     font-weight: 400;
-     padding: 5px 9px;
-     font-size: 12px;
-     border-radius: 3px;
   }
 
    .new-post-form img {
@@ -372,19 +345,15 @@
      border: 1px solid #dfe1e5;
   }
 
-  .post-form {
-    display: flex;
-    align-items: flex-start;
-    height: 200px;
-    width: 550px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    top: 100px;
+  #post-img-preview {
+    position: absolute;
+    max-height: 80px;
+    width: auto;
+    top: 110px;
+    left: 800px;
   }
 
   .single-post {
-    position: relative;
-    right: 50px;
     background-color: white;
     height: auto;
     width: 600px;
@@ -393,23 +362,14 @@
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #dfe1e5;
-    font-size: 16px;
+    font-size: 20px;
+    overflow: hidden;
   }
 
   .user{
     color: blue;
     font-size: 20px;
   }
-
-  #post-img-preview {
-    position: absolute;
-    width: auto;
-    left: 423px;
-    top: 43px;
-    max-height: 59px;
-    max-width: 67px;
-  }
-
 
   .HolyGrail {
     display: flex;
@@ -418,9 +378,8 @@
   }
 
   header {
-    display: flex;
     flex-direction: column;
-    /* flex: 1; */
+    flex: 1;
     background-color: #3b5998;
     height: 50px;
     color: white;
@@ -433,7 +392,6 @@
 
   .HolyGrail-content {
     flex: 1;
-    border: 1px solid black;
     margin: 5px;
   }
 
