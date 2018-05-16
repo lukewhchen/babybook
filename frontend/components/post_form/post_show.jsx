@@ -8,12 +8,12 @@ import { Link, withRouter } from "react-router-dom";
 
 function PostShow(props) {
   return (
-    <li>
-      {props.post.body}
-      <img src={props.post.image_url}/>
-      posted by:
-      <Link to={`/users/${props.author.id}`}>{props.author.fullName}</Link>
+    <li className="single-post">
+      <Link className="user" to={`/users/${props.author.id}`}>{props.author.fullName}</Link>
       <br/>
+      {props.post.body}
+      <br/>
+        <img src={props.post.image_url}/>
       <br/>
     </li>
   );

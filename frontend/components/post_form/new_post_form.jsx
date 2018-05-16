@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { createPost } from '../../actions/post_actions';
 
-class NewPostForm extends Component {
+class NewPostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { body: "", imageFile: null, imageUrl: null };
@@ -38,18 +38,38 @@ class NewPostForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submit}>
-        <label>What is on your mind!</label>
-        <br/>
-        <textarea onChange={this.handleChange("body")} value={this.state.body}/>
-        <input type="file" onChange={this.updateFile}/>
+      <div className='new-post-form'>
+        <h2>
+          <i className="fa fa-pencil" aria-hidden="true" />
+          Make Post
+        </h2>
 
-        <button>Make Post!</button>
-        <img src={this.state.imageUrl}/>
-      </form>
+        <form onSubmit={this.submit}>
+          <textarea
+            placeholder={`Whats on your mind? ${this.props.currentUser.first_name}`}
+            onChange={this.handleChange("body")}
+            value={this.state.body}/>
+          {this.state.imageUrl &&
+            <img src={this.state.imageUrl} id='post-img-preview' />
+          }
+
+          <div id="upload-image">
+            <i className="fa fa-picture-o" aria-hidden="true"></i>
+            <h3>Photo</h3>
+            <input type="file" onChange={this.updateFile}/>
+          </div>
+          <button className="post-button">Post</button>
+        </form>
+      </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.entities.users[state.session.id]
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -57,4 +77,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(NewPostForm);
+export default connect(mapStateToProps, mapDispatchToProps)(NewPostForm);

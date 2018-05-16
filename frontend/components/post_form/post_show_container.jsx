@@ -18,12 +18,13 @@ class PostShowContainer extends React.Component {
     return (
       <div>
         <MainPageHeader/>
-        <span>Hi {this.props.currentUser.fullName}</span>
+        <h4>Hi {this.props.currentUser.fullName}</h4>
         <br/>
         <button className='logout-button' onClick={this.props.logout}>LOGOUT</button>
+          <div className="post-form">
+            <NewPostForm />
+          </div>
         <article>
-          <NewPostForm/>
-          <h3>Here is your Posts...</h3>
           <ul>{posts}</ul>
         </article>
       </div>
