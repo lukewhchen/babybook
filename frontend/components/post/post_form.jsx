@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { createPost } from '../../actions/post_actions';
 
-class NewPostForm extends React.Component {
+class PostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { body: "", imageFile: null, imageUrl: null };
@@ -79,4 +79,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewPostForm);
+export default connect(mapStateToProps, mapDispatchToProps)(PostForm);

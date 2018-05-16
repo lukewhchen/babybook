@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
 
-class ASignupForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props){
     super(props);
     this.state = { first_name: "", last_name: "", email: "", password: "", gender: null };
@@ -80,4 +80,4 @@ const mapDispatchToProps = dispatch => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ASignupForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);

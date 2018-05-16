@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoMessage from './info_message';
 import FooterMessage from './footer_message';
-import ASignupFormContainer from '../session_form/another_signup_form_container';
+import SignupForm from '../session_form/signup_form';
 import HeadMessage from './head_message';
 
 const Welcome = () => {
@@ -9,7 +9,7 @@ const Welcome = () => {
     <div>
       <HeadMessage />
       <InfoMessage />
-      <ASignupFormContainer />
+      <SignupForm />
       <FooterMessage />
     </div>
   );

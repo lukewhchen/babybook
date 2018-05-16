@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PostShow from './post_show';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
-import NewPostForm from './new_post_form';
+import PostForm from './post_form';
 import MainPageHeader from '../welcome/main_page_header';
 
 class PostShowContainer extends React.Component {
@@ -22,7 +22,7 @@ class PostShowContainer extends React.Component {
         <br/>
         <button className='logout-button' onClick={this.props.logout}>LOGOUT</button>
           <div className="post-form">
-            <NewPostForm />
+            <PostForm />
           </div>
         <article>
           <ul>{posts}</ul>

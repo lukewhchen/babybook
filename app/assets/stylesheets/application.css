@@ -330,7 +330,6 @@
  }
 
  .new-post-form {
-
    position: relative;
    background-color: white;
    width: 500px;
@@ -338,25 +337,6 @@
    border-radius: 4px;
    border: 1px solid #dfe1e5;
  }
-
-  /* .new-post-form div{
-     font-size: 13px;
-     font-weight: 600;
-     color: #4b4f56;
-     background-color: #f6f7f9;
-     padding: 8px;
-     border-radius: 4px 4px 0 0;
-     border-bottom: 1px solid #dfe1e5;
-  }
-
-   .new-post-form div {
-     padding: 3px;
-     border-radius: 0;
-     border-bottom: none;
-     border-top: 1px solid #dfe1e5;
-     height: 31px;
-     border-radius: 0 0 4px 4px;
-  } */
 
   .new-post-form textarea {
      height: 81px;
