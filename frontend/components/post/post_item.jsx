@@ -1,12 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import postDetail from './post_detail';
-// import { ProtectedRoute } from '../../util/route_util';
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 
 
-function PostShow(props) {
+function PostItem(props) {
   return (
     <li className="single-post">
       <Link className="user" to={`/users/${props.author.id}`}>{props.author.fullName}</Link>
@@ -28,4 +25,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps)(PostShow));
+export default withRouter(connect(mapStateToProps)(PostItem));

@@ -379,6 +379,7 @@
     width: 550px;
     margin-top: 15px;
     margin-bottom: 10px;
+    top: 100px;
   }
 
   .single-post {
@@ -407,4 +408,45 @@
     top: 43px;
     max-height: 59px;
     max-width: 67px;
+  }
+
+
+  .HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    background-color: #3b5998;
+    height: 50px;
+    color: white;
+  }
+
+  .HolyGrail-body {
+    display: flex;
+    flex: 1;
+  }
+
+  .HolyGrail-content {
+    flex: 1;
+    border: 1px solid black;
+    margin: 5px;
+  }
+
+  .HolyGrail-nav, .HolyGrail-ads {
+    flex: 0 0 20em;
+  }
+  .HolyGrail-ads {
+    font-size: 15px;
+    background-color: #edf0f5;;
+  }
+
+  .HolyGrail-nav {
+    order: -1;
+    font-size: 15px;
+    background-color: #edf0f5;;
   }
