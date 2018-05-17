@@ -7,7 +7,7 @@ const InfoMessage = () => {
       <ul>
         <li><strong>See photos and updates</strong> from friends in News Feed.</li>
         <li><strong>Share whats new</strong> in your life on your Timeline.</li>
-        <li><strong>Find more</strong> of what you are looking for with Facebook Search.</li>
+        <li><strong>Find more</strong> of what you are looking for with Babybook Search.</li>
       </ul>
     </div>
   );
