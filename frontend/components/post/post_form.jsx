@@ -40,13 +40,11 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div className='new-post-form'>
-        <h2>
-          <i className="fa fa-pencil" aria-hidden="true" />
-          Make Post
-        </h2>
-
-        <form onSubmit={this.submit}>
+        <form className='new-post-form' onSubmit={this.submit}>
+          <h2>
+            <i className="fa fa-pencil" aria-hidden="true" />
+            Post Your Cutest Baby Photo Here. if you don't i will show you my favorite
+          </h2>
           <textarea
             placeholder={`Whats on your mind? ${this.props.currentUser.first_name}`}
             onChange={this.handleChange("body")}
@@ -54,15 +52,13 @@ class PostForm extends React.Component {
           {this.state.imageUrl &&
             <img src={this.state.imageUrl} id='post-img-preview' />
           }
-
-          <div id="upload-image">
-            <i className="fa fa-picture-o" aria-hidden="true"></i>
-            <h3>Photo</h3>
-            <input type="file" onChange={this.updateFile}/>
-          </div>
+          <br/>
+          <label htmlFor="up-image" className="custom-file-upload">
+            <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
+          </label>
+          <input id="up-image" type="file" onChange={this.updateFile}/>
           <button className="post-button">Post</button>
         </form>
-      </div>
     );
   }
 }

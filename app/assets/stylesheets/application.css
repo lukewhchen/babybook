@@ -35,7 +35,7 @@
  }
 
  img {
-  width: 400px;
+  width: 600px;
  }
 
  html {
@@ -223,18 +223,32 @@
    cursor: pointer;
  }
 
+ input[type="file"] {
+   display: none;
+}
+ .custom-file-upload {
+   border: 1px solid #ccc;
+   font-size: 18px;
+   font-weight: bold;
+   height: 20px;
+   width: 80px;
+   border-radius: 10px;
+   display: inline-flex;
+   background-color: #F2F3F4;
+   padding: 6px 12px;
+   cursor: pointer;
+   margin-left: 40px;
+   margin-right: 380px;
+}
 
  .post-button {
-   position: relative;
+   display: inline-flex;
    color: white;
    background-color: #4267b2;
    border: 1px solid #2a477b;
-   padding: 5px 7px;
-   font-size: 12px;
+   padding: 8px 10px;
    border-radius: 3px;
-   top: -25px;
-   left: 550px;
-   height: 25px;
+   height: 20px;
    width: 40px;
    font-size: 20px;
  }
@@ -312,12 +326,7 @@
  }
 
  #left-side h3{
-  /* position: relative; */
-  /* width: auto; */
   min-width: 200px;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-items: center; */
   border-radius: 5px;
   padding: 5px 10px;
   margin-top: 15px;
@@ -340,10 +349,15 @@
   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
  }
 
+ h2 > i {
+  color: black;
+  font-size: 12px;
+  margin: 5px;
+ }
 
  i {
   color: #8abd53;
-  font-size: 18px;
+  font-size: 16px;
  }
 
  .new-post-form {
@@ -356,31 +370,38 @@
  }
 
   .new-post-form textarea {
-     height: 120px;
-     width: 450px;
-     border: none;
-     resize: none;
-     position: relative;
-     right: -43px;
-     box-sizing: border-box;
-     padding: 10px;
-     padding-top: 15px;
-     font-size: 14px;
-     border: 1px solid #dfe1e5;
+    height: 120px;
+    width: 450px;
+    border: none;
+    resize: none;
+    position: relative;
+    right: -43px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 15px;
+    font-size: 18px;
+    border: 1px solid #dfe1e5;
   }
 
-   .new-post-form img {
-     top: 49px;
-     left: 8px;
-     border: 1px solid #dfe1e5;
+  .new-post-form > h2 {
+    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    padding-bottom: 1px;
+  }
+
+  .new-post-form img {
+    top: 49px;
+    left: 8px;
+    border: 1px solid #dfe1e5;
   }
 
   #post-img-preview {
     position: absolute;
     max-height: 80px;
     width: auto;
-    top: 110px;
-    left: 800px;
+    top: 120px;
+    left: 860px;
   }
 
   .single-post {
@@ -401,12 +422,36 @@
     font-size: 20px;
   }
 
+  .like-comment-share {
+    border-top: 1px solid #dfe1e5;
+    margin-top: 15px;
+    padding-top: 15px;
+ }
+
+  .like-comment-share > i{
+    color: #797D7F;
+    display: inline-flex;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 160px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+
+ .like-comment-share > i:hover {
+   background-color: #CACFD2;
+   cursor: pointer;
+ }
+
   .HolyGrail {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
   }
 
   header {
@@ -422,9 +467,6 @@
     flex: 1;
     margin-left: 50px;
     margin-right: 300px;
-    /* flex-shrink: 3;
-    align-items: stretch;
-    justify-content: center; */
   }
 
   .HolyGrail-content {
