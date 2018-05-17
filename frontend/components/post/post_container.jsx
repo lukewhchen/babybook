@@ -18,22 +18,25 @@ class PostContainer extends React.Component {
       return <PostItem key={post.id} post={post} />;
     });
     return (
-        <div className="HolyGrail">
+        <div className="MainPage">
 
           <header>
-            <div id="mp-header">b</div>
-            <div className="current-user">Hi {this.props.currentUser.fullName}</div>
+            <p className="mp-header">b</p>
+            <input className="search-bar" type="text" placeholder="Search" ></input>
+            <p className="current-user">
+              <i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{this.props.currentUser.fullName}
+            </p>
             <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
           </header>
 
-          <div className="HolyGrail-body">
-            <main className="HolyGrail-content">
+          <div className="MainPage-body">
+            <main className="MainPage-content">
               <PostForm />
               <ul>{posts}</ul>
             </main>
 
-            <nav className="HolyGrail-nav"><LeftSidebar/></nav>
-            <aside className="HolyGrail-ads"><RightSidebar/></aside>
+            <nav className="MainPage-nav"><LeftSidebar/></nav>
+            <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
 
         </div>
