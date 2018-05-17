@@ -360,19 +360,27 @@
   cursor: pointer;
 }
 
-
-
- #right-side {
+ .right-side {
   background-color: white;
-  height: 300px;
-  min-width: 270px;
+  height: auto;
+  min-width: 350px;
   margin-left: 8px;
   border-radius: 4px;
   border: 1px solid #dfe1e5;
   margin-top: 15px;
   padding-left: 20px;
-  font-size: 14px;
+  padding-bottom: 10px;
+  font-size: 18px;
   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+ }
+
+ .right-side > i {
+  display: inline-flex;
+  margin: 10px;
+ }
+
+ .right-side > a {
+  text-indent: -10em;
  }
 
  h2 > i {
