@@ -2,13 +2,12 @@ import React from 'react';
 
 const InfoMessage = () => {
   return (
-    <div id='left-side-login'>
-      <h2>Connect with friends and the world around you on Babybook.</h2>
-      <ul>
-        <li><strong>See photos and updates</strong> from friends in News Feed.</li>
-        <li><strong>Share whats new</strong> in your life on your Timeline.</li>
-        <li><strong>Find more</strong> of what you are looking for with Babybook Search.</li>
-      </ul>
+    <div className='left-login'>
+      <h2>Parenting start here.</h2>
+      <h3>Share your happiest moments on Babybook.</h3>
+      <li><strong>Post cutest baby pictures</strong> on your Timeline.</li>
+      <li><strong>See photos and updates</strong> from other parents.</li>
+      <li>Find the <strong>parenting information you need</strong> in News Feed.</li>
     </div>
   );
 };

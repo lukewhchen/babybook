@@ -8,8 +8,10 @@ const Welcome = () => {
   return (
     <div>
       <HeadMessage />
-      <InfoMessage />
-      <SignupForm />
+      <div className="test">
+        <InfoMessage />
+        <SignupForm />
+      </div>
       <FooterMessage />
     </div>
   );

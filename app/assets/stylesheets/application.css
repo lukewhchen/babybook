@@ -69,98 +69,44 @@
    font-weight: bold;
  }
 
- #bb-header {
-   background-color: #3b5998;
-   height: 80px;
-   color: white;
-   border-bottom: 1px solid black;
+.welcome-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3b5998;
+  height: 100px;
+  color: white;
+  border-bottom: 1px solid black;
+  font-size: 50px;
+  font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
  }
 
- #bb-header h1 {
-   position: relative;
-   top: 25px;
-   font-size: 40px;
-   margin-left: 120px;
-   text-decoration: none;
- }
-
- #bb-header input {
-   border: 1px solid black;
-   width: 150px;
-   height: 24px;
-   padding: 0 5px;
-   margin: 0px;
-   margin-right: 10px;
-   margin-top: 3px;
- }
-
- #bb-header label {
-   margin-right: 2px;
-   font-weight: bold;
-   display: flex;
-   flex-direction: column;
- }
-
- #bb-login {
-  position: flex;
-  top: 10px;
-  right: 50px;
-  display: block;
-  float: right;
-  background-color: inherit;
- }
-
- #bb-login label {
-   top: 20px;
-   color: white;
-   font-size: 18px;
- }
-
-
- #bb-login input {
-   font-size: 14px;
-   color: black;
-   background-color: white;
-   height: 20px;
-   margin-right: 10px;
-   margin-left: 5px;
- }
-
- #left-side-login {
-   float: left;
+ .left-login {
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    background-color: transparent;
-   width: 50%;
    color: black;
    min-height: 700px;
- }
-
- #left-side-login h2{
+   min-width: 700px;
    font-size: 26px;
-   display: inline-block;
+   margin-top: 60px;
+   margin-left: 100px;
+   margin-right: 50px;
+ }
+
+ .left-login > h2{
+   margin-bottom: 20px;
+ }
+
+ .left-login > h3{
+   margin-bottom: 60px;
+ }
+
+ .left-login > li{
+   margin-left: 30px;
+   margin-top: 30px;
+   font-size: 22px;
    color: black;
-   margin: 60px 130px;
- }
-
- #left-side-login ul{
-   font-size: 18px;
-   display: inline-block;
-   color: black;
-   margin: 30px 90px;
- }
-
- #left-side-login li{
-   padding-bottom: 40px;
- }
-
- #right-side-login {
-   float: right;
-   background-color: transparent;
-   width: 45%;
-   color: white;
-   min-height: 700px;
-   padding-top: 20px;
-   min-width: 500px;
  }
 
  #footer {
@@ -170,22 +116,36 @@
    text-align: center;
    padding-top: 50px;
    min-height: 200px;
-   font-size: 20px;
+   font-size: 22px;
  }
 
  .login-form {
-   position: relative;
-   right: 70px;
-   top : -50px;
+   font-size: 20px;
    background-color: transparent;
+   min-width: 400px;
+ }
+
+ .login-form > label > input {
+   border: 1px solid black;
+   width: 150px;
+   height: 30px;
+   padding: 0 5px;
+   margin-left: 5px;
+   margin-right: 20px;
+   background-color: white;
+   font-size: 20px;
+   color: black;
  }
 
  .login-button {
    color: white;
    background-color: #4267b2;
-   border: 1px solid #2a477b;
-   padding: 4px 7px;
-   height: 20px;
+   border: 2px solid #2a477b;
+   text-align: center;
+   height: 38px;
+   width: 60px;
+   font-size: 14px;
+   font-weight: bold;
  }
 
  .login-button:hover {
@@ -267,8 +227,16 @@
    cursor: pointer;
  }
 
- #signup_form {
-   margin-top: 10px;
+ .test {
+   display: flex;
+ }
+
+
+ .signup_form {
+   min-height: 700px;
+   min-width: 500px;
+   margin-top: 50px;
+   margin-left: 50px;
    color: black;
    background-color: transparent;
    font-size: 26px;
@@ -277,49 +245,48 @@
    text-rendering: optimizelegibility;
  }
 
- #signup_form h4{
-   margin-top: 10px;
-   color: black;
-   font-size: 18px;
-   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-
+ .signup_form > h4{
+   font-size: 22px;
  }
 
- #signup_form input {
-   display: inline-block;
-   font-size: 18px;
+ .signup_form > input {
+   background-color: white;
+   font-size: 22px;
    border-color: #BDC7D8;
    border-radius: 5px;
    border: 1px solid black;
-   width: 50%;
-   height: 30px;
+   width: 60%;
+   height: 50px;
    padding: 0 5px;
    margin: 10px;
    margin-right: 10px;
    margin-top: 3px;
  }
 
- #signup-button {
-   font-size: 22px;
+ select {
+   margin-left: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
    height: 30px;
-   min-width: 150px;
-   padding: 7px 20px;
+   width: 100px;
+   font-size: 20px;
+ }
+
+ .signup-button {
+   font-size: 24px;
+   font-weight: bold;
+   height: 50px;
+   width: 150px;
    text-align: center;
    background-color: #69A74E;
    box-shadow: inset 0 1px #A4E388;
-   border-color: #3B6E22;
    border-radius: 5px;
    color: #FFF;
    cursor: pointer;
-   display: inline-block;
    border: 1px solid black;
    margin-top: 10px;
  }
 
- .gender-selector {
-   width: 30px;
-   height: 30px;
- }
 
  #upload-image {
   position: relative;

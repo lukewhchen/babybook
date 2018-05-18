@@ -6,7 +6,7 @@ import { Link, withRouter } from "react-router-dom";
 function PostItem(props) {
   return (
     <li className="single-post">
-      <Link className="user" to={`/users/${props.author.id}`}><i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{props.author.fullName}</Link>
+      <Link className="user" to={`/users/${props.author.id}`}><i className="fa fa-user-circle" aria-hidden="true"/>{props.author.fullName}</Link>
       <br/>
       {props.post.body}
       <br/>

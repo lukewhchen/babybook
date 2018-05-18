@@ -5,16 +5,9 @@ import SessionForm from '../session_form/session_form';
 
 const HeadMessage = () => {
   return (
-    <div>
-      <header id='bb-header'>
-        <Link to="/">
-          <h1>babybook</h1>
-        </Link>
-      </header>
-
-      <nav id='bb-login'>
-        <SessionForm />
-      </nav>
+    <div className='welcome-header'>
+      <Link to="/">babybook</Link>
+      <SessionForm />
     </div>
   );
 };

@@ -29,40 +29,26 @@ class SignupForm extends React.Component {
   render(){
 
     return(
-      <div id='right-side-login'>
-        <div id="signup_form">
-          <h2>Sign Up</h2>
-          <h4>It's free and always will be.</h4>
-          <form onSubmit={this.handleSubmit}>
-            <span>
-              <input type='text'
-                    placeholder='First name'
-                    ref={(input) => this.first_name = input}></input>
-              <input type='text'
-                    placeholder='Last name'
-                    ref={(input) => this.last_name = input}></input>
-            </span>
-
-            <input type='text'
-                  placeholder='Email address'
-                  ref={(input) => this.email = input}></input>
-            <input type='password'
-                  placeholder='Password'
-                  ref={(input) => this.password = input}></input>
-
-                <div className="gender-selector">
-              <select defaultValue='gender'
-                      ref={(input) => this.gender = input}>
-                <option disabled value='gender'>Gender</option>
-                <option value='male'>Male</option>
-                <option value='female'>Female</option>
-              </select>
-            </div>
-
-            <button id='signup-button'>Sign Up</button>
-          </form>
-        </div>
-      </div>
+      <form className="signup_form" onSubmit={this.handleSubmit}>
+        <h2>Join Us</h2>
+        <h4>It's joy and always will be.</h4>
+          <input type='text' placeholder='First name'
+                  ref={(input) => this.first_name = input}/>
+          <input type='text' placeholder='Last name'
+                  ref={(input) => this.last_name = input}/>
+          <input type='text' placeholder='Email address'
+                ref={(input) => this.email = input}/>
+          <input type='password' placeholder='Password'
+                ref={(input) => this.password = input}/>
+          <div>
+            <select defaultValue='gender' ref={(input) => this.gender = input}>
+              <option disabled value='gender'>Gender</option>
+              <option value='male'>Male</option>
+              <option value='female'>Female</option>
+            </select>
+          </div>
+          <button className='signup-button'>Sign Up</button>
+      </form>
     );
   }
 }
