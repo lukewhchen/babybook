@@ -43,7 +43,7 @@ class PostForm extends React.Component {
         <form className='new-post-form' onSubmit={this.submit}>
           <h2>
             <i className="fa fa-pencil" aria-hidden="true" />
-            Post Your Cutest Baby Photo Here. if you don't i will show you my favorite
+            Post Your Cutest Baby Photo Here. if you don't I will show you my favorite
           </h2>
           <textarea
             placeholder={`Whats on your mind? ${this.props.currentUser.first_name}`}
