@@ -477,12 +477,6 @@
    cursor: pointer;
  }
 
-  .MainPage {
-    display: flex;
-    min-height: 300px;
-    flex-direction: column;
-  }
-
   header {
     display: flex;
     align-items: flex-end;

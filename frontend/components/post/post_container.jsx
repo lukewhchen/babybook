@@ -18,27 +18,23 @@ class PostContainer extends React.Component {
       return <PostItem key={post.id} post={post} />;
     });
     return (
-        <div className="MainPage">
-
+        <div>
           <header>
             <p className="mp-header">b</p>
-            <input className="search-bar" type="text" placeholder="Search" ></input>
+            <input className="search-bar" type="text" placeholder="Search" />
             <p className="current-user">
               <i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{this.props.currentUser.fullName}
             </p>
             <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
           </header>
-
           <div className="MainPage-body">
             <main className="MainPage-content">
               <PostForm />
               <ul>{posts}</ul>
             </main>
-
             <nav className="MainPage-nav"><LeftSidebar/></nav>
             <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
-
         </div>
     );
   }
