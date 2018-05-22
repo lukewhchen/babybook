@@ -2,8 +2,8 @@ import React from 'react';
 
 const FooterMessage = () => {
   return (
-    <div id='footer'>
-      <p>babybook @ 2018 developed by Luke Chen</p>
+    <div className='footer'>
+      <p>Babybook @ 2018 developed by Luke Chen</p>
     </div>
   );
 };

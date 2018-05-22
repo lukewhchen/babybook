@@ -109,13 +109,12 @@
    color: black;
  }
 
- #footer {
+ .footer {
    clear: both;
    color: #1E90FF;
    background-color: white;
    text-align: center;
-   padding-top: 50px;
-   min-height: 200px;
+   height: auto;
    font-size: 22px;
  }
 
