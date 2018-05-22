@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  errors: state.errors.login,
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  login: user => (dispatch(login(user))),
+  login: user => (dispatch(login(user)))
 });
 
 class SessionForm extends React.Component {
@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -23,14 +24,19 @@ class SessionForm extends React.Component {
     this.props.login(this.state);
   }
 
+  handleErrors() {
+    if (this.props.errors.length > 0)
+      return (<h4 className='login-error'>{this.props.errors}</h4>);
+  }
+
   update(field) {
     return e => this.setState({ [field]: e.target.value });
   }
 
-
   render () {
     return (
         <form className='login-form' onSubmit={this.handleSubmit}>
+          {this.handleErrors()}
           <label>Email:
             <input onChange={this.update('email')}
               type='text' value={this.state.email} />

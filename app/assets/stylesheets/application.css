@@ -54,6 +54,17 @@
    font-size: 14px;
  }
 
+ .login-error {
+   position: absolute;
+   left: -66%;
+   background-color: #c81e2b;
+ }
+
+ .login-error > h4{
+   margin: 15px;
+   font-size: 11px
+ }
+
  .mp-header {
    background-color: white;
    min-width: 25px;
