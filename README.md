@@ -16,7 +16,7 @@ Once user sign up for an account, they can see all the posts on the main page. U
 ![Main Page](https://github.com/lukewhchen/babybook/blob/master/docs/Main%20Page.png?raw=true)
 
 ## Parenting Information
-User can also share parenting information with other user. On the right-side of main page, user can see all kind of parenting infor and visiting the website through links.
+User can also share parenting information with other user. On the right-side of main page, user can see all kind of parenting information and visiting the website through links.
 
 
 # Future Directions

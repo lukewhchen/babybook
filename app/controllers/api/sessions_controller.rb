@@ -9,6 +9,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
+      # console.log("error")
       render json: ['Invalid email/password'], status: 401
     end
   end
