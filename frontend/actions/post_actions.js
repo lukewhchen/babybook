@@ -10,6 +10,7 @@ const receivePosts = payload => ({
   posts: payload.posts,
   authors: payload.authors
 });
+// tp6 need authors ?
 
 const receivePost = payload => ({
   type: RECEIVE_POST,
@@ -26,30 +27,35 @@ const removePost = payload => ({
 
 export const fetchPosts = userId => dispatch => {
   return PostAPIUtil.fetchPosts(userId).then(
-    payload => dispatch(receivePosts(payload))
+    payload => dispatch(receivePosts(payload)),
+    errors => dispatch(receiveErrors(errors, 'posts'))
   );
 };
 
 export const fetchPost = postId => dispatch => {
   return PostAPIUtil.fetchPost(postId).then(
-    payload => dispatch(receivePost(payload))
+    payload => dispatch(receivePost(payload)),
+    errors => dispatch(receiveErrors(errors, 'posts'))
   );
 };
 
 export const createPost = post => dispatch => {
   return PostAPIUtil.createPost(post).then(
-    payload => dispatch(receivePost(payload))
+    payload => dispatch(receivePost(payload)),
+    errors => dispatch(receiveErrors(errors, 'posts'))
   );
 };
 
 export const updatePost = post => dispatch => {
   return PostAPIUtil.updatePost(post).then(
-    payload => dispatch(receivePost(payload))
+    payload => dispatch(receivePost(payload)),
+    errors => dispatch(receiveErrors(errors, 'posts'))
   );
 };
 
 export const deletePost = postId => dispatch => {
   return PostAPIUtil.deletePost(postId).then(
-    payload => dispatch(removePost(payload))
+    payload => dispatch(removePost(payload)),
+    errors => dispatch(receiveErrors(errors, 'posts'))
   );
 };
