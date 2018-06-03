@@ -18,7 +18,7 @@
 
 # Use email as unique credentials for different users
 class User < ApplicationRecord
-  validates :first_name, :last_name, :password_digest, :session_token, presence: true
+  validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
   has_attached_file :profile_photo, default_url: "big-girl.jpg"

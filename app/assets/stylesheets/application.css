@@ -54,19 +54,6 @@
    font-size: 14px;
  }
 
- .login-error {
-   position: absolute;
-   min-height: 40px;
-   padding: 10px;
-   left: 500px;
-   background-color: red
- }
-
- /* .login-error > h4{
-   margin: 15px;
-   font-size: 11px
- } */
-
  .mp-header {
    background-color: white;
    min-width: 25px;
@@ -147,6 +134,17 @@
    background-color: white;
    font-size: 20px;
    color: black;
+ }
+
+ .login-error {
+   position: absolute;
+   font-size: 15px;
+   min-height: 30px;
+   max-width: 200px;
+   padding: 10px;
+   left: 500px;
+   background-color: #EC3349;
+   border-radius: 5px;
  }
 
  .login-button {
@@ -255,6 +253,19 @@
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    letter-spacing: normal;
    text-rendering: optimizelegibility;
+ }
+
+ .signup-error {
+   position: absolute;
+   color: white;
+   font-size: 20px;
+   min-height: 30px;
+   max-width: 250px;
+   padding: 10px;
+   right: 260px;
+   top: 550px;
+   background-color: #EC3349;
+   border-radius: 5px;
  }
 
  .signup_form > h4{

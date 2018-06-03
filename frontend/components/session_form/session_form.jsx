@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
 
   handleErrors() {
     if (!this.props.errors.length > 0) return null;
-      return (<h4 className='login-error'>{this.props.errors[0]}</h4>);
+      return (<p className='login-error'>{this.props.errors[0]}</p>);
   }
 
   update(field) {

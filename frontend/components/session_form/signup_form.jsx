@@ -9,12 +9,18 @@ class SignupForm extends React.Component {
     this.state = { first_name: "", last_name: "", email: "", password: "", gender: null };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createUserObject = this.createUserObject.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault();
     const user = this.createUserObject();
     this.props.signup(user);
+  }
+
+  handleErrors() {
+    if (!this.props.errors.length > 0) return null;
+      return (<p className='signup-error'>{this.props.errors[0]}</p>);
   }
 
   createUserObject(){
@@ -32,6 +38,7 @@ class SignupForm extends React.Component {
       <form className="signup_form" onSubmit={this.handleSubmit}>
         <h2>Join Us</h2>
         <h4>It's joy and always will be.</h4>
+        {this.handleErrors()}
           <input type='text' placeholder='First name'
                   ref={(input) => this.first_name = input}/>
           <input type='text' placeholder='Last name'
