@@ -56,14 +56,16 @@
 
  .login-error {
    position: absolute;
-   left: -66%;
-   background-color: #c81e2b;
+   min-height: 40px;
+   padding: 10px;
+   left: 500px;
+   background-color: red
  }
 
- .login-error > h4{
+ /* .login-error > h4{
    margin: 15px;
    font-size: 11px
- }
+ } */
 
  .mp-header {
    background-color: white;

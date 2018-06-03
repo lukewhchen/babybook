@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  errors: state.errors.session
+  errors: state.errors.login
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
   }
 
   handleErrors() {
-    if (!this.props.errors.length > 0)
+    if (!this.props.errors.length > 0) return null;
       return (<h4 className='login-error'>{this.props.errors[0]}</h4>);
   }
 
@@ -37,6 +37,7 @@ class SessionForm extends React.Component {
     return (
         <form className='login-form' onSubmit={this.handleSubmit}>
           {this.handleErrors()}
+
           <label>Email:
             <input onChange={this.update('email')}
               type='text' value={this.state.email} />
