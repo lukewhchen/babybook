@@ -21,7 +21,10 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-
+  has_attached_file :profile_photo, default_url: "big-girl.jpg"
+  validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
+  has_attached_file :cover_photo, default_url: "big-girl.jpg"
+  validates_attachment_content_type :cover_photo, content_type: /\Aimage\/.*\Z/
   after_initialize :ensure_session_token
 
   has_many :posts,

@@ -5,10 +5,10 @@ class Api::PostsController < ApplicationController
     @posts = Post.all
     render :index
   end
-# @posts = Post.all.includes(:author)
+
   def show
     @post = Post.find(params[:id])
-    render json: @post
+    render :show
   end
 
   def create

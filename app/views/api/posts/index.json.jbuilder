@@ -14,3 +14,5 @@ json.authors do
     end
   end
 end
+# for rendering all posts
+# tp6
