@@ -16,17 +16,21 @@ class SessionForm extends React.Component {
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleErrors = this.handleErrors.bind(this);
+    this.checkErrors = this.checkErrors.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.login(this.state);
+    this.props.login(user);
   }
 
   handleErrors() {
-    if (!this.props.errors.length > 0) return null;
-      return (<p className='login-error'>{this.props.errors[0]}</p>);
+    return (<p className='login-error'>{this.props.errors[0]}</p>);
+  }
+
+  checkErrors() {
+    return (this.props.errors.length > 0);
   }
 
   update(field) {
@@ -36,7 +40,7 @@ class SessionForm extends React.Component {
   render () {
     return (
         <form className='login-form' onSubmit={this.handleSubmit}>
-          {this.handleErrors()}
+          {this.checkErrors() ? this.handleErrors() : null}
 
           <label>Email:
             <input onChange={this.update('email')}

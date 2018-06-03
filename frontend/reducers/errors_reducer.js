@@ -1,14 +1,3 @@
-// import { combineReducers } from 'redux';
-// import sessionErrorsReducer from './session_errors_reducer';
-
-// const errorsReducer = combineReducers({
-//   session: sessionErrorsReducer
-// });
-
-// export default errorsReducer;
-
-
-
 import merge from 'lodash/merge';
 import {
   RECEIVE_ERRORS,
