@@ -25,6 +25,7 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => (
 const mapStateToProps = state => {
   return { loggedIn: Boolean(state.session.id)};
 };
+// tp6 check session.id and session.currentUser
 
 export const AuthRoute =
   withRouter(connect(mapStateToProps, null)(Auth));
