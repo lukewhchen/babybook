@@ -539,55 +539,89 @@
     background-color: #edf0f5;;
   }
 
+  #id-photo img{
+    position: relative;
+    background-color: red;
+    top: 220px;
+    left: 60px;
+    width: 180px;
+    height: 180px;
+    z-index: 1;
 
-  #profile-pic img{
-    flex-direction: column;
-    box-sizing: border-box;
-    border-style: double;
-    border: 4px solid white;
-    position: absolute;
-    border-radius: 3px;
-    background-color: white;
-    width: 70%;
-    max-height: 400px;
+  }
+
+  .cover-imgs {
+    max-width: 1027px;
     margin-left: 15%;
+    height: 450px;
+    border: 1px solid #A2A3A3;
+    background-color: white
   }
 
-  .profile {
-    display: flex;
+  .cover-imgs img {
+    width: auto;
+    height: 380px;
   }
+
+  .cover-imgs h4 {
+    position: relative;
+    top: -300px;
+    left: 260px;
+    width: 200px;
+    font-size: 34px;
+    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+  }
+
+  #profile-imgs {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    top: -160px;
+    left: 40px;
+    border: 1px solid #A2A3A3;
+  }
+
 
   .profile-body {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    max-width: 1030px;
+    height: 200px;
+    /* background-color: red; */
   }
 
-  .profile-post {
-    position: relative;
-    top: 400px;
-    left: 18%;
+  .user-info {
     background-color: white;
-    height: 60%;
-    width: 30%;
+    height: 300px;
+    min-width: 365px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
+    margin-right: 20px;
     border-radius: 4px;
     border: 1px solid #dfe1e5;
     font-size: 24px;
     overflow: hidden;
+    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
   }
 
-  .pp-body {
-    /* display: flex;
-    flex: 1; */
-    position: relative;
-    left: 50%;
-    top: 100px;
-    margin-left: 50px;
-    margin-right: 1000px;
+  .user-info > label {
+    display: inline-flex;
+    margin: 10px;
+    font-size: 30px;
   }
 
-  .pp-content {
-    flex: 1;
-    margin: 5px;
+  .user-info > p {
+    margin: 10px;
+    font-size: 20px;
+    color: #515755;
+  }
+
+  .user-icon > i {
+    color: #4267b2;
+  }
+
+  .profile-post {
   }

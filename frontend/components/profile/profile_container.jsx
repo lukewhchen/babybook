@@ -23,11 +23,10 @@ class ProfileContainer extends React.Component {
     // const posts = this.props.posts.map(post => {
     //   return <PostItem key={post.id} post={post} />;
     //   });
-    const ProfilePicture = ({url}) => (
-      <div id='profile-pic'>
-        <img src={url}></img>
-      </div>
-    );
+    // const ProfilePicture = ({url}) => (
+    //     <img src={url}></img>
+    // );
+
     return (
       <div>
         <header>
@@ -39,26 +38,28 @@ class ProfileContainer extends React.Component {
           <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
         </header>
 
-        <div className="profile">
-          <ProfilePicture url={this.props.user.profile_photo_url}/>
+        <div className="cover-imgs">
+          <img src={this.props.user.cover_photo_url}/>
+          <img id="profile-imgs" src={this.props.user.profile_photo_url}/>
+          <h4>{this.props.user.fullName}</h4>
+        </div>
+
           <div className="profile-body">
-            <li className="profile-post">
-              <br/>
-              <p>Current user is: {this.props.currentUser.fullName}</p>
-              <p>{console.log(this.props)}</p>
-              <p>This is {this.props.user.fullName} profile</p>
-              <label className="like-comment-share">
-                <i className="fa fa-thumbs-o-up" aria-hidden="true">Like</i>
-                <i className="fa fa-commenting-o" aria-hidden="true">Comment</i>
-                <i className="fa fa-share" aria-hidden="true">Share</i>
+            <div className="user-info">
+              <label className="user-icon">
+                <i className="fa fa-globe" aria-hidden="true">&nbsp;&nbsp;Intro</i>
               </label>
-            </li>
-            <div className="pp-body">
-              <main className="pp-content">
-                <PostForm />
-              </main>
+              <p>User name: {this.props.user.fullName}</p>
+              <p>Email: {this.props.user.email}</p>
+              <p>Hometown: {this.props.user.hometown || "null"}</p>
+              <p>Workplace: {this.props.user.workplace || "null"}</p>
+              <p>School: {this.props.user.school || "null"}</p>
+              <p>Gender: {this.props.user.gender || "null"}</p>
             </div>
-          </div>
+
+            <div className="profile-post">
+                <PostForm />
+            </div>
 
         </div>
       </div>
