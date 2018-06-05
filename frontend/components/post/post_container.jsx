@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 import PostItem from './post_item';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { logout } from '../../actions/session_actions';
@@ -20,10 +21,10 @@ class PostContainer extends React.Component {
     return (
         <div>
           <header>
-            <p className="mp-header">b</p>
+            <Link to="/"><p className="mp-header">b</p></Link>
             <input className="search-bar" type="text" placeholder="Search" />
             <p className="current-user">
-              <i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{this.props.currentUser.fullName}
+                <i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{this.props.currentUser.fullName}
             </p>
             <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
           </header>

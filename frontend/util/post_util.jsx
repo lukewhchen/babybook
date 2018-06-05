@@ -38,12 +38,3 @@ export const deletePost = postId => {
     url: `api/posts/${postId}`
   });
 };
-
-// export const fetchFeed = (userId) => {
-//   const data = userId ? { userId } : null;
-//   return $.ajax({
-//     method: 'GET',
-//     url: 'api/feed',
-//     data
-//   });
-// };

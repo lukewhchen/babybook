@@ -15,22 +15,19 @@ class ProfileContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
-    // this.props.fetchPosts(this.props.user.id);
-    // this.props.fetchUsers();
+    this.props.fetchPosts(this.props.match.params.userId);
   }
 
   render() {
-    // const posts = this.props.posts.map(post => {
-    //   return <PostItem key={post.id} post={post} />;
-    //   });
-    // const ProfilePicture = ({url}) => (
-    //     <img src={url}></img>
-    // );
-
+    const userPosts = this.props.posts.map(post => {
+      if (post.author_id === this.props.user.id) {
+        return <PostItem key={post.id} post={post} />;
+      }
+    });
     return (
       <div>
         <header>
-          <p className="mp-header">b</p>
+          <Link to="/"><p className="mp-header">b</p></Link>
           <input className="search-bar" type="text" placeholder="Search" />
           <p className="current-user">
             <i className="fa fa-user-circle" aria-hidden="true"/>&nbsp;&nbsp;{this.props.currentUser.fullName}
@@ -58,7 +55,8 @@ class ProfileContainer extends React.Component {
             </div>
 
             <div className="profile-post">
-                <PostForm />
+              <PostForm />
+              <ul>{userPosts}</ul>
             </div>
 
         </div>
@@ -69,10 +67,11 @@ class ProfileContainer extends React.Component {
 // tp6 console 第二次才抓到user資料
 
 const mapStateToProps = (state, ownProps) => {
+  const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]};
   return {
-    // posts: Object.values(state.entities.posts),
-    user: state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]},
+    user,
     currentUser: state.entities.users[state.session.id],
+    posts: Object.values(state.entities.posts),
   };
 };
 
