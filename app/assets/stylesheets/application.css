@@ -469,6 +469,18 @@
    margin-bottom: 10px;
   }
 
+  .user-link{
+    color: white;
+    font-size: 16px;
+    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+  }
+
+  .user-link > i {
+   color: white;
+   margin-right: 8px;
+   font-size: 25px;
+  }
+
 
   .like-comment-share {
     border-top: 1px solid #dfe1e5;
