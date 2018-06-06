@@ -335,7 +335,7 @@
   height: auto;
  }
 
- .left-icon > i{
+ .left-icon i{
    color: black;
    display: inline-flex;
    margin-left: 80px;
@@ -350,14 +350,23 @@
    padding-right: 20px;
 }
 
-.left-icon > i:hover {
+.left-icon i:hover {
   background-color: #FBFCFC;
   cursor: pointer;
 }
 
-.left-icon > i:active {
+.left-icon i:active {
   color: blue;
   cursor: pointer;
+}
+
+.left-icon p {
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #515755;
 }
 
  .right-side {

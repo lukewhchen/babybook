@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import PostItem from './post_item';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
+import { fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from './post_form';
 import LeftSidebar from './left_sidebar';
@@ -14,6 +15,7 @@ class PostContainer extends React.Component {
   }
 
   render() {
+    const currentUser = this.props.currentUser;
     const reversePosts = this.props.posts.reverse();
     const posts = reversePosts.map(post => {
       return <PostItem key={post.id} post={post} />;
@@ -34,7 +36,7 @@ class PostContainer extends React.Component {
               <PostForm />
               <ul>{posts}</ul>
             </main>
-            <nav className="MainPage-nav"><LeftSidebar/></nav>
+            <nav className="MainPage-nav"><LeftSidebar currentUser={currentUser}/></nav>
             <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
         </div>
@@ -50,6 +52,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: () => dispatch(fetchPosts()),
   logout: () => dispatch(logout())
 });
