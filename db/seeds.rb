@@ -35,13 +35,14 @@ DefaultPhoto = [
 ]
 
   imgs = []
-DefaultPhoto.each do |el|
+# DefaultPhoto.each do |el|
   # imgs << File.open(File.join(Rails.root, 'assets', 'images', el))
-  imgs << File.open(File.join(Rails.root, "app/assets/images/#{el}"))
+  # imgs << File.open(File.join(Rails.root, "app/assets/images/#{el}"))
+  # imgs << File.open(File.join(Rails.root, image_url(el)))
   # imgs << File.open(asset_url(el))
   # app/assets/images/big-girl.jpg
 
-end
+# end
 # img = File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg'))
 # Post.first.update(image: img)
 
