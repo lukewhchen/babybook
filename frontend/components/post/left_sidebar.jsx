@@ -25,13 +25,3 @@ const LeftSidebar = ({ currentUser }) => {
 };
 
 export default LeftSidebar;
-
-
-// <i className="fa fa-gamepad" aria-hidden="true">Search</i>
-// <i className="fa fa-flash" aria-hidden="true" />
-// <i className="fa fa-child" aria-hidden="true" />
-// <i className="fa fa-ellipsis-h" aria-hidden="true" />
-// src='https://github.com/lukewhchen'
-// <i className="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;Events</i><br/>
-// <i className="fa fa-commenting-o" aria-hidden="true">&nbsp;&nbsp;Messenger</i><br/>
-// <i className="fa fa-google" aria-hidden="true">&nbsp;&nbsp;Messenger</i><br/>
