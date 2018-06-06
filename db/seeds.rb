@@ -31,9 +31,9 @@ DefaultPhoto = [
   "hithere.jpeg", "youcan.jpg"
 ]
 
-  img = []
+  Images = []
 DefaultPhoto.each do |el|
-  img << File.open(File.join(Rails.root, 'app', 'assets', 'images', el))
+  Images << File.open(File.join(Rails.root, 'app', 'assets', 'images', el))
 end
 # img = File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg'))
 # Post.first.update(image: img)
@@ -51,11 +51,11 @@ PostBody = [
 
 
 Post.destroy_all
-Post.create!(body: PostBody[0] ,author_id:luke.id, image:img[0])
-Post.create!(body: PostBody[1] ,author_id:meiyao.id, image:img[1] )
-Post.create!(body: PostBody[2] ,author_id:emma.id, image:img[2] )
-Post.create!(body: PostBody[3] ,author_id:jordan.id, image:img[3] )
-Post.create!(body: PostBody[4] ,author_id:kobe.id, image:img[4] )
-Post.create!(body: PostBody[5] ,author_id:jon.id, image:img[5] )
-Post.create!(body: PostBody[6] ,author_id:taylor.id, image:img[6] )
-Post.create!(body: PostBody[7] ,author_id:mark.id, image:img[7] )
+Post.create!(body: PostBody[0] ,author_id:luke.id, image:Images[0])
+Post.create!(body: PostBody[1] ,author_id:meiyao.id, image:Images[1] )
+Post.create!(body: PostBody[2] ,author_id:emma.id, image:Images[2] )
+Post.create!(body: PostBody[3] ,author_id:jordan.id, image:Images[3] )
+Post.create!(body: PostBody[4] ,author_id:kobe.id, image:Images[4] )
+Post.create!(body: PostBody[5] ,author_id:jon.id, image:Images[5] )
+Post.create!(body: PostBody[6] ,author_id:taylor.id, image:Images[6] )
+Post.create!(body: PostBody[7] ,author_id:mark.id, image:Images[7] )
