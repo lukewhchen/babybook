@@ -7,14 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-luke = User.create!(email: 'luke@gmail.com', first_name: 'Luke', last_name: 'Chen', password:'123456')
-meiyao = User.create!(email: 'meiyao@gmail.com', first_name: 'MeiYao', last_name: 'Lin', password:'234567')
-emma = User.create!(email: 'emma@gmail.com', first_name: 'Emma', last_name: 'Chen', password:'345678')
-jordan = User.create!(email: 'jordan@gmail.com', first_name: 'Michale', last_name: 'Jordan', password:'456789')
-kobe = User.create!(email: 'kobe@gmail.com', first_name: 'Kobe', last_name: 'Bryant', password:'987654')
-jon = User.create!(email: 'jon@gmail.com', first_name: 'Jon', last_name: 'Snow', password:'876543')
-taylor = User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name: 'Swift', password:'765432')
-mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321')
+luke = User.create!(email: 'luke@gmail.com', first_name: 'Luke', last_name: 'Chen', password:'123456',
+  hometown:'Taiwan', workplace:'babybook', school:'app Academy', gender:'male')
+meiyao = User.create!(email: 'meiyao@gmail.com', first_name: 'MeiYao', last_name: 'Lin', password:'234567',
+  hometown:'Taiwan', workplace:'NIH', school:'NTU', gender:'female')
+emma = User.create!(email: 'emma@gmail.com', first_name: 'Emma', last_name: 'Chen', password:'345678',
+  hometown:'Maryland', workplace:'playground', school:'puppy', gender:'female')
+jordan = User.create!(email: 'jordan@gmail.com', first_name: 'Michale', last_name: 'Jordan', password:'456789',
+  hometown:'Chicago', workplace:'Chicago Bulls', school:'University of North Carolina', gender:'male')
+kobe = User.create!(email: 'kobe@gmail.com', first_name: 'Kobe', last_name: 'Bryant', password:'987654',
+  hometown:'Philadelphia', workplace:'Los Angeles Lakers', school:'Lower Merion', gender:'male')
+jon = User.create!(email: 'jon@gmail.com', first_name: 'Jon', last_name: 'Snow', password:'876543',
+  hometown:'Winterfell', workplace:'the North', school:'Old Gods of the Forest', gender:'male')
+taylor = User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name: 'Swift', password:'765432',
+  hometown:'Reading', workplace:'Hollywood', school:'homeschool', gender:'female')
+mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321',
+  hometown:'White Plains', workplace:'facebook', school:'Harvard', gender:'male')
 
 
 Post.destroy_all
