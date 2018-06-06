@@ -24,13 +24,38 @@ taylor = User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name
 mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321',
   hometown:'White Plains', workplace:'facebook', school:'Harvard', gender:'male')
 
+DefaultPhoto = [
+  "big-girl.jpg", "cover-1.jpg",
+  "emma.jpg", "boss-bb.jpg",
+  'cutebaby.jpg', "favorite.jpeg",
+  "hithere.jpeg", "youcan.jpg"
+]
+
+  img = []
+DefaultPhoto.each do |el|
+  img << File.open(File.join(Rails.root, 'app', 'assets', 'images', el))
+end
+# img = File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg'))
+# Post.first.update(image: img)
+
+PostBody = [
+  "My little princess.",
+  "I Love YOU so much Baby!! Every day I wake up and fall in love with YOU all over again!!",
+  "Dad eats my ice cream ~~~",
+  "I'm a born leader.",
+  "Here she is ... the newest member of the Mamba family!",
+  "My favorite show in Winterfell.",
+  "Here is the answer you are looking for!",
+  "Let's make the world a better place."
+]
+
 
 Post.destroy_all
-Post.create!(body: "My little princess" ,author_id:luke.id, image: "cutebaby.jpg")
-Post.create!(body: "9 Ways to Help Your Child's Language Development" ,author_id:meiyao.id )
-Post.create!(body: "Do Tech Toys Hurt Baby's Language Development?" ,author_id:emma.id )
-Post.create!(body: "Hear This Baby Say Hello -- at 7 Weeks Old!" ,author_id:jordan.id )
-Post.create!(body: "26 Baby Shower Games" ,author_id:kobe.id )
-Post.create!(body: "You Know Nothing!" ,author_id:jon.id )
-Post.create!(body: "Taylor Swift CONFIRMS Mystery Baby Voice in Gorgeous" ,author_id:taylor.id )
-Post.create!(body: "Mark welcome second baby girl" ,author_id:mark.id )
+Post.create!(body: PostBody[0] ,author_id:luke.id, image:img[0])
+Post.create!(body: PostBody[1] ,author_id:meiyao.id, image:img[1] )
+Post.create!(body: PostBody[2] ,author_id:emma.id, image:img[2] )
+Post.create!(body: PostBody[3] ,author_id:jordan.id, image:img[3] )
+Post.create!(body: PostBody[4] ,author_id:kobe.id, image:img[4] )
+Post.create!(body: PostBody[5] ,author_id:jon.id, image:img[5] )
+Post.create!(body: PostBody[6] ,author_id:taylor.id, image:img[6] )
+Post.create!(body: PostBody[7] ,author_id:mark.id, image:img[7] )
