@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+environment_seed_file = File.join(Rails.root, 'db', 'seeds', "#{Rails.env}.rb")
 
 User.destroy_all
 luke = User.create!(email: 'luke@gmail.com', first_name: 'Luke', last_name: 'Chen', password:'123456',
@@ -24,6 +25,8 @@ taylor = User.create!(email: 'taylor@gmail.com', first_name: 'Taylor', last_name
 mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuckerberg', password:'654321',
   hometown:'White Plains', workplace:'facebook', school:'Harvard', gender:'male')
 
+
+
 DefaultPhoto = [
   "big-girl.jpg", "cover-1.jpg",
   "emma.jpg", "boss-bb.jpg",
@@ -34,8 +37,10 @@ DefaultPhoto = [
   imgs = []
 DefaultPhoto.each do |el|
   # imgs << File.open(File.join(Rails.root, 'assets', 'images', el))
-  # imgs << File.open(File.join(Rails.root, "assets/images/#{el}"))
-  imgs << File.open(asset_url(el))
+  imgs << File.open(File.join(Rails.root, "/app/assets/images/#{el}"))
+  # imgs << File.open(asset_url(el))
+  # app/assets/images/big-girl.jpg
+
 end
 # img = File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg'))
 # Post.first.update(image: img)
