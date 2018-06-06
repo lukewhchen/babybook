@@ -26,7 +26,7 @@ mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuc
 
 
 Post.destroy_all
-Post.create!(body: "When Do Babies Talk?" ,author_id:luke.id )
+Post.create!(body: "My little princess" ,author_id:luke.id, image: "cutebaby.jpg")
 Post.create!(body: "9 Ways to Help Your Child's Language Development" ,author_id:meiyao.id )
 Post.create!(body: "Do Tech Toys Hurt Baby's Language Development?" ,author_id:emma.id )
 Post.create!(body: "Hear This Baby Say Hello -- at 7 Weeks Old!" ,author_id:jordan.id )
