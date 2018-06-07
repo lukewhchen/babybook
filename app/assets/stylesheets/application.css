@@ -176,8 +176,8 @@
 
  .current-user {
    color: white;
-   width: 150px;
-   min-width: 100px;
+   /* width: 150px; */
+   min-width: 150px;
    margin-right: 250px;
    font-size: 16px;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
