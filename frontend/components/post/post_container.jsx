@@ -11,6 +11,7 @@ import RightSidebar from './right_sidebar';
 
 class PostContainer extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchPosts();
   }
 
