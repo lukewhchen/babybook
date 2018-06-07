@@ -523,12 +523,16 @@
  }
 
   header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     align-items: flex-end;
     background-color: #3b5998;
     height: 50px;
     padding-bottom: 15px;
     color: white;
+    z-index: 9999;
   }
 
   .MainPage-body {
@@ -536,14 +540,19 @@
     flex: 1;
     margin-left: 50px;
     margin-right: 1000px;
+    margin-top: 70px;
+    width: 100%
   }
 
   .MainPage-content {
-    flex: 1;
-    margin: 5px;
+    /* flex: 1; */
+    position: relative;
+    margin: 300px;
+    top: -295px;
   }
 
   .MainPage-nav {
+    position: fixed;
     flex-grow: 0;
     width: 300px;
     min-width: 300px;
@@ -553,7 +562,9 @@
   }
 
   .MainPage-ads {
+    position: fixed;
     flex-grow: 0;
+    left: 980px;
     width: 300px;
     max-width: 300px;
     font-size: 15px;
