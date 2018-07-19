@@ -13,7 +13,9 @@ class PostForm extends React.Component {
   }
 
   handleErrors() {
-    return (<p className='posts-error'>Please say something!</p>);
+    if (this.checkErrors()) {
+      return (<p className='posts-error'>Please say something!</p>);
+    }
   }
 
   checkErrors() {
@@ -63,7 +65,7 @@ class PostForm extends React.Component {
             <img src={this.state.imageUrl} id='post-img-preview' />
           }
           <br/>
-          {this.checkErrors() ? this.handleErrors() : null}
+          {this.handleErrors()}
           <label htmlFor="up-image" className="custom-file-upload">
             <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
           </label>
