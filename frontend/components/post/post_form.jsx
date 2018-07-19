@@ -8,6 +8,16 @@ class PostForm extends React.Component {
     this.state = { body: "", imageFile: null, imageUrl: null };
     this.submit = this.submit.bind(this);
     this.updateFile = this.updateFile.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
+    this.checkErrors = this.checkErrors.bind(this);
+  }
+
+  handleErrors() {
+    return (<p className='posts-error'>Please say something!</p>);
+  }
+
+  checkErrors() {
+    return (this.props.errors.length > 0);
   }
 
   handleChange(field) {
@@ -53,6 +63,7 @@ class PostForm extends React.Component {
             <img src={this.state.imageUrl} id='post-img-preview' />
           }
           <br/>
+          {this.checkErrors() ? this.handleErrors() : null}
           <label htmlFor="up-image" className="custom-file-upload">
             <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
           </label>
@@ -65,7 +76,8 @@ class PostForm extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    errors: state.errors.posts
   };
 };
 
