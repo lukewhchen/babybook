@@ -71,8 +71,10 @@
 
 .welcome-header {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content:flex-start;
   align-items: center;
+  padding-left: 100px;
   background-color: #3b5998;
   height: 100px;
   color: white;
@@ -122,7 +124,8 @@
  .login-form {
    font-size: 20px;
    background-color: transparent;
-   min-width: 400px;
+   margin-left: 500px;
+   min-width: 700px;
  }
 
  .login-form > label > input {
@@ -168,6 +171,7 @@
    width: 60px;
    font-size: 14px;
    font-weight: bold;
+   margin-right: 10px;
  }
 
  .login-button:hover {
