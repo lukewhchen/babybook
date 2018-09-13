@@ -17,12 +17,21 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleErrors = this.handleErrors.bind(this);
     this.checkErrors = this.checkErrors.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.login(user);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = {
+      email: "luke@gmail.com",
+      password: "123456"};
+    this.props.login(demoUser);
   }
 
   handleErrors() {
@@ -53,6 +62,7 @@ class SessionForm extends React.Component {
           </label>
 
           <button className="login-button" onClick={this.handleSubmit}>Log In</button>
+          <button className="login-button" onClick={this.handleDemo}>Demo</button>
         </form>
     );
   }
