@@ -391,7 +391,8 @@
   border: 1px solid #dfe1e5;
   margin-top: 15px;
   padding-left: 20px;
-  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
   font-size: 18px;
   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
  }
