@@ -39,13 +39,13 @@ class SignupForm extends React.Component {
         <h2>Join Us</h2>
         <h4>It's joy and always will be.</h4>
         {this.handleErrors()}
-          <input type='text' placeholder='First name'
+          <input type='text' placeholder='  First name'
                   ref={(input) => this.first_name = input}/>
-          <input type='text' placeholder='Last name'
+          <input type='text' placeholder='  Last name'
                   ref={(input) => this.last_name = input}/>
-          <input type='text' placeholder='Email address'
+          <input type='text' placeholder='  Email address'
                 ref={(input) => this.email = input}/>
-          <input type='password' placeholder='Password'
+          <input type='password' placeholder='  Password'
                 ref={(input) => this.password = input}/>
           <div>
             <select defaultValue='gender' ref={(input) => this.gender = input}>
