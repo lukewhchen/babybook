@@ -1,8 +1,6 @@
 class Post < ApplicationRecord
   validates :body, :author_id, presence: true
-  # DefaultPhoto = ["big-girl.jpg", "cover-1.jpg", "emma.jpg"]
   Default = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"]
-  # DPhoto = ["boss-bb.jpg"]
 
   # has_attached_file :image, default_url: "boss-bb.jpg"
   has_attached_file :image, default_url: Default.shuffle.first
