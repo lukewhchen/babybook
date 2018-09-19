@@ -15,7 +15,7 @@ const postsReducer = (state = {}, action) => {
       delete newState[action.post.id];
       return newState;
     case RECEIVE_COMMENT:{
-      let post = Object.assign({}, state[action.commnet.post_id]);
+      let post = Object.assign({}, state[action.comment.post_id]);
       post.comment_ids = post.comment_ids.slice();
       post.comment_ids.push(action.comment.id);
       return merge({}, state, { [post.id]: post});
