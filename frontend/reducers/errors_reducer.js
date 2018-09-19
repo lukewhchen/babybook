@@ -10,6 +10,7 @@ const defaultState = {
   signup: [],
   posts: [],
   users: [],
+  comments: []
 };
 
 const errorsReducer = (state = defaultState, action) => {
