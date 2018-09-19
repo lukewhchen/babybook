@@ -8,14 +8,16 @@ export const REMOVE_POST = 'REMOVE_POST';
 const receivePosts = payload => ({
   type: RECEIVE_POSTS,
   posts: payload.posts,
-  authors: payload.authors
+  authors: payload.authors,
+  comments: payload.comments
 });
 // tp6 need authors ?
 
 const receivePost = payload => ({
   type: RECEIVE_POST,
   post: payload.post,
-  author: payload.author
+  author: payload.author,
+  comments: payload.comments
 });
 
 const removePost = payload => ({
