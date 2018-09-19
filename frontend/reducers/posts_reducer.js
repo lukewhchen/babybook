@@ -14,16 +14,18 @@ const postsReducer = (state = {}, action) => {
       const newState = merge({}, state);
       delete newState[action.post.id];
       return newState;
-    case RECEIVE_COMMENT:
+    case RECEIVE_COMMENT:{
       let post = Object.assign({}, state[action.commnet.post_id]);
       post.comment_ids = post.comment_ids.slice();
       post.comment_ids.push(action.comment.id);
       return merge({}, state, { [post.id]: post});
-    case REMOVE_COMMENT:
-      let post = Objext.assign({}, state[action.comment.post_id]);
+    }
+    case REMOVE_COMMENT:{
+      let post = Object.assign({}, state[action.comment.post_id]);
       post.comment_ids = post.comment_ids.slice();
       post.comment_ids.splice(post.comment_ids.indexOf(action.comment.id), 1);
       return merge({}, state, { [post.id]: post});
+    }
     default:
       return state;
   }
