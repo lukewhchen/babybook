@@ -12,3 +12,24 @@ const removeComment = comment => ({
   type: REMOVE_COMMENT,
   comment
 });
+
+export const createComment = comment => dispatch => {
+  return CommentAPIUtil.createComment(comment).then(
+    comment => dispatch(receiveComment(comment)),
+    errors => dispatch(receiveErrors(errors, 'comments'))
+  );
+};
+
+export const updateComment = comment => dispatch => {
+  return CommentAPIUtil.updateComment(comment).then(
+    comment => dispatch(receiveComment(comment)),
+    errors => dispatch(receiveErrors(errors, 'comments'))
+  );
+};
+
+export const deleteComment = commentId => dispatch => {
+  return CommentAPIUtil.deleteComment(commentId).then(
+    comment => dispatch(removeComment(comment)),
+    errors => dispatch(receiveErrors(errors, 'comments'))
+  );
+};
