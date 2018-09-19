@@ -1,5 +1,6 @@
 class Comment < ApplicationRecord
   validates :body, :author_id, :post_id, presence: true
+  validates :body, length: { maximum: 300 }
 
   belongs_to :author,
     foreign_key: :author_id,
