@@ -27,12 +27,11 @@ mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuc
 
 
 
-DefaultPhoto = [
-  "big-girl.jpg", "cover-1.jpg",
-  "emma.jpg", "boss-bb.jpg",
-  'cutebaby.jpg', "favorite.jpeg",
-  "hithere.jpeg", "youcan.jpg"
-]
+Seedphoto = [
+  "https://s3.amazonaws.com/seedphoto/best-friend.jpg",
+  "https://s3.amazonaws.com/seedphoto/cutebaby.jpg",
+  "https://s3.amazonaws.com/seedphoto/favorite.jpeg"
+  ]
 
   imgs = []
 # DefaultPhoto.each do |el|
@@ -57,6 +56,16 @@ PostBody = [
   "Let's make the world a better place."
 ]
 
+
+# Post.destroy_all
+# Post.create!(body: PostBody[0] ,author_id:luke.id, image_url:'https://s3.us-east-1.amazonaws.com/aa-babybook-pro/posts/images/000/000/206/original/best-friend.jpg?1536255734')
+# Post.create!(body: PostBody[1] ,author_id:meiyao.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
+# Post.create!(body: PostBody[2] ,author_id:emma.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
+# Post.create!(body: PostBody[3] ,author_id:jordan.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
+# Post.create!(body: PostBody[4] ,author_id:kobe.id, image_url:'https://s3.amazonaws.com/seedphoto/best-friend.jpg' )
+# Post.create!(body: PostBody[5] ,author_id:jon.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
+# Post.create!(body: PostBody[6] ,author_id:taylor.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
+# Post.create!(body: PostBody[7] ,author_id:mark.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg')
 
 Post.destroy_all
 Post.create!(body: PostBody[0] ,author_id:luke.id, image: imgs[0])
