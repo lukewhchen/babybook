@@ -71,7 +71,7 @@ Post.destroy_all
 Post.create!(body: PostBody[0] ,author_id:luke.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
 Post.create!(body: PostBody[1] ,author_id:meiyao.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
 Post.create!(body: PostBody[2] ,author_id:emma.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
-Post.create!(body: PostBody[3] ,author_id:jordan.id, image: imgs[3] )
+Post.create!(body: PostBody[3] ,author_id:jordan.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
 Post.create!(body: PostBody[4] ,author_id:kobe.id, image: imgs[4] )
 Post.create!(body: PostBody[5] ,author_id:jon.id, image: imgs[5] )
 Post.create!(body: PostBody[6] ,author_id:taylor.id, image: imgs[6] )
