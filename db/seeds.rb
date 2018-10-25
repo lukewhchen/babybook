@@ -69,7 +69,7 @@ PostBody = [
 
 Post.destroy_all
 Post.create!(body: PostBody[0] ,author_id:luke.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
-Post.create!(body: PostBody[1] ,author_id:meiyao.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
+Post.create!(body: PostBody[1] ,author_id:meiyao.id, image: imgs[1] )
 Post.create!(body: PostBody[2] ,author_id:emma.id,  image: imgs[2] )
 Post.create!(body: PostBody[3] ,author_id:jordan.id, image: imgs[3] )
 Post.create!(body: PostBody[4] ,author_id:kobe.id, image: imgs[4] )
