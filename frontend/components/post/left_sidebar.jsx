@@ -8,7 +8,7 @@ const LeftSidebar = ({ currentUser }) => {
         <Link to={`/users/${currentUser.id}`}>
         <i className="fa fa-user-circle" aria-hidden="true">&nbsp;&nbsp;{currentUser.first_name}</i><br/></Link>
         <a href='https://www.independent.co.uk/topic/babies' target='_blank'>
-          <i className="fa fa-newspaper-o" aria-hidden="true">&nbsp;&nbsp;More Babys</i><br/></a>
+          <i className="fa fa-newspaper-o" aria-hidden="true">&nbsp;&nbsp;More Babies</i><br/></a>
         <a href='https://lukewhchen.github.io/Flip/' target='_blank'>
           <i className="fa fa-gamepad" aria-hidden="true">&nbsp;&nbsp;Puzzle Game</i><br/></a>
         <br/>
