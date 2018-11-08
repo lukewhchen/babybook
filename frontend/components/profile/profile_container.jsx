@@ -50,12 +50,12 @@ class ProfileContainer extends React.Component {
               <label className="user-icon">
                 <i className="fa fa-globe" aria-hidden="true">&nbsp;&nbsp;Intro</i>
               </label>
-              <p>User name: {this.props.user.fullName}</p>
-              <p>Email: {this.props.user.email}</p>
-              <p>Hometown: {this.props.user.hometown || "null"}</p>
-              <p>Workplace: {this.props.user.workplace || "null"}</p>
-              <p>School: {this.props.user.school || "null"}</p>
-              <p>Gender: {this.props.user.gender || "null"}</p>
+              <p><strong>User name:</strong> <em>{this.props.user.fullName}</em></p>
+              <p><strong>Email:</strong> <em>{this.props.user.email}</em></p>
+              <p><strong>Hometown:</strong> <em>{this.props.user.hometown || "null"}</em></p>
+              <p><strong>Workplace:</strong> <em>{this.props.user.workplace || "null"}</em></p>
+              <p><strong>School:</strong> <em>{this.props.user.school || "null"}</em></p>
+              <p><strong>Gender:</strong> <em>{this.props.user.gender || "null"}</em></p>
             </div>
 
             <div className="profile-post">
