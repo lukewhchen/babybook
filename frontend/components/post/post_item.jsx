@@ -7,9 +7,7 @@ function PostItem(props) {
   return (
     <li className="single-post">
       <Link className="user" to={`/users/${props.author.id}`}><i className="fa fa-user-circle" aria-hidden="true"/>{props.author.fullName}</Link>
-      <br/>
-      {props.post.body}
-      <br/>
+      <ul>{props.post.body}</ul>
         <img src={props.post.image_url}/>
       <br/>
       <label className="like-comment-share">

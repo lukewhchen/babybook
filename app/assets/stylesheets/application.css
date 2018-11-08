@@ -485,6 +485,11 @@
     overflow: hidden;
   }
 
+  .single-post > ul {
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+
   .user{
     color: #365899;
     font-size: 22px;
