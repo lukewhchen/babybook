@@ -679,5 +679,9 @@
   }
 
   .underline {
-  border-bottom: 1px solid black;
-}
+    width: 170px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+    border-width:5px;
+    border-bottom-style:double;
+  }
