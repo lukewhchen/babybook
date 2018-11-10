@@ -71,12 +71,12 @@
 
 .welcome-header {
   display: flex;
-  /* justify-content: space-around; */
   justify-content:flex-start;
   align-items: center;
   padding-left: 100px;
   background-color: #3b5998;
   height: 100px;
+  width: auto;
   color: white;
   border-bottom: 1px solid black;
   font-size: 50px;
