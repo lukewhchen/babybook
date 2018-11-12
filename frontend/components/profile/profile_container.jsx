@@ -6,6 +6,7 @@ import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from '../post/post_form';
 import PostItem from '../post/post_item';
+import Search from './search';
 
 
 class ProfileContainer extends React.Component {
@@ -26,12 +27,11 @@ class ProfileContainer extends React.Component {
         return <PostItem key={post.id} post={post} />;
       }
     });
-
     return (
       <div>
         <header>
           <Link to="/"><p className="mp-header">b</p></Link>
-          <input className="search-bar" type="text" placeholder=" Search" />
+          <input className="search-bar" type="text" placeholder="  Search" />
           <p className="current-user">
             <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
               <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
