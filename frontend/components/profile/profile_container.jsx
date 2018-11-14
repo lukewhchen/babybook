@@ -6,7 +6,7 @@ import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from '../post/post_form';
 import PostItem from '../post/post_item';
-import Search from './search';
+
 
 
 class ProfileContainer extends React.Component {
