@@ -6,12 +6,24 @@ import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from '../post/post_form';
 import PostItem from '../post/post_item';
-
-
+import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
+import { clearSearchResults } from '../../actions/search_actions';
+import SearchBarContainer from './search_bar_container';
 
 class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+  }
+
+  toggleDropdown(component) {
+    return () => {
+      if (this.props.dropdownDisplayed) {
+        this.props.hideDropdown();
+      } else {
+        this.props.showDropdown(component);
+      }
+    };
   }
 
   componentDidMount() {
@@ -27,11 +39,12 @@ class ProfileContainer extends React.Component {
         return <PostItem key={post.id} post={post} />;
       }
     });
+    // <input className="search-bar" type="text" placeholder="  Search" />
     return (
       <div>
         <header>
           <Link to="/"><p className="mp-header">b</p></Link>
-          <input className="search-bar" type="text" placeholder="  Search" />
+          <SearchBarContainer />
           <p className="current-user">
             <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
               <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
@@ -72,10 +85,16 @@ class ProfileContainer extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]};
+  const dropdownDisplayed = (
+    state.ui.dropdown.displayed
+  );
   return {
     user,
     currentUser: state.entities.users[state.session.id],
     posts: Object.values(state.entities.posts),
+    searchResults: state.ui.searchResults,
+    users: state.entities.users,
+    dropdownDisplayed,
   };
 };
 
@@ -84,6 +103,9 @@ const mapDispatchToProps = dispatch => ({
   fetchUser: userId => dispatch(fetchUser(userId)),
   fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: userId => dispatch(fetchPosts(userId)),
+  clearSearchResults: () => dispatch(clearSearchResults()),
+  showDropdown: component => dispatch(showDropdown(component)),
+  hideDropdown: () => dispatch(hideDropdown()),
 });
 
 export default connect(

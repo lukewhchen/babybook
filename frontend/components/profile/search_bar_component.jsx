@@ -45,10 +45,7 @@ class SearchBarComponent extends React.Component {
         return(
           <li className='search-result' key={user.id}>
             <Link to={`/users/${user.id}`} className='search-result-content'>
-              <div className='main-nav-minipic'>
-                <img src={user.profilePicUrl} />
-              </div>
-              <p>{user.fname} {user.lname}</p>
+              <p>{user.first_name} {user.last_name}</p>
             </Link>
           </li>
         );
@@ -60,19 +57,16 @@ class SearchBarComponent extends React.Component {
         </ul>
       );
     }
-
+        // <div className='nav-search-wrapper'>
     return (
       <div>
-        <div className='nav-search-wrapper'>
+        <div className='search-bar'>
           <input
             onChange={this.handleSearch}
             type='text'
-            placeholder='Search'
+            placeholder='Search...'
             value={this.state.input}
           />
-          <div className='nav-search-icon'>
-            <img src={window.magnifierURL} />
-          </div>
         </div>
         {searchResults}
       </div>
