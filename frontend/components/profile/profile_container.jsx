@@ -39,7 +39,7 @@ class ProfileContainer extends React.Component {
         return <PostItem key={post.id} post={post} />;
       }
     });
-    // <input className="search-bar" type="text" placeholder="  Search" />
+
     return (
       <div>
         <header>
