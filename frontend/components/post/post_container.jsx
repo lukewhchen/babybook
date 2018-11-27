@@ -30,7 +30,7 @@ class PostContainer extends React.Component {
               <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
                 <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
             </p>
-            <button className="logout-button" onClick={this.props.logout}>LOGOUT</button>
+            <button className="logout-button" onClick={this.props.logout}>LOG OUT</button>
           </header>
           <div className="MainPage-body">
             <main className="MainPage-content">
