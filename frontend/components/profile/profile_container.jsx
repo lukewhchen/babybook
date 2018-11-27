@@ -14,6 +14,7 @@ class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   toggleDropdown(component) {
@@ -24,6 +25,12 @@ class ProfileContainer extends React.Component {
         this.props.showDropdown(component);
       }
     };
+  }
+
+  handleClick() {
+    if (this.props.searchResults.length > 0) {
+      this.props.clearSearchResults();
+    }
   }
 
   componentDidMount() {
@@ -42,7 +49,7 @@ class ProfileContainer extends React.Component {
 
     return (
       <div>
-        <header>
+        <header onClick={this.handleClick}>
           <Link to="/"><p className="mp-header">b</p></Link>
           <SearchBarContainer />
           <p className="current-user">
