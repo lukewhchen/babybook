@@ -34,11 +34,12 @@ class ProfileContainer extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   window.scrollTo(0, 0);
-  //   this.props.fetchUser(this.props.match.params.userId);
-  //   this.props.fetchPosts(this.props.match.params.userId);
-  // }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    this.handleClick();
+    this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchPosts(this.props.match.params.userId);
+  }
 
   render() {
     const reversePosts = this.props.posts.reverse();

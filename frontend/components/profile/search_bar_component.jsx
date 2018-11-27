@@ -35,7 +35,7 @@ class SearchBarComponent extends React.Component {
   clearInput() {
     this.setState({ input: '' });
   }
-              // <p>{user.first_name} {user.last_name}</p>
+
   render() {
     let searchResults;
     if (this.state.searchResults.length < 1) {

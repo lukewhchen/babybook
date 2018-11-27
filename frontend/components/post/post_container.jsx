@@ -8,8 +8,21 @@ import { logout } from '../../actions/session_actions';
 import PostForm from './post_form';
 import LeftSidebar from './left_sidebar';
 import RightSidebar from './right_sidebar';
+import { clearSearchResults } from '../../actions/search_actions';
+import SearchBarContainer from '../profile/search_bar_container';
 
 class PostContainer extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    if (this.props.searchResults.length > 0) {
+      this.props.clearSearchResults();
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchPosts();
@@ -24,15 +37,16 @@ class PostContainer extends React.Component {
 
     return (
         <div>
-          <header>
+          <header onClick={this.handleClick}>
             <Link to="/"><p className="mp-header">b</p></Link>
-            <input className="search-bar" type="text" placeholder=" Search..." />
+            <SearchBarContainer />
             <p className="current-user">
               <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
                 <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
             </p>
             <button className="logout-button" onClick={this.props.logout}>Log Out</button>
           </header>
+
           <div className="MainPage-body">
             <main className="MainPage-content">
               <PostForm />
@@ -56,7 +70,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: () => dispatch(fetchPosts()),
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  clearSearchResults: () => dispatch(clearSearchResults()),
 });
 
 export default connect(
