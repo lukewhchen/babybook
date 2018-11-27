@@ -66,5 +66,5 @@ Post.create!(body: PostBody[2] ,author_id:emma.id,  image: File.open(Rails.root.
 Post.create!(body: PostBody[3] ,author_id:jordan.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'bear.jpg')))
 Post.create!(body: PostBody[4] ,author_id:kobe.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'kobebaby.jpg')))
 Post.create!(body: PostBody[5] ,author_id:jon.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'youknownot.jpg')))
-Post.create!(body: PostBody[6] ,author_id:taylor.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'hithere.jpg')))
+Post.create!(body: PostBody[6] ,author_id:taylor.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'youcan.jpg')))
 Post.create!(body: PostBody[7] ,author_id:mark.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'mark.jpg')))
