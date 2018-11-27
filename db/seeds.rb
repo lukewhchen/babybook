@@ -53,26 +53,18 @@ PostBody = [
   "Here she is ... the newest member of the Mamba family!",
   "My favorite show in Winterfell.",
   "Here is the answer you are looking for!",
-  "Let's make the world a better place."
+  "Let's make the world a better place.",
+  "Best friend forever!",
+  "Let it go~~"
 ]
 
-
-# Post.destroy_all
-# Post.create!(body: PostBody[0] ,author_id:luke.id, image_url:'https://s3.us-east-1.amazonaws.com/aa-babybook-pro/posts/images/000/000/206/original/best-friend.jpg?1536255734')
-# Post.create!(body: PostBody[1] ,author_id:meiyao.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
-# Post.create!(body: PostBody[2] ,author_id:emma.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
-# Post.create!(body: PostBody[3] ,author_id:jordan.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
-# Post.create!(body: PostBody[4] ,author_id:kobe.id, image_url:'https://s3.amazonaws.com/seedphoto/best-friend.jpg' )
-# Post.create!(body: PostBody[5] ,author_id:jon.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
-# Post.create!(body: PostBody[6] ,author_id:taylor.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg' )
-# Post.create!(body: PostBody[7] ,author_id:mark.id, image_url:'https://s3.amazonaws.com/seedphoto/cutebaby.jpg')
 
 Post.destroy_all
 Post.create!(body: PostBody[0] ,author_id:luke.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
 Post.create!(body: PostBody[1] ,author_id:meiyao.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'cutebaby.jpg')))
-Post.create!(body: PostBody[2] ,author_id:emma.id,  image: imgs[2] )
-Post.create!(body: PostBody[3] ,author_id:jordan.id, image: imgs[3] )
-Post.create!(body: PostBody[4] ,author_id:kobe.id, image: imgs[4] )
-Post.create!(body: PostBody[5] ,author_id:jon.id, image: imgs[5] )
-Post.create!(body: PostBody[6] ,author_id:taylor.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'emma.jpg')))
-Post.create!(body: PostBody[7] ,author_id:mark.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'biggirl.jpg')))
+Post.create!(body: PostBody[2] ,author_id:emma.id,  image: File.open(Rails.root.join('app', 'assets', 'images', 'george.jpg')))
+Post.create!(body: PostBody[3] ,author_id:jordan.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'bear.jpg')))
+Post.create!(body: PostBody[4] ,author_id:kobe.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'kobebaby.jpg')))
+Post.create!(body: PostBody[5] ,author_id:jon.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'youknownot.jpg')))
+Post.create!(body: PostBody[6] ,author_id:taylor.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'hithere.jpg')))
+Post.create!(body: PostBody[7] ,author_id:mark.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'mark.jpg')))
