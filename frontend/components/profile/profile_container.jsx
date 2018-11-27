@@ -6,26 +6,26 @@ import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 import PostForm from '../post/post_form';
 import PostItem from '../post/post_item';
-import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
+// import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
 import { clearSearchResults } from '../../actions/search_actions';
 import SearchBarContainer from './search_bar_container';
 
 class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
-    this.toggleDropdown = this.toggleDropdown.bind(this);
+    // this.toggleDropdown = this.toggleDropdown.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  toggleDropdown(component) {
-    return () => {
-      if (this.props.dropdownDisplayed) {
-        this.props.hideDropdown();
-      } else {
-        this.props.showDropdown(component);
-      }
-    };
-  }
+  // toggleDropdown(component) {
+  //   return () => {
+  //     if (this.props.dropdownDisplayed) {
+  //       this.props.hideDropdown();
+  //     } else {
+  //       this.props.showDropdown(component);
+  //     }
+  //   };
+  // }
 
   handleClick() {
     if (this.props.searchResults.length > 0) {
@@ -33,11 +33,11 @@ class ProfileContainer extends React.Component {
     }
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    this.props.fetchUser(this.props.match.params.userId);
-    this.props.fetchPosts(this.props.match.params.userId);
-  }
+  // componentDidMount() {
+  //   window.scrollTo(0, 0);
+  //   this.props.fetchUser(this.props.match.params.userId);
+  //   this.props.fetchPosts(this.props.match.params.userId);
+  // }
 
   render() {
     const reversePosts = this.props.posts.reverse();
@@ -111,8 +111,8 @@ const mapDispatchToProps = dispatch => ({
   fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: userId => dispatch(fetchPosts(userId)),
   clearSearchResults: () => dispatch(clearSearchResults()),
-  showDropdown: component => dispatch(showDropdown(component)),
-  hideDropdown: () => dispatch(hideDropdown()),
+  // showDropdown: component => dispatch(showDropdown(component)),
+  // hideDropdown: () => dispatch(hideDropdown()),
 });
 
 export default connect(
