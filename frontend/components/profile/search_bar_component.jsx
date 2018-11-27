@@ -35,7 +35,7 @@ class SearchBarComponent extends React.Component {
   clearInput() {
     this.setState({ input: '' });
   }
-
+              // <p>{user.first_name} {user.last_name}</p>
   render() {
     let searchResults;
     if (this.state.searchResults.length < 1) {
@@ -45,7 +45,7 @@ class SearchBarComponent extends React.Component {
         return(
           <li className='search-result' key={user.id}>
             <Link to={`/users/${user.id}`} className='search-result-content'>
-              <p>{user.first_name} {user.last_name}</p>
+              <i className="fa fa-user-circle" aria-hidden="true"/><p>{user.first_name} {user.last_name}</p>
             </Link>
           </li>
         );

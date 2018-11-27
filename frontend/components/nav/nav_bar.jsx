@@ -40,13 +40,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-    // const reversePosts = this.props.posts.reverse();
-    // const userPosts = reversePosts.map(post => {
-    //   if (post.author_id === this.props.user.id) {
-    //     return <PostItem key={post.id} post={post} />;
-    //   }
-    // });
-
     return (
       <div>
           <Link to="/"><p className="mp-header">b</p></Link>

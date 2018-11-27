@@ -9,6 +9,7 @@ import PostItem from '../post/post_item';
 // import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
 import { clearSearchResults } from '../../actions/search_actions';
 import SearchBarContainer from './search_bar_container';
+// import NavBar from '../nav/nav_bar';
 
 class ProfileContainer extends React.Component {
   constructor(props){
