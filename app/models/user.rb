@@ -23,7 +23,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
   has_attached_file :profile_photo, default_url: "profile1.jpg"
   validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
-  has_attached_file :cover_photo, default_url: "cover-1.jpg"
+  has_attached_file :cover_photo, default_url: "cover1.jpg"
   validates_attachment_content_type :cover_photo, content_type: /\Aimage\/.*\Z/
   after_initialize :ensure_session_token
 
