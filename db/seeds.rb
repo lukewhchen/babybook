@@ -52,7 +52,6 @@ PostBody = [
   "Here is the answer you are looking for!",
   "Let's make the world a better place.",
   "Best friend forever!",
-  "Let it go~~"
 ]
 
 
