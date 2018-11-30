@@ -57,7 +57,7 @@ class SearchBarComponent extends React.Component {
         </ul>
       );
     }
-        // <div className='nav-search-wrapper'>
+
     return (
       <div>
         <div className='search-bar'>
