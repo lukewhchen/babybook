@@ -34,14 +34,6 @@ mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuc
   cover_photo: File.open(Rails.root.join('app', 'assets', 'images', 'coverhighway.jpg')))
 
 
-# Seedphoto = [
-#   "https://s3.amazonaws.com/seedphoto/best-friend.jpg",
-#   "https://s3.amazonaws.com/seedphoto/cutebaby.jpg",
-#   "https://s3.amazonaws.com/seedphoto/favorite.jpeg"
-#   ]
-
-
-
 PostBody = [
   "My little princess.",
   "I Love YOU so much Baby!! Every day I wake up and fall in love with YOU all over again!!",
