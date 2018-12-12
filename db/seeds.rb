@@ -42,8 +42,7 @@ PostBody = [
   "Here she is ... the newest member of the Mamba family!",
   "My favorite show in Winterfell.",
   "Here is the answer you are looking for!",
-  "Let's make the world a better place.",
-  "really ??"
+  "Let's make the world a better place."
 ]
 
 
