@@ -5,3 +5,4 @@ class Api::SearchController < ApplicationController
   end
 end
 # tp6 search by "erts" will crash
+# debugger
