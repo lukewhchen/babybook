@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   Default = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"]
 
   # has_attached_file :image, default_url: "boss-bb.jpg"
-  # check tp6
+  # check tp6: remove dafault
   has_attached_file :image, default_url: Default.shuffle.first
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
