@@ -46,11 +46,11 @@ class PostContainer extends React.Component {
           </header>
 
           <div className="MainPage-body">
+            <nav className="MainPage-nav"><LeftSidebar currentUser={currentUser}/></nav>
             <main className="MainPage-content">
               <PostForm />
               <ul>{posts}</ul>
             </main>
-            <nav className="MainPage-nav"><LeftSidebar currentUser={currentUser}/></nav>
             <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
         </div>

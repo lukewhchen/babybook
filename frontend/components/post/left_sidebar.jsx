@@ -12,11 +12,13 @@ const LeftSidebar = ({ currentUser }) => {
         <a href='https://lukewhchen.github.io/Flip/' target='_blank'>
           <i className="fa fa-gamepad" aria-hidden="true"><ul>&nbsp;&nbsp;Puzzle Game</ul></i><br/></a>
         <br/>
-        <p className='underline'>About Babybook</p>
+        <p>About Babybook</p>
         <a href='https://www.linkedin.com/in/luke-chen-42342458/' target='_blank'>
           <i className="fa fa-linkedin-square" aria-hidden="true"><ul>&nbsp;&nbsp;LinkedIn</ul></i></a>
+        <br/>
         <a href='https://github.com/lukewhchen' target='_blank'>
           <i className="fa fa-github" aria-hidden="true"><ul>&nbsp;&nbsp;Github</ul></i></a>
+        <br/>
         <a href='https://lukewhchen.github.io/' target='_blank'>
           <i className="fa fa-tv" aria-hidden="true"><ul>&nbsp;Portfolio</ul></i><br/></a>
       </label>

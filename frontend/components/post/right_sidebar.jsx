@@ -21,7 +21,7 @@ const RightSidebar = () => {
         <i className="fa fa-child" aria-hidden="true" />
         <a href="http://redtri.com/san-francisco/best-san-francisco-playgrounds/" target="_blank">Check out a new playground</a><br/>
         <i className="fa fa-child" aria-hidden="true" />
-        <a href="https://www.independent.co.uk/news/business/news/peppa-pig-entertainment-one-117-new-episodes-cartoon-global-market-a7743991.html" target="_blank">Peppa Pig owner Entertainment One &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;announces 117 new episodes</a><br/>
+        <a href="https://www.independent.co.uk/news/business/news/peppa-pig-entertainment-one-117-new-episodes-cartoon-global-market-a7743991.html" target="_blank">Peppa Pig owner Entertainment One announces 117 new episodes</a><br/>
     </li>
   );
 };
