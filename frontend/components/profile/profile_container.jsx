@@ -52,7 +52,7 @@ class ProfileContainer extends React.Component {
     return (
       <div>
         <header onClick={this.handleClick}>
-          <Link to="/"><p className="mp-header">b</p></Link>
+          <Link to="/"><p className="bb-logo">b</p></Link>
           <SearchBarContainer />
           <p className="current-user">
             <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>

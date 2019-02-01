@@ -54,7 +54,7 @@
    font-size: 14px;
  }
 
- .mp-header {
+ .bb-logo {
    background-color: white;
    min-width: 25px;
    height: 30px;
@@ -62,7 +62,6 @@
    margin-right: 10px;
    font-size: 26px;
    text-align: center;
-   margin-left: 140px;
    padding-left: 5px;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
    border-radius: 2px;
@@ -178,15 +177,15 @@
    color: black;
    margin-right: 200px;
    font-size: 22px;
-   align-items: center;
-   justify-content: space-between;
+   /* align-items: center; */
+   /* justify-content: space-between; */
    background: #fff;
    border-radius: 3px;
-   margin-bottom: 2px;
+   /* margin-bottom: 2px; */
  }
  .search-bar > input {
    font-size: 22px;
-   line-height: 30px;
+   line-height: 36px;
    padding-left: 6px;
  }
 
@@ -202,7 +201,7 @@
     position: relative;
   }
 
- .current-user {
+ /* .current-user {
    color: white;
    min-width: 150px;
    margin-right: 250px;
@@ -211,21 +210,21 @@
  }
 
  .current-user > i {
-  color: white;
-  font-size: 25px;
- }
+  /* color: black; */
+  /* font-size: 25px; */
+ /* } */
 
  .logout-button {
    color: white;
    background-color: #4267b2;
-   border: 2px solid #2a477b;
+   border: 1px solid #2a477b;
    text-align: center;
    height: 30px;
    width: 60px;
    font-size: 14px;
-   font-weight: bold;
-   margin-right: 10px;
+   border-radius: 5px;
  }
+
 
  .logout-button:hover {
    background-color: #2a477b;
@@ -515,13 +514,14 @@
   .user-link{
     color: white;
     font-size: 16px;
+    line-height: 30px;
     font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+    margin-right: 50px;
   }
 
   .user-link > i {
    color: white;
-   margin-right: 8px;
-   font-size: 25px;
+   font-size: 22px;
   }
 
 
@@ -715,4 +715,10 @@
 
   .fa-user-circle {
     margin-right: 5px;
+  }
+
+  .xyz {
+    height: 65px;
+    display: flex;
+    justify-content: center;
   }

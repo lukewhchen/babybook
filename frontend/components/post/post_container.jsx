@@ -37,13 +37,11 @@ class PostContainer extends React.Component {
 
     return (
         <div>
-          <header onClick={this.handleClick}>
-            <Link to="/"><p className="mp-header">b</p></Link>
+          <header className="xyz" onClick={this.handleClick}>
+            <Link to="/"><p className="bb-logo">b</p></Link>
             <SearchBarContainer />
-            <p className="current-user">
-              <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
-                <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
-            </p>
+            <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
+            <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
             <button className="logout-button" onClick={this.props.logout}>Log Out</button>
           </header>
 
