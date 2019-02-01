@@ -158,13 +158,13 @@
  .login-button {
    color: white;
    background-color: #4267b2;
-   border: 2px solid #2a477b;
+   border: 1px solid #2a477b;
    text-align: center;
-   height: 38px;
-   width: 60px;
+   height: 26px;
+   width: 50px;
    font-size: 14px;
-   font-weight: bold;
    margin-right: 10px;
+   border-radius: 5px;
  }
 
  .login-button:hover {

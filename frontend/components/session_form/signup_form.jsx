@@ -37,7 +37,7 @@ class SignupForm extends React.Component {
     return(
       <form className="signup_form" onSubmit={this.handleSubmit}>
         <h2>Join Us</h2>
-        <h4>It's joy and always will be.</h4>
+        <h4>It's joyful and always will be.</h4>
         {this.handleErrors()}
           <input type='text' placeholder='  First name'
                   ref={(input) => this.first_name = input}/>
