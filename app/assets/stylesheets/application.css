@@ -607,12 +607,13 @@
   }
 
   .cover-imgs {
-    margin-top: 64px;
-    margin-left: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1027px;
     height: 450px;
     border: 1px solid #A2A3A3;
-    background-color: white
+    background-color: white;
   }
 
   .cover-imgs img {
@@ -622,27 +623,26 @@
 
   .cover-imgs h4 {
     position: relative;
-    top: -300px;
-    left: 260px;
-    width: 200px;
+    top: -240px;
+    left: 240px;
+    width: 400px;
     font-size: 34px;
-    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
   }
 
   #profile-imgs {
     position: relative;
     width: 200px;
     height: 200px;
-    top: -160px;
-    left: 40px;
+    top: -155px;
+    left: 20px;
     border: 1px solid #A2A3A3;
   }
 
 
   .profile-body {
     display: flex;
-    flex-direction: row;
-    margin-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1030px;
     height: 200px;
   }
@@ -700,7 +700,7 @@
     margin-right: 5px;
   }
 
-  .xyz {
+  .nav-bar {
     height: 50px;
     display: flex;
     justify-content: center;

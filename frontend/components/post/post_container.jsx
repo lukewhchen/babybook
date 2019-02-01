@@ -37,7 +37,7 @@ class PostContainer extends React.Component {
 
     return (
         <div>
-          <header className="xyz" onClick={this.handleClick}>
+          <header className="nav-bar" onClick={this.handleClick}>
             <Link to="/"><p className="bb-logo">b</p></Link>
             <SearchBarContainer />
             <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
