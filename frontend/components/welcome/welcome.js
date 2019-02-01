@@ -8,7 +8,7 @@ const Welcome = () => {
   return (
     <div>
       <HeadMessage />
-      <div className="test">
+      <div className="welcome-body">
         <InfoMessage />
         <SignupForm />
       </div>

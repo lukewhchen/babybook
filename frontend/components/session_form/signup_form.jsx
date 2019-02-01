@@ -47,13 +47,11 @@ class SignupForm extends React.Component {
                 ref={(input) => this.email = input}/>
           <input type='password' placeholder='  Password'
                 ref={(input) => this.password = input}/>
-          <div>
-            <select defaultValue='gender' ref={(input) => this.gender = input}>
-              <option disabled value='gender'>Gender</option>
-              <option value='male'>Male</option>
-              <option value='female'>Female</option>
-            </select>
-          </div>
+          <select defaultValue='gender' ref={(input) => this.gender = input}>
+            <option disabled value='gender'>Gender</option>
+            <option value='male'>Male</option>
+            <option value='female'>Female</option>
+          </select>
           <button className='signup-button'>Sign Up</button>
       </form>
     );
