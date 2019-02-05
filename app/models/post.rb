@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   # has_attached_file :image, default_url: "boss-bb.jpg"
   # check tp6: remove dafault
   has_attached_file :image, default_url: Default.shuffle.first
+  # has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :author,

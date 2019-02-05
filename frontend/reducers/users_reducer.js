@@ -21,11 +21,13 @@ const usersReducer =  (state = {}, action) => {
     case RECEIVE_POST:
       return merge({}, state, {[action.author.id]: action.author});
     case RECEIVE_SEARCH_RESULTS:
-      Object.values(action.users).forEach(id => {
-        delete newState[id];
-        newState[id] = action.users[id];
-      });
-      return newState;
+    debugger
+      return merge({}, state, action.users);
+      // Object.values(action.users).forEach(id => {
+      //   delete newState[id];
+      //   newState[id] = action.users[id];
+      // });
+      // return newState;
     default:
       return state;
   }
