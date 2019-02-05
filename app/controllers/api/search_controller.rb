@@ -4,5 +4,3 @@ class Api::SearchController < ApplicationController
     render 'api/users/index'
   end
 end
-# tp6 search by "erts" will crash
-# debugger try user combination.

@@ -21,7 +21,6 @@ const usersReducer =  (state = {}, action) => {
     case RECEIVE_POST:
       return merge({}, state, {[action.author.id]: action.author});
     case RECEIVE_SEARCH_RESULTS:
-    debugger
       return merge({}, state, action.users);
       // Object.values(action.users).forEach(id => {
       //   delete newState[id];
