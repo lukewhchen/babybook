@@ -18,7 +18,6 @@ class Api::PostsController < ApplicationController
       ran_idx = rand(PhotoLibrary.length)
       @post.image = File.open(File.join(Rails.root, 'app', 'assets', 'images', PhotoLibrary[ran_idx]))
     end
-    debugger
 
     if @post.save
       render :show

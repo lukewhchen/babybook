@@ -28,7 +28,6 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    // debugger
     const demoUser = {
       email: "jon@gmail.com",
       password: "876543"};
