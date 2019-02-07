@@ -10,7 +10,7 @@ import {
 
 const sessionReducer = (state = {id: null}, action) => {
   Object.freeze(state);
-
+  // debugger
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return {

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createPost } from '../../actions/post_actions';
+const PhotoLibrary = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"];
 
 class PostForm extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class PostForm extends React.Component {
   updateFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
+    debugger;
     fileReader.onloadend = () =>
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     if (file) {
@@ -41,10 +43,18 @@ class PostForm extends React.Component {
   submit(e) {
     e.preventDefault();
     const formData = new FormData();
+    debugger;
     formData.append("post[body]", this.state.body);
     if (this.state.imageFile) {
       formData.append("post[image]", this.state.imageFile);
     }
+    // else {
+    //   let randomImage = new Image(100, 100);
+    //   let randomNumber = Math.floor(Math.random() * (PhotoLibrary.length+1));
+    //   randomImage.src = PhotoLibrary[randomNumber];
+    //   formData.append("post[image]", randomImage );
+    //   debugger;
+    // }
     this.props.createPost(formData).then(() => {
       this.setState({ body: "", imageFile: null, imageUrl: null });
     });

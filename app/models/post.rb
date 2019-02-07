@@ -1,12 +1,10 @@
 class Post < ApplicationRecord
   validates :body, :author_id, presence: true
   validates :body, length: { maximum: 63206 }
-  Default = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"]
+  PhotoLibrary = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"]
+  debugger
 
-  # has_attached_file :image, default_url: "boss-bb.jpg"
-  # check tp6: remove dafault
-  has_attached_file :image, default_url: Default.shuffle.first
-  # has_attached_file :image
+  has_attached_file :image, default_url: PhotoLibrary.shuffle.first
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :author,
@@ -17,5 +15,10 @@ class Post < ApplicationRecord
     foreign_key: :post_id,
     class_name: :Comment,
     dependent: :destroy
+
+  def pick_random_picture
+
+  end
+
 
 end
