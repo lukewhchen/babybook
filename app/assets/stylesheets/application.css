@@ -144,15 +144,16 @@
    border-radius: 5px;
  }
 
- .posts-error {
+ #posts-error {
    position: absolute;
    font-size: 24px;
-   min-height: 30px;
    padding: 10px;
-   left: 200px;
+   left: 10px;
+   bottom: 120px;
    background-color: #FA686B;
    box-shadow: 2px 2px 5px #bababa;
    border-radius: 5px;
+   visibility: hidden;
  }
 
  .login-button {

@@ -13,11 +13,25 @@ class PostForm extends React.Component {
     this.checkErrors = this.checkErrors.bind(this);
   }
 
+  // handleErrors() {
+  //   if (this.checkErrors()) {
+  //     return (<p className='posts-error'>Please say something!</p>);
+  //   }
+  // }
+
   handleErrors() {
+    const eMsg = document.getElementById('posts-error');
+    // debugger;
     if (this.checkErrors()) {
-      return (<p className='posts-error'>Please say something!</p>);
+      eMsg.style.visibility = "visible";
+      setTimeout(() => {
+        eMsg.style.visibility = "hidden";
+        // this.props.clearError();
+        // tp6 need new mapDispatchToProps for clearError
+      }, 1000);
     }
   }
+  // setTimeout(function(){eMsg.style.visibility = "hidden";}, 1000);
 
   checkErrors() {
     return (this.props.errors.length > 0);
@@ -41,6 +55,7 @@ class PostForm extends React.Component {
 
   submit(e) {
     e.preventDefault();
+    this.handleErrors();
     const formData = new FormData();
     formData.append("post[body]", this.state.body);
     if (this.state.imageFile) {
@@ -66,7 +81,7 @@ class PostForm extends React.Component {
             <img src={this.state.imageUrl} id='post-img-preview' />
           }
           <br/>
-          {this.handleErrors()}
+          <p id='posts-error'>Please say something!</p>
           <label htmlFor="up-image" className="custom-file-upload">
             <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
           </label>
@@ -76,6 +91,7 @@ class PostForm extends React.Component {
     );
   }
 }
+// {this.handleErrors()}
 
 const mapStateToProps = (state) => {
   return {

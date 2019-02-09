@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   before_action :ensure_logged_in
-  PhotoLibrary = ["youcan.jpg", "hithere.jpeg", "cutebaby.jpg", "bestfriend.jpg", "george.jpg", "kobebaby.jpg"]
+  PhotoLibrary = ["youcan.jpg", "hithere.jpeg", "cutebaby.jpg", "bestfriend.jpg", "george.jpg", "kobebaby.jpg", "bear.jpg", "happyhalloween.jpg"]
 
   def index
     @posts = Post.all
@@ -18,6 +18,9 @@ class Api::PostsController < ApplicationController
       ran_idx = rand(PhotoLibrary.length)
       @post.image = File.open(File.join(Rails.root, 'app', 'assets', 'images', PhotoLibrary[ran_idx]))
     end
+    # if @post.without_attached_file?
+    #   @post.add_random_picture
+    # end
 
     if @post.save
       render :show
