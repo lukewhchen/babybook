@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../../actions/session_actions';
+import { login, clearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   errors: state.errors.login
 });
 
 const mapDispatchToProps = dispatch => ({
-  login: user => (dispatch(login(user)))
+  login: user => (dispatch(login(user))),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 class SessionForm extends React.Component {
@@ -24,6 +25,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.login(user);
+    this.props.clearErrors();
   }
 
   handleDemo(e) {
@@ -32,6 +34,7 @@ class SessionForm extends React.Component {
       email: "jon@gmail.com",
       password: "876543"};
     this.props.login(demoUser);
+    this.props.clearErrors();
   }
 
   handleErrors() {

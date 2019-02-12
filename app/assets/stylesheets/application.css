@@ -136,24 +136,24 @@
  .login-error {
    position: absolute;
    font-size: 15px;
-   min-height: 30px;
+   height: 30px;
    max-width: 200px;
    padding: 10px;
-   left: 600px;
+   top: 18px;
+   right: 3%;
    background-color: #EC3349;
    border-radius: 5px;
  }
 
- #posts-error {
+ .posts-error {
    position: absolute;
-   font-size: 24px;
+   font-size: 20px;
    padding: 10px;
-   left: 10px;
-   bottom: 120px;
+   left: 200px;
+   bottom: 2px;
    background-color: #FA686B;
    box-shadow: 2px 2px 5px #bababa;
    border-radius: 5px;
-   visibility: hidden;
  }
 
  .login-button {
@@ -288,17 +288,19 @@
  }
 
  .signup-error {
-   position: absolute;
+   position: relative;
    color: white;
-   font-size: 20px;
-   min-height: 30px;
-   max-width: 250px;
+   font-size: 18px;
+   height: 30px;
+   max-width: 230px;
+   text-align: center;
+   bottom: 50px;
+   left: 160px;
    padding: 10px;
-   right: 280px;
-   top: 550px;
    background-color: #EC3349;
    border-radius: 5px;
  }
+
  .signup_form > h2{
    padding-top: 10%;
  }

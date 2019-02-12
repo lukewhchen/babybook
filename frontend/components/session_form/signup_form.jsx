@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
+import { signup, clearErrors } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
@@ -14,13 +14,15 @@ class SignupForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    this.props.clearErrors();
     const user = this.createUserObject();
     this.props.signup(user);
   }
 
   handleErrors() {
     if (!this.props.errors.length > 0) return null;
-      return (<p className='signup-error'>{this.props.errors[0]}</p>);
+    // debugger;
+    return (<p className='signup-error'>{this.props.errors[0]}</p>);
   }
 
   createUserObject(){
@@ -38,7 +40,6 @@ class SignupForm extends React.Component {
       <form className="signup_form" onSubmit={this.handleSubmit}>
         <h2>Join Us</h2>
         <h4>It's joyful and always will be.</h4>
-        {this.handleErrors()}
           <input type='text' placeholder='  First name'
                   ref={(input) => this.first_name = input}/>
           <input type='text' placeholder='  Last name'
@@ -53,6 +54,7 @@ class SignupForm extends React.Component {
             <option value='female'>Female</option>
           </select>
           <button className='signup-button'>Sign Up</button>
+          {this.handleErrors()}
       </form>
     );
   }
@@ -66,7 +68,8 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    signup: (user) => dispatch(signup(user))
+    signup: (user) => dispatch(signup(user)),
+    clearErrors: () => dispatch(clearErrors())
   });
 };
 
