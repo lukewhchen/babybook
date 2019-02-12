@@ -201,19 +201,6 @@
     position: relative;
   }
 
- /* .current-user {
-   color: white;
-   min-width: 150px;
-   margin-right: 250px;
-   font-size: 16px;
-   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
- }
-
- .current-user > i {
-  /* color: black; */
-  /* font-size: 25px; */
- /* } */
-
  .logout-button {
    color: white;
    background-color: #4267b2;
@@ -224,7 +211,6 @@
    font-size: 14px;
    border-radius: 5px;
  }
-
 
  .logout-button:hover {
    background-color: #2a477b;

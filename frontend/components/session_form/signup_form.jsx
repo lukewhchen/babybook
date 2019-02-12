@@ -21,7 +21,6 @@ class SignupForm extends React.Component {
 
   handleErrors() {
     if (!this.props.errors.length > 0) return null;
-    // debugger;
     return (<p className='signup-error'>{this.props.errors[0]}</p>);
   }
 

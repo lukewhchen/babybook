@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { createPost } from '../../actions/post_actions';
 import { clearErrors } from '../../actions/session_actions';
-const PhotoLibrary = ["youcan.jpg", "hithere.jpg", "cutebaby.jpg"];
 
 class PostForm extends React.Component {
   constructor(props) {
