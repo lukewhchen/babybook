@@ -119,6 +119,7 @@
  .login-form {
    font-size: 18px;
    margin-left: 100px;
+   min-width: 550px;
  }
 
  .login-form > label > input {
