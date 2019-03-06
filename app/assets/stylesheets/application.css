@@ -207,7 +207,7 @@
    border: 1px solid #2a477b;
    text-align: center;
    height: 30px;
-   width: 60px;
+   min-width: 70px;
    font-size: 14px;
    border-radius: 5px;
  }
@@ -507,6 +507,7 @@
     line-height: 30px;
     font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
     margin-right: 50px;
+    min-width: 100px;
   }
 
   .user-link > i {
