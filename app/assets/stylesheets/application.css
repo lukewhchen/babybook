@@ -73,17 +73,18 @@
   display: flex;
   justify-content:center;
   align-items: center;
-  background-color: #3b5998;
+  background-color: rgb(60,90,153,1);
+  /* background: linear-gradient(180deg, rgba(59,89,152,0), rgba(59,89,152,1)); */
   height: 80px;
   color: white;
-  font-size: 48px;
+  font-size: 42px;
   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
  }
 
  .welcome-head a {
    min-width: 400px;
-   /* margin-left: 10px; */
+  font-weight: bold;
  }
 
  .left-login {
@@ -165,10 +166,10 @@
    border: 1px solid #2a477b;
    text-align: center;
    height: 26px;
-   width: 50px;
+   width: 56px;
    font-size: 14px;
    margin-right: 10px;
-   border-radius: 5px;
+   border-radius: 2px;
  }
 
  .login-button:hover {
