@@ -6,8 +6,10 @@ import SessionForm from '../session_form/session_form';
 const HeadMessage = () => {
   return (
     <div className='welcome-head'>
-      <Link to="/">babybook</Link>
-      <SessionForm />
+      <div className='wh-container'>
+        <Link to="/">babybook</Link>
+        <SessionForm />
+      </div>
     </div>
   );
 };

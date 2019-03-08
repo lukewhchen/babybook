@@ -43,16 +43,6 @@
  }
 
  textarea {
-   /* border: 1px dashed black;
-   height: 80px;
-   width: 400px;
-   resize: none;
-   position: relative;
-   box-sizing: border-box;
-   padding: 10px;
-   padding-top: 15px;
-   font-size: 20px;
-   background-color: pink; */
  }
 
  .bb-logo {
@@ -70,21 +60,23 @@
  }
 
 .welcome-head {
-  display: flex;
-  justify-content:center;
-  align-items: center;
   background-color: rgb(60,90,153,1);
-  /* background: linear-gradient(180deg, rgba(59,89,152,0), rgba(59,89,152,1)); */
   height: 80px;
   color: white;
   font-size: 42px;
   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-  /* font-weight: bold; */
  }
 
  .welcome-head a {
    min-width: 400px;
-  font-weight: bold;
+   font-weight: bold;
+ }
+
+ .wh-container {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
  }
 
  .left-login {
@@ -121,8 +113,9 @@
 
  .login-form {
    font-size: 18px;
-   margin-left: 100px;
    min-width: 550px;
+   float: right;
+   padding-top: 10px;
  }
 
  .login-form > label > input {
