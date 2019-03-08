@@ -6,7 +6,7 @@ import HeadMessage from './head_message';
 
 const Welcome = () => {
   return (
-    <div>
+    <div className="wel-container">
       <HeadMessage />
       <div className="welcome-body">
         <InfoMessage />

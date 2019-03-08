@@ -36,17 +36,18 @@ class SignupForm extends React.Component {
   render(){
 
     return(
-      <form className="signup_form" onSubmit={this.handleSubmit}>
-        <h2>Join Us</h2>
-        <h4>It's joyful and always will be.</h4>
+      <div className="signup-container">
+        <form className="signup_form" onSubmit={this.handleSubmit}>
+          <h2>Join Us</h2>
+          <h4>It's joyful and always will be.</h4>
           <input type='text' placeholder='  First name'
-                  ref={(input) => this.first_name = input}/>
+            ref={(input) => this.first_name = input}/>
           <input type='text' placeholder='  Last name'
-                  ref={(input) => this.last_name = input}/>
+            ref={(input) => this.last_name = input}/>
           <input type='text' placeholder='  Email address'
-                ref={(input) => this.email = input}/>
+            ref={(input) => this.email = input}/>
           <input type='password' placeholder='  Password'
-                ref={(input) => this.password = input}/>
+            ref={(input) => this.password = input}/>
           <select defaultValue='gender' ref={(input) => this.gender = input}>
             <option disabled value='gender'>Gender</option>
             <option value='male'>Male</option>
@@ -54,7 +55,8 @@ class SignupForm extends React.Component {
           </select>
           <button className='signup-button'>Sign Up</button>
           {this.handleErrors()}
-      </form>
+        </form>
+      </div>
     );
   }
 }

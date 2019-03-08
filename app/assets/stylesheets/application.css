@@ -79,27 +79,6 @@
   padding-top: 20px;
  }
 
- .left-login {
-   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-   color: black;
-   font-size: 20px;
-   min-width: 600px;
- }
-
- .left-login > h2{
-   padding-top: 10%;
- }
-
- .left-login > h3{
-   padding-top: 10px;
- }
-
- .left-login > li{
-   padding-left: 3%;
-   padding-right: 8%;
-   padding-top: 20px;
- }
-
  .welcome-foot {
    clear: both;
    color: #1E90FF;
@@ -115,7 +94,7 @@
    font-size: 18px;
    min-width: 550px;
    float: right;
-   padding-top: 10px;
+   padding-top: 12px;
  }
 
  .login-form > label > input {
@@ -251,14 +230,43 @@
    background-color: #2a477b;
    cursor: pointer;
  }
+ .wel-container {
+   background-color: #edf0f5;;
+ }
 
  .welcome-body {
+   width: 1000px;
+   margin: 0 auto;
    display: flex;
-   justify-content: center;
    padding-bottom: 50px;
    height: 90vh;
  }
+ .signup-container {
+   display: block;
+   width: 450px;
+ }
 
+ .left-login {
+   display: block;
+   font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+   color: black;
+   font-size: 20px;
+   width: 550px;
+ }
+
+ .left-login > h2{
+   padding-top: 10%;
+ }
+
+ .left-login > h3{
+   padding-top: 10px;
+ }
+
+ .left-login > li{
+   padding-left: 3%;
+   padding-right: 8%;
+   padding-top: 20px;
+ }
 
  .signup_form {
    display: flex;
@@ -575,7 +583,7 @@
     /* min-width: 300px; */
     /* order: -1; */
     font-size: 15px;
-    background-color: #edf0f5;;
+    background-color: #edf0f5;
   }
 
   /* .MainPage-ads { */
