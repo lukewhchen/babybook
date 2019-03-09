@@ -53,8 +53,6 @@ class PostContainer extends React.Component {
                   <button className="logout-button" onClick={this.props.logout}>Log Out</button>
             </div>
           </header>
-
-
           <div className="MainPage-body">
             <nav className="MainPage-nav"><LeftSidebar currentUser={currentUser}/></nav>
             <main className="MainPage-content">
