@@ -185,7 +185,8 @@
    height: 30px;
    min-width: 70px;
    font-size: 14px;
-   border-radius: 5px;
+   border-radius: 2px;
+   margin-left: 20px;
  }
 
  .logout-button:hover {
@@ -511,8 +512,8 @@
     font-size: 16px;
     line-height: 30px;
     font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-    margin-right: 50px;
-    min-width: 100px;
+    /* margin-right: 50px; */
+    min-width: 150px;
   }
 
   .user-link > i {
