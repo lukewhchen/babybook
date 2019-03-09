@@ -53,11 +53,16 @@ class ProfileContainer extends React.Component {
       <div>
         <header className="nav-container" onClick={this.handleClick}>
           <div className="nav-bar">
-              <Link to="/"><p className="bb-logo">b</p></Link>
-              <SearchBarContainer />
-              <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
+              <div className="nav-left">
+                <Link to="/"><p className="bb-logo">b</p></Link>
+                <SearchBarContainer />
+              </div>
+              <div className="nav-right">
+                <Link className="user-link" to={`/users/${this.props.currentUser.id}`}>
                 <i className="fa fa-user-circle" aria-hidden="true"/>{this.props.currentUser.fullName}</Link>
+                <Link to="/"><p className="home">HOME</p></Link>
                 <button className="logout-button" onClick={this.props.logout}>Log Out</button>
+              </div>
           </div>
         </header>
 

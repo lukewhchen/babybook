@@ -153,7 +153,7 @@
    width: 500px;
    height: 30px;
    color: black;
-   margin-right: 430px;
+   /* margin-right: 430px; */
    font-size: 22px;
    background: #fff;
    border-radius: 3px;
@@ -182,11 +182,10 @@
    background-color: #4267b2;
    border: 1px solid #2a477b;
    text-align: center;
-   height: 30px;
-   min-width: 70px;
    font-size: 14px;
    border-radius: 2px;
    margin-left: 20px;
+   min-width: 60px;
  }
 
  .logout-button:hover {
@@ -507,19 +506,50 @@
    margin-bottom: 10px;
   }
 
+  .nav-left {
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-bar {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .user-link{
     color: white;
     font-size: 16px;
     line-height: 30px;
     font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-    /* margin-right: 50px; */
-    min-width: 150px;
   }
 
   .user-link > i {
    color: white;
    font-size: 22px;
   }
+
+
+   .home {
+    line-height: 30px;
+    font-size: 16px;
+    margin-left: 20px;
+    min-width: 70px;
+    align-items: center;
+    text-align: center;
+   }
+
+   .home:hover {
+     background-color: #2a477b;
+     cursor: pointer;
+   }
 
 
   .like-comment-share {
@@ -685,9 +715,4 @@
 
   .fa-user-circle {
     margin-right: 5px;
-  }
-
-  .nav-bar {
-    display: flex;
-    margin: 0 auto;
   }
