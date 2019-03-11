@@ -60,7 +60,8 @@
  }
 
 .welcome-head {
-  background-color: rgb(60,90,153,1);
+  /* background-color: rgb(60,90,153,1); */
+  background-color: #4267b2;
   height: 80px;
   color: white;
   font-size: 42px;
