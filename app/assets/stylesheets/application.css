@@ -60,8 +60,8 @@
  }
 
 .welcome-head {
-  background-color: rgba(60,90,153,1);
-  /* background-color: #4267b2; */
+  /* background-color: rgba(60,90,153,1); */
+  background-color: #4e70b6;
   height: 80px;
   color: white;
   font-size: 42px;
@@ -589,7 +589,7 @@
     width: 100%;
     display: flex;
     align-items: flex-end;
-    background-color: #3b5998;
+    background-color: #4e70b6;
     height: 50px;
     padding-bottom: 15px;
     color: white;
@@ -695,10 +695,23 @@
     color: #4267b2;
   }
 
-  .search-results {
+  .search-results{
     width: 498px;
     position: absolute;
     z-index: 9;
+    /* margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px; */
+  }
+
+  .search-result{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+  .search-result:hover {
+    background-color: #cddffd;
+    cursor: pointer;
   }
 
   .search-result-content {
