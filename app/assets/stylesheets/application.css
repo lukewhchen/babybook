@@ -161,7 +161,8 @@
 
  .search-bar > input {
    font-size: 22px;
-   line-height: 36px;
+   height: 30px;
+   width: 494px;
    padding-left: 6px;
  }
 
