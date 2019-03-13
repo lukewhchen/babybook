@@ -18,6 +18,8 @@ class SearchBarComponent extends React.Component {
     this.setState({ input: e.target.value }, () => {
       if (this.state.input.length > 0) {
         this.props.fetchSearchResults(this.state.input);
+      } else {
+        this.props.clearSearchResults();
       }
     });
   }
