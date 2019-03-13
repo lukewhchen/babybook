@@ -135,8 +135,8 @@
 
  .login-button {
    color: white;
-   background-color: #4267b2;
-   border: 1px solid #2a477b;
+   background-color: #4e70b6;
+   border: 1px solid #325aa3;
    text-align: center;
    height: 26px;
    width: 56px;
@@ -180,8 +180,8 @@
 
  .logout-button {
    color: white;
-   background-color: #4267b2;
-   border: 1px solid #2a477b;
+   background-color: #4e70b6;
+   border: 1px solid #325aa3;
    text-align: center;
    font-size: 14px;
    border-radius: 2px;
