@@ -358,6 +358,9 @@
   border-radius: 5px;
   font-size: 20px;
  }
+ .left-icon {
+   position: fixed;
+ }
 
  .left-icon i{
    color: #2F4F4F;
@@ -375,7 +378,6 @@
 
 .left-icon i:active {
   color: blue;
-  cursor: pointer;
 }
 
 .left-icon p {
@@ -391,6 +393,7 @@
 }
 
  .right-side {
+  position: fixed;
   background-color: white;
   width: 350px;
   border-radius: 4px;
