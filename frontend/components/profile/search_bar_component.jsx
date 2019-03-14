@@ -5,9 +5,9 @@ import { withRouter, Link } from 'react-router-dom';
 class SearchBarComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSearch = this.handleSearch.bind(this);
-    this.clearInput = this.clearInput.bind(this);
-    this.state = {
+      this.handleSearch = this.handleSearch.bind(this);
+      this.clearInput = this.clearInput.bind(this);
+      this.state = {
       input: '',
       searchResults: this.props.searchResults
     };
