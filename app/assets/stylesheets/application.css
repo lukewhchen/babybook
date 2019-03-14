@@ -411,13 +411,9 @@
 
 /* small fa fa logo */
  .right-side > i {
-  /* display: inline-flex; */
-  /* color: #33A3FF; */
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
-  /* margin-left: 1em; */
-  /* text-indent: -3em; */
  }
 /* text */
   .right-side a {
