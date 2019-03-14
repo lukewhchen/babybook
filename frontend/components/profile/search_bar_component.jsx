@@ -40,21 +40,19 @@ class SearchBarComponent extends React.Component {
   }
 
   render() {
-    let searchResults;
-    if (this.state.searchResults.length < 1) {
-      searchResults = null;
-    } else {
-      const searchResultItems = this.state.searchResults.map(user => {
-        return(
-          <li className='search-result' key={user.id}>
-            <Link to={`/users/${user.id}`} className='search-result-content'>
+    let displayedSearchResults = null;
+    if (this.state.searchResults.length >= 1) {
+        const searchResultItems = this.state.searchResults.map(user => {
+          return(
+            <li className='search-result' key={user.id}>
+              <Link to={`/users/${user.id}`} className='search-result-content'>
               <i className="fa fa-user-circle" aria-hidden="true"/><p>{user.first_name} {user.last_name}</p>
-            </Link>
-          </li>
-        );
+              </Link>
+            </li>
+          );
       });
 
-      searchResults = (
+      displayedSearchResults = (
         <ul className='search-results content-item'>
           {searchResultItems}
         </ul>
@@ -71,7 +69,7 @@ class SearchBarComponent extends React.Component {
             value={this.state.input}
           />
         </div>
-        {searchResults}
+        {displayedSearchResults}
       </div>
     );
   }
