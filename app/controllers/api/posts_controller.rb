@@ -3,12 +3,15 @@ class Api::PostsController < ApplicationController
   PhotoLibrary = ["youcan.jpg", "hithere.jpeg", "cutebaby.jpg", "bestfriend.jpg", "george.jpg", "kobebaby.jpg", "bear.jpg", "happyhalloween.jpg"]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.includes(:author)
+    # @posts = Post.most_recently(10)
+    # try to spped up loading posts rate no working yet...
     render :index
   end
 
   def show
     @post = Post.find(params[:id])
+    # @post = Post.by_author(params[:id])
     render :show
   end
 
