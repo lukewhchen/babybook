@@ -4,14 +4,11 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:author)
-    # @posts = Post.most_recently(10)
-    # try to spped up loading posts rate no working yet...
     render :index
   end
 
   def show
     @post = Post.find(params[:id])
-    # @post = Post.by_author(params[:id])
     render :show
   end
 
@@ -21,9 +18,6 @@ class Api::PostsController < ApplicationController
       ran_idx = rand(PhotoLibrary.length)
       @post.image = File.open(File.join(Rails.root, 'app', 'assets', 'images', PhotoLibrary[ran_idx]))
     end
-    # if @post.without_attached_file?
-    #   @post.add_random_picture
-    # end
 
     if @post.save
       render :show
