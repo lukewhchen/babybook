@@ -6,7 +6,7 @@ import { Link, withRouter } from "react-router-dom";
 function PostItem(props) {
   return (
     <li className="single-post">
-      <Link className="user" to={`/users/${props.author.id}`}><i className="fa fa-user-circle" aria-hidden="true"/>{props.author.fullName}</Link>
+      <Link className="user" to={`/users/${props.post.author_id}`}><i className="fa fa-user-circle" aria-hidden="true"/>{props.post.author_name}</Link>
       <ul>{props.post.body}</ul>
         <img src={props.post.image_url}/>
       <br/>
@@ -19,13 +19,4 @@ function PostItem(props) {
   );
 }
 
-
-const mapStateToProps = (state, ownProps) => {
-  const authorId = ownProps.post.author_id;
-  const author = state.entities.users[authorId];
-  return {
-    author: author
-  };
-};
-
-export default withRouter(connect(mapStateToProps)(PostItem));
+export default withRouter((PostItem));

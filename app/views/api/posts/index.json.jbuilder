@@ -5,14 +5,3 @@ json.posts do
     end
   end
 end
-
-
-json.authors do
-  @posts.map(&:author).each do |author|
-    json.set! author.id do
-      json.partial! 'api/users/user', user: author
-    end
-  end
-end
-# for rendering all posts
-# tp6
