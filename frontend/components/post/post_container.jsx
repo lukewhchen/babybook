@@ -17,12 +17,6 @@ class PostContainer extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // handleClick() {
-  //   if (this.props.searchResults.length > 0) {
-  //     this.props.clearSearchResults();
-  //   }
-  // }
-
   handleClick() {
     let results = this.props.searchResults;
     if (results) {

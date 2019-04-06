@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
   before_action :ensure_logged_in, only: [:index, :show, :update]
 
   def index
-    @users = User.all
+    @users = User.all.includes(:posts)
     render :index
   end
 
