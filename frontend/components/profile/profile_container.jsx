@@ -95,7 +95,6 @@ class ProfileContainer extends React.Component {
     );
   }
 }
-// tp6 console 第二次才抓到user資料
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]};
@@ -115,7 +114,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchUser: userId => dispatch(fetchUser(userId)),
-  fetchUsers: () => dispatch(fetchUsers()),
+  // fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: userId => dispatch(fetchPosts(userId)),
   clearSearchResults: () => dispatch(clearSearchResults()),
   // showDropdown: component => dispatch(showDropdown(component)),

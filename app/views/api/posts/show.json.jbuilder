@@ -5,5 +5,3 @@ end
 json.author do
   json.partial! 'api/users/user', user: @post.author
 end
-# for showing new post
-# tp6

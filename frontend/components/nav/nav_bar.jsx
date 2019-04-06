@@ -53,7 +53,6 @@ class NavBar extends React.Component {
     );
   }
 }
-// tp6 console 第二次才抓到user資料
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]};
