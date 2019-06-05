@@ -4,6 +4,7 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:author)
+    # @posts = Post.order("id DESC").includes(:author).limit(10)s
     render :index
   end
 

@@ -29,6 +29,7 @@ class PostContainer extends React.Component {
     this.props.fetchPosts();
   }
 
+
   render() {
     const currentUser = this.props.currentUser;
     const reversePosts = this.props.posts.reverse();
