@@ -23,9 +23,9 @@ class PostForm extends React.Component {
     return (this.props.errors.length > 0);
   }
 
-  handleChange(field) {
+  handleChange() {
     return e => {
-      this.setState({ [field]: e.target.value });
+      this.setState({ body: e.target.value });
     };
   }
 
@@ -61,7 +61,7 @@ class PostForm extends React.Component {
           </h2>
           <textarea
             placeholder={`Whats on your mind? ${this.props.currentUser.first_name}`}
-            onChange={this.handleChange("body")}
+            onChange={this.handleChange()}
             value={this.state.body}/>
           {this.state.imageUrl &&
             <img src={this.state.imageUrl} id='post-img-preview' />

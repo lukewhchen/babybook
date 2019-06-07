@@ -8,9 +8,9 @@ class SearchBarComponent extends React.Component {
       this.handleSearch = this.handleSearch.bind(this);
       this.clearInput = this.clearInput.bind(this);
       this.state = {
-      input: '',
-      searchResults: this.props.searchResults
-    };
+        input: '',
+        searchResults: this.props.searchResults
+      };
   }
 
   handleSearch(e) {
@@ -58,7 +58,7 @@ class SearchBarComponent extends React.Component {
         </ul>
       );
     }
-
+// issue line 66 add () will cause error. tp6
     return (
       <div>
         <div className='search-bar'>
