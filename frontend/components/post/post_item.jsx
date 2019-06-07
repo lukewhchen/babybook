@@ -4,11 +4,15 @@ import { Link, withRouter } from "react-router-dom";
 
 
 function PostItem(props) {
+  const author = props.post.author_name;
+  const authorURL = `/users/${props.post.author_id}`;
+  const postContent = props.post.body;
+  const postImage = props.post.image_url;
   return (
     <li className="single-post">
-      <Link className="user" to={`/users/${props.post.author_id}`}><i className="fa fa-user-circle" aria-hidden="true"/>{props.post.author_name}</Link>
-      <ul>{props.post.body}</ul>
-        <img src={props.post.image_url}/>
+      <Link className="user" to={authorURL}><i className="fa fa-user-circle" aria-hidden="true"/>{author}</Link>
+      <ul>{postContent}</ul>
+        <img src={postImage}/>
       <br/>
       <label className="like-comment-share">
         <i className="fa fa-thumbs-o-up" aria-hidden="true">Like</i>
