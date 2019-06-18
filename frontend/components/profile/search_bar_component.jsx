@@ -58,7 +58,7 @@ class SearchBarComponent extends React.Component {
         </ul>
       );
     }
-// issue line 66 add () will cause error. tp6
+
     return (
       <div>
         <div className='search-bar'>
