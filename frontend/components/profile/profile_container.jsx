@@ -42,8 +42,7 @@ class ProfileContainer extends React.Component {
   }
 
   render() {
-    const reversePosts = this.props.posts.reverse();
-    const userPosts = reversePosts.map(post => {
+    const userPosts = this.props.posts.map(post => {
       if (post.author_id === this.props.user.id) {
         return <PostItem key={post.id} post={post} />;
       }
@@ -104,7 +103,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     user,
     currentUser: state.entities.users[state.session.id],
-    posts: Object.values(state.entities.posts),
+    posts: Object.values(state.entities.posts).reverse(),
     searchResults: state.ui.searchResults,
     users: state.entities.users,
     dropdownDisplayed,

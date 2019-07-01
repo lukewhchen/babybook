@@ -45,11 +45,9 @@ class PostContainer extends React.Component {
   }
 
   render() {
-
     const diplayNumber = this.state.displayBase * 3;
     const currentUser = this.props.currentUser;
-    const reversePosts = this.props.posts.reverse();
-    const posts = reversePosts.slice(0,diplayNumber).map(post => {
+    const posts = this.props.posts.slice(0,diplayNumber).map(post => {
       return <PostItem key={post.id} post={post} />;
     });
 
@@ -86,7 +84,7 @@ class PostContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    posts: Object.values(state.entities.posts),
+    posts: Object.values(state.entities.posts).reverse(),
     currentUser: state.entities.users[state.session.id]
   };
 };
