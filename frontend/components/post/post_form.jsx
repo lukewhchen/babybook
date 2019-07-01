@@ -61,8 +61,7 @@ class PostForm extends React.Component {
           </h2>
           <textarea
             placeholder={`Whats on your mind? ${this.props.currentUser.first_name}`}
-            onChange={this.handleChange()}
-            value={this.state.body}/>
+            onChange={this.handleChange()} value={this.state.body}/>
           {this.state.imageUrl &&
             <img src={this.state.imageUrl} id='post-img-preview' />
           }
