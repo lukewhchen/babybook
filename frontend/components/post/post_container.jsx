@@ -75,7 +75,7 @@ class PostContainer extends React.Component {
             </main>
             <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
-          <span className="sentinels">"Hi"</span>
+          <span className="sentinels">_</span>
         </div>
 
     );
