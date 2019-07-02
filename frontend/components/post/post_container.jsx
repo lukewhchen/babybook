@@ -14,15 +14,9 @@ import SearchBarContainer from '../profile/search_bar_container';
 class PostContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = { displayBase: 1 };
+    this.state = { shownPosts: 1 };
     this.handleClick = this.handleClick.bind(this);
-    this.addScrollObserver = this.addScrollObserver.bind(this);
-    this.observer = new IntersectionObserver(
-          checkPoint => {
-            if ( checkPoint[0].intersectionRatio <= 0) return;
-            this.setState( prev => ({displayBase: prev.displayBase+1}));
-          }
-        );
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleClick() {
@@ -32,22 +26,25 @@ class PostContainer extends React.Component {
     }
   }
 
-  addScrollObserver() {
-    this.observer.observe(
-      document.querySelector('.sentinels')
-    );
+  handleScroll() {
+    const observer = new IntersectionObserver(
+          checkPoint => {
+            if ( checkPoint[0].intersectionRatio <= 0) return;
+            this.setState( prev => ({shownPosts: prev.shownPosts+3}));
+          }
+        );
+    observer.observe(document.querySelector('.sentinels'));
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchPosts();
-    this.addScrollObserver();
+    this.handleScroll();
   }
 
   render() {
-    const diplayNumber = this.state.displayBase * 3;
     const currentUser = this.props.currentUser;
-    const posts = this.props.posts.slice(0,diplayNumber).map(post => {
+    const posts = this.props.posts.slice(0,this.state.shownPosts).map(post => {
       return <PostItem key={post.id} post={post} />;
     });
 
@@ -75,7 +72,7 @@ class PostContainer extends React.Component {
             </main>
             <aside className="MainPage-ads"><RightSidebar/></aside>
           </div>
-          <span className="sentinels">_</span>
+          <span className="sentinels">.</span>
         </div>
 
     );

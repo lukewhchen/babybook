@@ -14,8 +14,10 @@ import SearchBarContainer from './search_bar_container';
 class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
+    this.state = { shownPosts: 3 };
     // this.toggleDropdown = this.toggleDropdown.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   // toggleDropdown(component) {
@@ -34,18 +36,28 @@ class ProfileContainer extends React.Component {
     }
   }
 
+  handleScroll() {
+    const observer = new IntersectionObserver(
+          checkPoint => {
+            if ( checkPoint[0].intersectionRatio <= 0) return;
+            this.setState( prev => ({shownPosts: prev.shownPosts+3}));
+          }
+        );
+    observer.observe(document.querySelector('.sentinels-1'));
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.handleClick();
+    this.handleScroll();
     this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchPosts(this.props.match.params.userId);
   }
 
   render() {
-    const userPosts = this.props.posts.map(post => {
-      if (post.author_id === this.props.user.id) {
+    const personalPosts = this.props.posts.filter( post => post.author_id === this.props.user.id)
+    const userPosts = personalPosts.slice(0,this.state.shownPosts).map(post => {
         return <PostItem key={post.id} post={post} />;
-      }
     });
 
     return (
@@ -83,12 +95,11 @@ class ProfileContainer extends React.Component {
               <p><strong>School:</strong> <em>{this.props.user.school || "null"}</em></p>
               <p><strong>Gender:</strong> <em>{this.props.user.gender || "null"}</em></p>
             </div>
-
             <div className="profile-post">
               <PostForm />
               <ul>{userPosts}</ul>
+              <span className="sentinels-1">.</span>
             </div>
-
         </div>
       </div>
     );
