@@ -69,13 +69,14 @@
  }
 
  .logo {
+   margin-top: 20px;
    font-size: 38px;
    font-weight: bold;
    color: #FBFCFC;
  }
 
  .wh-container {
-  width: 945px;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,23 +259,30 @@
  .left-login {
    display: block;
    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
-   color: black;
-   font-size: 20px;
    width: 550px;
  }
 
- .left-login > h2{
+ .left-login h2{
    padding-top: 10%;
+   padding-bottom: 20px;
+   font-size: 26px;
+   font-weight: bold;
+   color: #333333;
+   width: 420px;
  }
 
- .left-login > h3{
-   padding-top: 10px;
+ .left-login strong {
+   font-weight: bold;
+   color: #333333;
+   font-size: 18px;
  }
 
  .left-login > li{
-   padding-left: 3%;
-   padding-right: 8%;
-   padding-top: 20px;
+   font-size: 16px;
+   color: #666666;
+   display: flex;
+   align-items: center;
+   margin-top: 26px;
  }
 
  .signup_form {
@@ -315,7 +323,6 @@
    border-color: #BDC7D8;
    border-radius: 5px;
    border: 1px solid black;
-   width: 400px;
    height: 40px;
    padding: 0 5px;
    margin-top: 10px;
@@ -739,4 +746,23 @@
 
   .fa-user-circle {
     margin-right: 5px;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+  }
+
+  .update {
+    background-image: url("updates.png");
+  }
+  .news {
+    background-image: url("news.png");
+  }
+  .more {
+    background-image: url("more.png");
   }

@@ -3,11 +3,19 @@ import React from 'react';
 const InfoMessage = () => {
   return (
     <div className='left-login'>
-      <h2>Parenting starts here.</h2>
-      <h3>Share your happiest moments on Babybook.</h3>
-      <li><strong>Post the cutest baby picture</strong> on your Timeline.</li>
-      <li><strong>See photos and updates</strong> from other parents.</li>
-      <li>Find the <strong>parenting information you need</strong> in your News Feed.</li>
+      <h2>Connect with friends and the world around you on Babybook.</h2>
+      <li>
+        <div className="icon update"></div>
+        <p><strong>Post the cutest baby picture </strong>on your Timeline</p>.
+      </li>
+      <li>
+        <div className="icon news"></div>
+        <p><strong>See photos and updates </strong> from other parents.</p>
+      </li>
+      <li>
+        <div className="icon more"></div>
+        <p><strong>Find more parenting information </strong> in your News Feed.</p>
+      </li>
     </div>
   );
 };
