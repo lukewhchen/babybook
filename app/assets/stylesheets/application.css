@@ -782,15 +782,11 @@
   }
 
   .fineprint {
+    font-family: 'Freight Sans';
     margin-top: 12px;
     font-size: 12px;
     color: #7a7a7a;
     width: 340px;
-  }
-
-  .fineprint strong {
-    font-weight: bold;
-    color: #333333;
   }
 
   hr {
