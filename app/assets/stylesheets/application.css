@@ -84,15 +84,26 @@
 
  .welcome-foot {
    clear: both;
-   color: #1E90FF;
+   color: #737373;
    background-color: white;
-   text-align: center;
-   font-size: 22px;
-   height: 50px;
-   line-height: 50px;
-   margin-top: -50px;
+   font-size: 12px;
+   height: 130px;
+   line-height: 30px;
  }
 
+ .foot-info {
+   width: 1000px;
+   margin: auto;
+ }
+
+ .foot-info p{
+   padding-top: 3px;
+   color: #737373;
+ }
+
+ .foot-info a{
+   color: #385C97;
+ }
  .login-form {
    display: flex;
    font-size: 14px;
@@ -248,7 +259,7 @@
    margin: 0 auto;
    display: flex;
    padding-bottom: 50px;
-   height: 90vh;
+   height: 600px;
  }
  .signup-container {
    display: block;
@@ -780,4 +791,10 @@
   .fineprint strong {
     font-weight: bold;
     color: #333333;
+  }
+
+  hr {
+    height: 1px;
+    background-color: #dddfe2;
+    border: none;
   }
