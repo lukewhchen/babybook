@@ -39,7 +39,7 @@ class SignupForm extends React.Component {
       <div className="signup-container">
         <form className="signup_form" onSubmit={this.handleSubmit}>
           <h2>Join Us</h2>
-          <h4>It's joyful and always will be.</h4>
+          <h6>It's joyful and always will be.</h6>
           <input type='text' placeholder='  First name'
             ref={(input) => this.first_name = input}/>
           <input type='text' placeholder='  Last name'
@@ -53,6 +53,13 @@ class SignupForm extends React.Component {
             <option value='male'>Male</option>
             <option value='female'>Female</option>
           </select>
+          <p className="fineprint">
+            By clicking Sign Up, you agree to our &nbsp;
+            <strong>Terms</strong>,&nbsp;<strong>Data Policy</strong>
+            &nbsp; and <strong>Cookies Policy.</strong>&nbsp; You
+            may receive SMS Notifications from us and can opt out
+            any time.
+          </p>
           <button className='signup-button'>Sign Up</button>
           {this.handleErrors()}
         </form>
