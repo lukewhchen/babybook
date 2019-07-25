@@ -7,7 +7,9 @@ const HeadMessage = () => {
   return (
     <div className='welcome-head'>
       <div className='wh-container'>
-        <Link to="/">babybook</Link>
+        <div className='logo'>
+          <Link to="/">babybook</Link>
+        </div>
         <SessionForm />
       </div>
     </div>
