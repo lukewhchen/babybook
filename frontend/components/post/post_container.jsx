@@ -59,7 +59,13 @@ class PostContainer extends React.Component {
                 <div className="nav-right">
                   <Link className="user-link" to={`/users/${currentUser.id}`}>
                   <i className="fa fa-user-circle" aria-hidden="true"/>{currentUser.fullName}</Link>
-                  <Link to="/"><p className="home">HOME</p></Link>
+                  <Link to="/"><p className="home">Home</p></Link>
+                  <Link to="/"><p className="home">Find Friends</p></Link>
+                  <Link to="/"><p className="home">Create</p></Link>
+                  <div className="header-icon friends"></div>
+                  <div className="header-icon messages"></div>
+                  <div className="header-icon alert"></div>
+                  <div className="header-icon questions"></div>
                   <button className="logout-button" onClick={this.props.logout}>Log Out</button>
                 </div>
             </div>
