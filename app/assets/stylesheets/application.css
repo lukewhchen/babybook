@@ -35,14 +35,11 @@
  }
 
  img {
-  width: 600px;
+  width: 508px;
  }
 
  html {
   background-color: #edf0f5;
- }
-
- textarea {
  }
 
  .bb-logo {
@@ -240,15 +237,13 @@
    display: none;
 }
  .custom-file-upload {
-   border: 1px solid #ccc;
-   font-size: 20px;
+   font-size: 14px;
    font-weight: bold;
-   border-radius: 10px;
+   border-radius: 14px;
    background-color: #F2F3F4;
    padding: 6px 12px;
    cursor: pointer;
-   margin-left: 60px;
-   margin-right: 300px;
+   margin-left: 10px;
 }
 
 .custom-file-upload:hover {
@@ -257,16 +252,12 @@
 }
 
  .post-button {
-   position: relative;
    color: white;
    background-color: #4267b2;
-   border: 1px solid #2a477b;
    padding: 6px 25px;
-   border-radius: 10px;
-   height: 22px;
-   width: 50px;
-   font-size: 20px;
-   text-align: center;
+   border-radius: 14px;
+   font-size: 14px;
+   margin-left: 354px;
  }
 
  .post-button:hover {
@@ -406,10 +397,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 200px;
-  margin-top: 10px;
-  border-radius: 5px;
-  font-size: 20px;
+  width: 180px;
  }
  .left-icon {
    position: fixed;
@@ -417,11 +405,11 @@
 
  .left-icon i{
    color: #2F4F4F;
+   font-weight: bold;
    display: inline-flex;
-   margin-top: 10px;
-   height: 30px;
-   width: 190px;
-   line-height: 30px;
+   margin-top: 5px;
+   width: 170px;
+   line-height: 25px;
 }
 
 .left-icon i:hover {
@@ -448,13 +436,10 @@
  .right-side {
   position: fixed;
   background-color: white;
-  width: 350px;
-  border-radius: 4px;
+  width: 292px;
+  border-radius: 3px;
   border: 1px solid #dfe1e5;
-  font-size: 18px;
-  margin-top: 10px;
-  padding-bottom: 20px;
-  padding-right: 5px;
+  font-size: 14px;
  }
 
  .right-side > h4 {
@@ -490,33 +475,28 @@
  }
 
  .new-post-form {
-   position: relative;
    background-color: white;
-   width: 620px;
-   height: 210px;
-   margin-top: 10px;
+   width: 528px;
+   padding-bottom: 5px;
    border-radius: 4px;
    border: 1px solid #dfe1e5;
  }
 
   .new-post-form textarea {
-    position: relative;
-    width: 95%;
-    height: 50%;
+    width: 96%;
+    height: 80px;
     resize: none;
-    font-size: 22px;
-    margin-left: 5px;
-    padding: 10px;
-    padding-top: 15px;
-    border-bottom-style: double;
-    border: 1px solid #dfe1e5;
-    margin-bottom: 2px;
+    font-size: 16px;
+    border-bottom: 1px solid #dfe1e5;
+    margin: 5px -23px 5px 10px;
   }
 
   .new-post-form > h2 {
-    font-size: 16px;
-    padding: 5px;
-    padding-bottom: 1px;
+    font-size: 13px;
+    background-color: #f5f6f7;
+    border-bottom: 1px solid #dddfe2;
+    padding: 9px 7px;
+    color: #4b4f56;
   }
 
   .new-post-form img {
@@ -534,14 +514,13 @@
 
   .single-post {
     background-color: white;
-    height: auto;
-    width: 600px;
+    width: 508px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #dfe1e5;
-    font-size: 24px;
+    font-size: 16px;
     overflow: hidden;
   }
 
@@ -551,14 +530,15 @@
   }
 
   .user{
-    color: #365899;
-    font-size: 22px;
+    color: #385C97;
+    font-size: 14px;
+    font-weight: bold;
     font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
   }
 
   .user > i {
    color: gray;
-   font-size: 50px;
+   font-size: 38px;
    margin-bottom: 10px;
   }
 
@@ -620,30 +600,21 @@
      cursor: pointer;
    }
 
-
   .like-comment-share {
-    border-top: 1px solid #dfe1e5;
-    margin-top: 30px;
-    padding-top: 15px;
+    /* border-top: 1px solid #dfe1e5; */
  }
 
   .like-comment-share > i{
-    color: #797D7F;
+    color: #606E87;
     display: inline-flex;
-    margin: 0 auto;
     font-size: 20px;
-    font-weight: bold;
     justify-content: center;
-    text-align: center;
-    height: 40px;
-    width: 160px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 168px;
+    margin-top: 5px;
  }
 
  .like-comment-share > i:hover {
-   background-color: #CACFD2;
+   color: #3578E5;
    cursor: pointer;
  }
 
@@ -668,9 +639,9 @@
 
   .MainPage-body {
     display: flex;
-    width: 1200px;
+    width: 1013px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 54px;
   }
 
   .MainPage-content {
@@ -678,7 +649,7 @@
   }
 
   .MainPage-nav {
-    font-size: 15px;
+    font-size: 14px;
     background-color: #edf0f5;
   }
 
@@ -766,9 +737,8 @@
   }
 
   .search-results{
-    width: 498px;
+    width: 440px;
     position: absolute;
-    /* z-index: 9; */
     margin-top: 25px;
   }
 
@@ -789,13 +759,13 @@
     text-decoration: none;
     cursor: pointer;
     font-size: 14px;
-    color: #000;
     padding: 5px 0 5px 8px;
-    /* z-index: 9; */
+    font-weight: 500;
+    color: #333333;
   }
 
-  .fa-user-circle {
-    /* color: white; */
+  .search-result-content p{
+    padding-left: 10px;
   }
 
   .header-icon {
