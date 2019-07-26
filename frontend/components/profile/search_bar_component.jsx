@@ -60,14 +60,17 @@ class SearchBarComponent extends React.Component {
     }
 
     return (
-      <div>
+      <div className='search-container'>
         <div className='search-bar'>
           <input
             onChange={this.handleSearch}
             type='text'
-            placeholder='Search...'
+            placeholder='Search'
             value={this.state.input}
           />
+        </div>
+        <div className="search-button">
+          <div className="search-icon"></div>
         </div>
         {displayedSearchResults}
       </div>
