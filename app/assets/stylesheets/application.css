@@ -221,14 +221,14 @@
   }
 
  .logout-button {
-   color: white;
+   color: #FBFCFE;
    background-color: #4e70b6;
    border: 1px solid #325aa3;
    text-align: center;
    font-size: 12px;
    border-radius: 2px;
-   margin-left: 20px;
-   min-width: 66px;
+   width: 60px;
+   margin-bottom: 7px;
  }
 
  .logout-button:hover {
@@ -563,7 +563,7 @@
   }
 
   .nav-left {
-    width: 600px;
+    /* width: 600px; */
     display: flex;
     justify-content: flex-start;
     margin-top: 8px;
@@ -576,7 +576,7 @@
   }
 
   .nav-right {
-    width: 600px;
+    /* width: 600px; */
     display: flex;
     justify-content: flex-start;
     margin-top: 8px;
@@ -594,18 +594,29 @@
    font-size: 22px;
   }
 
+  .user-link2 {
+    display: flex;
+  }
+
+  .user-link2 > i {
+    color: white;
+    margin-top: 2px;
+    margin-left: 45px;
+    font-size: 24px;
+  }
 
    .home {
+    color: #FBFCFE;
     line-height: 30px;
     font-size: 12px;
-    margin-left: 20px;
     min-width: 70px;
     align-items: center;
     text-align: center;
    }
 
    .home:hover {
-     background-color: #2a477b;
+     background-color: #365A9D;
+     border-radius: 3px;
      cursor: pointer;
    }
 
@@ -784,12 +795,12 @@
   }
 
   .fa-user-circle {
-    margin-right: 5px;
+    /* color: white; */
   }
 
   .header-icon {
     display: flex;
-    width: 50px;
+    width: 32px;
     height: 26px;
     background-repeat: no-repeat;
     opacity: 0.5;
@@ -798,7 +809,6 @@
     cursor: pointer;
     opacity: 1;
   }
-
 
   .friends {
     background-image: url("header-icons.png");

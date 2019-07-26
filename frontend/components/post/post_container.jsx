@@ -57,8 +57,10 @@ class PostContainer extends React.Component {
                   <SearchBarContainer />
                 </div>
                 <div className="nav-right">
-                  <Link className="user-link" to={`/users/${currentUser.id}`}>
-                  <i className="fa fa-user-circle" aria-hidden="true"/>{currentUser.fullName}</Link>
+                  <div className="user-link2">
+                    <i className="fa fa-user-circle" aria-hidden="true"/>
+                    <Link to={`/users/${currentUser.id}`}><p className="home">{currentUser.fullName}</p></Link>
+                  </div>
                   <Link to="/"><p className="home">Home</p></Link>
                   <Link to="/"><p className="home">Find Friends</p></Link>
                   <Link to="/"><p className="home">Create</p></Link>
