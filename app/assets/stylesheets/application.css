@@ -170,7 +170,6 @@
    cursor: pointer;
  }
  .search-container {
-   width: 450px;
    display: flex;
  }
  .search-bar {
@@ -193,7 +192,7 @@
     width: 50px;
     height: 25px;
     margin-left: -10px;
-    border-radius: 3px;
+    border-radius: 0 3px 3px 0;
     border: 1px solid #3b5998;
     border-left: none;
  }
