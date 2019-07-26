@@ -543,7 +543,6 @@
   }
 
   .nav-left {
-    /* width: 600px; */
     display: flex;
     justify-content: flex-start;
     margin-top: 8px;
@@ -556,7 +555,6 @@
   }
 
   .nav-right {
-    /* width: 600px; */
     display: flex;
     justify-content: flex-start;
     margin-top: 8px;
@@ -601,7 +599,6 @@
    }
 
   .like-comment-share {
-    /* border-top: 1px solid #dfe1e5; */
  }
 
   .like-comment-share > i{
@@ -628,11 +625,9 @@
     top: 0;
     width: 100%;
     display: flex;
-    /* align-items: flex-end; */
     background-color: #4267b2;
     border-bottom: solid 1px #29497f;
     height: 42px;
-    /* padding-bottom: 15px; */
     color: white;
     z-index: 9999;
   }
