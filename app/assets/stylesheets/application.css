@@ -773,13 +773,13 @@
   }
 
   .update {
-    background-image: url(updates.png);
+    background-image: url("updates.png");
   }
   .news {
     background-image: url("news.png");
   }
   .more {
-    background-image: url(image-path('more.png'));
+    background-image: url("more.png");
   }
 
   .fineprint {
