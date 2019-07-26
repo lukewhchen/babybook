@@ -158,7 +158,7 @@
    height: 26px;
    width: 50px;
    font-size: 12px;
-   margin-right: 10px;
+   margin-left: 10px;
    margin-top: 18px;
    border-radius: 2px;
  }
@@ -324,10 +324,11 @@
  }
 
  .signup_form > h6{
-   font-size: 20px;
+   font-size: 18px;
    margin-top: 3px;
    margin-bottom: 20px;
    color: #333333;
+   font-weight: normal;
  }
 
  .signup_form > input {
