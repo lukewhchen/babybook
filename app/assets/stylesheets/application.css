@@ -507,9 +507,11 @@
 
   #post-img-preview {
     position: absolute;
-    max-height: 100px;
-    max-width: 100px;
-    left: 500px;
+    height: 75px;
+    width: 100px;
+    left: 780px;
+    top: 101px;
+    object-fit: contain;
   }
 
   .single-post {
