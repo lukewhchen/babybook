@@ -183,6 +183,7 @@
    padding-left: 5px;
    width: 395px;
  }
+
  .search-button{
     cursor: pointer;
     background-color: #F5F6F7;
@@ -192,6 +193,9 @@
     border-radius: 0 3px 3px 0;
     border: 1px solid #3b5998;
     border-left: none;
+ }
+ .search-button:hover{
+    background-color: #306DDF;
  }
 
  .search-icon {
