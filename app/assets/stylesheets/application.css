@@ -181,6 +181,7 @@
  .search-bar > input {
    font-size: 15px;
    padding-left: 5px;
+   width: 395px;
  }
  .search-button{
     cursor: pointer;
@@ -414,6 +415,7 @@
 .left-icon i:hover {
   background-color: #FBFCFC;
   cursor: pointer;
+  color: #33A3FF;
 }
 
 .left-icon i:active {
@@ -740,6 +742,11 @@
     margin-bottom: 5px;
     font-size: 10px;
   }
+
+  .selected {
+    background-color: #cddffd;
+  }
+
   .search-result:hover {
     background-color: #cddffd;
     cursor: pointer;

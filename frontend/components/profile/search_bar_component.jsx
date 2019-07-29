@@ -1,15 +1,17 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom'
 
 class SearchBarComponent extends React.Component {
   constructor(props) {
     super(props);
       this.handleSearch = this.handleSearch.bind(this);
       this.clearInput = this.clearInput.bind(this);
+      this.handleKeyDown = this.handleKeyDown.bind(this);
       this.state = {
         input: '',
-        searchResults: this.props.searchResults
+        searchResults: this.props.searchResults,
+        cursorIdx: 0
       };
   }
 
@@ -22,6 +24,25 @@ class SearchBarComponent extends React.Component {
         this.props.clearSearchResults();
       }
     });
+  }
+
+
+  handleKeyDown(e) {
+    const { cursorIdx, searchResults } = this.state;
+    const lastIdx = searchResults.length-1;
+    if (e.keyCode === 38) {
+        this.setState( prevState => ({
+          cursorIdx: cursorIdx > 0 ? prevState.cursorIdx - 1 : lastIdx
+        }));
+    } else if (e.keyCode === 40) {
+      this.setState( prevState => ({
+        cursorIdx: cursorIdx < lastIdx ? prevState.cursorIdx + 1 : 0
+      }));
+    } else if (e.keyCode === 13) {
+      this.props.clearSearchResults();
+      this.props.history.push(`/users/${searchResults[cursorIdx].id}`);
+      this.setState( {cursorIdx:0});
+    }
   }
 
   componentWillUpdate(nextProps) {
@@ -41,12 +62,13 @@ class SearchBarComponent extends React.Component {
 
   render() {
     let displayedSearchResults = null;
+    let cursorIdx = this.state.cursorIdx;
     if (this.state.searchResults.length >= 1) {
-        const searchResultItems = this.state.searchResults.map(user => {
+        const searchResultItems = this.state.searchResults.map((user, idx) => {
           return(
-            <li className='search-result' key={user.id}>
+            <li className={cursorIdx === idx ? 'selected' : null} key={user.id}>
               <Link to={`/users/${user.id}`} className='search-result-content'>
-              <i className="fa fa-user-circle" aria-hidden="true"/><p>{user.first_name} {user.last_name}</p>
+                <i className="fa fa-user-circle" aria-hidden="true"/><p>{user.first_name} {user.last_name}</p>
               </Link>
             </li>
           );
@@ -64,6 +86,8 @@ class SearchBarComponent extends React.Component {
         <div className='search-bar'>
           <input
             onChange={this.handleSearch}
+            onKeyDown={this.handleKeyDown}
+            onClick={this.props.clearSearchResults}
             type='text'
             placeholder='Search'
             value={this.state.input}

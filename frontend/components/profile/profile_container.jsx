@@ -18,6 +18,7 @@ class ProfileContainer extends React.Component {
     // this.toggleDropdown = this.toggleDropdown.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    // this.clearSearchResults = this.clearSearchResults.bind(this);
   }
 
   // toggleDropdown(component) {
