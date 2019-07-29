@@ -140,13 +140,12 @@
 
  .posts-error {
    position: absolute;
-   font-size: 20px;
-   padding: 10px;
-   left: 200px;
-   bottom: 2px;
+   font-size: 14px;
+   padding: 5px 10px;
    background-color: #FA686B;
    box-shadow: 2px 2px 5px #bababa;
    border-radius: 5px;
+   margin-left: 170px;
  }
 
  .login-button {
