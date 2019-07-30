@@ -86,11 +86,11 @@ class ProfileContainer extends React.Component {
           </div>
         </header>
 
-        <div className="cover-imgs">
+        <div className="profile-image">
           <img src={this.props.user.cover_photo_url}/>
-          <img id="profile-imgs" src={this.props.user.profile_photo_url}/>
-          <h4>{this.props.user.fullName}</h4>
-          <div className="cover-navbar">
+          <img src={this.props.user.profile_photo_url}/>
+          <div className="profile-name"><li>{this.props.user.fullName}</li></div>
+          <div className="profile-navbar">
             <li>Timeline</li>
             <li>About</li>
             <li>Friends</li>
