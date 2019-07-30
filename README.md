@@ -6,7 +6,7 @@ Babybook is a Facebook-inspired full-stack web application built upon a Rails fr
 
 ## Authentication - User Log-in/out and Sign-up/out
 
-![Welcome Page](https://github.com/lukewhchen/babybook/blob/master/docs/welcome.png)
+![Welcome Page](https://github.com/lukewhchen/babybook/blob/master/docs/welcome1.png)
 
 When visiting babybook if you already have an account, you can easily log in on navigation bar. You can always create a new account using the sign up form. The users account information are protected by Auth pattern. Only the valid user can log-in and see all the features.
 
