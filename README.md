@@ -13,7 +13,7 @@ When visiting babybook if you already have an account, you can easily log in on 
 ## Posts - Main Page
 Once user sign up for an account, they can see all the posts on the main page. Users can post their cutest baby photo through Post button. The main purpose for developed babybook is to share baby's photo, if you don't have for now, babybook will pick one on your post. Photos are hosted using an AWS S3 bucket and uploaded and stored into the database using the `paperclip` gem.
 
-![Main Page](/Users/meiyaolin/Desktop/ProjectsByLuke/babybook/docs/main.png)
+![Main Page](https://github.com/lukewhchen/babybook/blob/master/docs/welcome.png)
 
 ## Parenting Information
 Users can also share parenting information with other user. On the right-side of main page, user can see all kind of parenting information and visiting the website through links.
