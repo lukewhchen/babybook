@@ -34,10 +34,6 @@
   list-style: none;
  }
 
- img {
-  width: 508px;
- }
-
  html {
   background-color: #edf0f5;
  }
@@ -195,7 +191,7 @@
     border-left: none;
  }
  .search-button:hover{
-    background-color: #306DDF;
+    background-color: #3578E5;
  }
 
  .search-icon {
@@ -521,32 +517,55 @@
 
   .single-post {
     background-color: white;
-    width: 508px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    width: 528px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
     border-radius: 4px;
     border: 1px solid #dfe1e5;
     font-size: 16px;
     overflow: hidden;
   }
 
-  .single-post > ul {
-    margin-bottom: 5px;
-    padding-left: 10px;
+  .post-header {
+    display: flex;
+    margin: 10px 12px;
   }
 
-  .user{
-    color: #385C97;
+  .avatar {
+    font-size: 38px;
+    margin-right: 10px;
+  }
+
+  .avatar i {
+    color: gray;
+  }
+
+  .post-info{
+    color: #385898;
     font-size: 14px;
+  }
+  .post-info > ul:nth-child(1) {
     font-weight: bold;
-    font-family: 'Freight Sans', Helvetica, Arial, sans-serif;
+    margin-top: 5px;
+  }
+  .post-info > ul:nth-child(1):hover {
+    text-decoration: underline;
   }
 
-  .user > i {
-   color: gray;
-   font-size: 38px;
-   margin-bottom: 10px;
+  .post-info > ul:nth-child(2) {
+    color: #616770;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .post-content ul{
+    font-size: 14px;
+    color: #1C1E21;
+    margin: 10px 12px;
+  }
+
+  .single-post img {
+    width: 528px;
+    margin-bottom: 5px;
   }
 
   .nav-left {
@@ -614,6 +633,7 @@
     font-size: 20px;
     justify-content: center;
     width: 168px;
+    height: 30px;
     margin-top: 5px;
  }
 
