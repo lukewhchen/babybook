@@ -394,6 +394,7 @@
  }
 
  .left-side {
+    position: fixed;
     display: flex;
     color: #1D2129;
     flex-direction: column;
@@ -677,6 +678,7 @@
 
   .mainpage-content {
     margin-right: 10px;
+    margin-left: 190px;
   }
 
   .profile-image {
