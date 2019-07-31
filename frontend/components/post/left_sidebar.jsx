@@ -5,12 +5,10 @@ const LeftSidebar = ({ currentUser }) => {
   return (
       <div className="left-side">
         <li>
-          <div className="left-icon">
-            <Link to={`/users/${currentUser.id}`}>
-              <i className="fa fa-user-circle ll" aria-hidden="true"></i>
-            </Link>
-          </div>
-          <label>{currentUser.fullName}</label>
+          <Link className="left-icon" to={`/users/${currentUser.id}`}>
+            <i className="fa fa-user-circle ll" aria-hidden="true"></i>
+            <label>{currentUser.fullName}</label>
+          </Link>
         </li>
         <li>
           <div className="left-icon newsfeed"></div>
@@ -30,36 +28,28 @@ const LeftSidebar = ({ currentUser }) => {
         </li>
         <p className='explore'>Explore</p>
         <li>
-          <div className="left-icon">
-            <a href='https://lukewhchen.github.io/Flip/' target='_blank'>
-              <i className="fa fa-gamepad" aria-hidden="true"></i>
-            </a>
-          </div>
-          <label>Puzzle Game</label>
+          <a className="left-icon" href='https://lukewhchen.github.io/Flip/' target='_blank'>
+            <i className="fa fa-gamepad" aria-hidden="true"></i>
+            <label>Puzzle Game</label>
+          </a>
         </li>
         <li>
-          <div className="left-icon">
-            <a href='https://www.linkedin.com/in/luke-chen-42342458/' target='_blank'>
-              <i className="fa fa-linkedin-square" aria-hidden="true"></i>
-            </a>
-          </div>
-          <label>LinkedIn</label>
+          <a className="left-icon" href='https://www.linkedin.com/in/luke-chen-42342458/' target='_blank'>
+            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+            <label>&nbsp;LinkedIn</label>
+          </a>
         </li>
         <li>
-          <div className="left-icon">
-            <a href='https://github.com/lukewhchen' target='_blank'>
-              <i className="fa fa-github" aria-hidden="true"></i>
-            </a>
-          </div>
-          <label>Github</label>
+          <a className="left-icon" href='https://github.com/lukewhchen' target='_blank'>
+            <i className="fa fa-github" aria-hidden="true"></i>
+            <label>&nbsp;Github</label>
+          </a>
         </li>
         <li>
-          <div className="left-icon">
-            <a href='https://lukewhchen.github.io/' target='_blank'>
-              <i className="fa fa-tv" aria-hidden="true"></i>
-            </a>
-          </div>
-          <label>Portfolio</label>
+          <a className="left-icon" href='https://lukewhchen.github.io/' target='_blank'>
+            <i className="fa fa-tv" aria-hidden="true"></i>
+            <label>Portfolio</label>
+          </a>
         </li>
       </div>
   );
