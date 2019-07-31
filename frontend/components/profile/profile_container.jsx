@@ -100,16 +100,15 @@ class ProfileContainer extends React.Component {
         </div>
 
           <div className="profile-body">
-            <div className="user-info">
-              <label className="user-icon">
-                <i className="fa fa-globe" aria-hidden="true">&nbsp;&nbsp;Intro</i>
-              </label>
-              <p><strong>User name:</strong> <em>{this.props.user.fullName}</em></p>
-              <p><strong>Email:</strong> <em>{this.props.user.email}</em></p>
-              <p><strong>Hometown:</strong> <em>{this.props.user.hometown || "null"}</em></p>
-              <p><strong>Workplace:</strong> <em>{this.props.user.workplace || "null"}</em></p>
-              <p><strong>School:</strong> <em>{this.props.user.school || "null"}</em></p>
-              <p><strong>Gender:</strong> <em>{this.props.user.gender || "null"}</em></p>
+            <div className="user-intro">
+              <i className="fa fa-globe" aria-hidden="true"><p>&nbsp;&nbsp;Intro</p></i>
+              <p>I just find myself happy with the simple things. Appreciating the blessings god gave me.</p>
+              <p><strong>User Name:</strong>&nbsp;{this.props.user.fullName}</p>
+              <p><strong>Email:</strong>&nbsp;{this.props.user.email}</p>
+              <p><strong>Hometown:</strong>&nbsp;{this.props.user.hometown || "San Francisco"}</p>
+              <p><strong>Workplace:</strong>&nbsp;{this.props.user.workplace || "Fortune 500 "}</p>
+              <p><strong>School:</strong>&nbsp;{this.props.user.school || "Stanford University"}</p>
+              <p><strong>Gender:</strong>&nbsp;{this.props.user.gender || "Unspecified"}</p>
             </div>
             <div className="profile-post">
               <PostForm />
