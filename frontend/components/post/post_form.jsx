@@ -53,6 +53,7 @@ class PostForm extends React.Component {
   }
 
   render() {
+    const name = this.props.currentUser.first_name;
     return (
         <form className='new-post-form' onSubmit={this.submit}>
           <h2>
@@ -60,10 +61,11 @@ class PostForm extends React.Component {
             Share your cutest baby photo here. if you don't I will show you my favorite.
           </h2>
           <textarea
-            placeholder={`Whats on your mind, ${this.props.currentUser.first_name}?`}
-            onChange={this.handleChange()} value={this.state.body}/>
+            placeholder={`Whats on your mind, ${name}?`}
+            onChange={this.handleChange()}
+            value={this.state.body}/>
           {this.state.imageUrl &&
-            <img src={this.state.imageUrl} id='post-img-preview' />
+            <img src={this.state.imageUrl}/>
           }
           <br/>
           {this.handleErrors()}

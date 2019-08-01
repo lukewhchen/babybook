@@ -515,19 +515,23 @@
   }
 
   .new-post-form img {
-    top: 49px;
-    left: 8px;
-    border: 1px solid #dfe1e5;
-  }
-
-  #post-img-preview {
     position: absolute;
     height: 75px;
     width: 100px;
-    left: 780px;
-    top: 101px;
+    top: 102px;
+    left: 821px;
+    border: 1px solid #dfe1e5;
     object-fit: contain;
   }
+
+  /* .image-preview {
+    position: absolute;
+    height: 75px;
+    width: 100px;
+    left: 820px;
+    top: 101px;
+    object-fit: contain;
+  } */
 
   .single-post {
     background-color: white;
