@@ -54,13 +54,15 @@ class ProfileContainer extends React.Component {
     this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchPosts(this.props.match.params.userId);
   }
-
+// <img src={post.image_url}/>
   render() {
     const personalPosts = this.props.posts.filter( post => post.author_id === this.props.user.id)
     const userPosts = personalPosts.slice(0,this.state.shownPosts).map(post => {
         return <PostItem key={post.id} post={post} />;
     });
-
+    const userPhotos = personalPosts.slice(0,9).map(post => {
+        return <div className="single-photo"><img src={post.image_url}/></div>;
+    });
     return (
       <div>
         <header className="nav-container" onClick={this.handleClick}>
@@ -99,9 +101,10 @@ class ProfileContainer extends React.Component {
           </div>
         </div>
 
-          <div className="profile-body">
+        <div className="profile-body">
+          <div className="profile-info">
             <div className="user-intro">
-              <i className="fa fa-globe" aria-hidden="true"><p>&nbsp;&nbsp;Intro</p></i>
+              <div className="profile-icon globe"><p>Intro</p></div>
               <p>I just find myself happy with the simple things. Appreciating the blessings god gave me.</p>
               <p><strong>User Name:</strong>&nbsp;{this.props.user.fullName}</p>
               <p><strong>Email:</strong>&nbsp;{this.props.user.email}</p>
@@ -110,11 +113,18 @@ class ProfileContainer extends React.Component {
               <p><strong>School:</strong>&nbsp;{this.props.user.school || "Stanford University"}</p>
               <p><strong>Gender:</strong>&nbsp;{this.props.user.gender || "Unspecified"}</p>
             </div>
-            <div className="profile-post">
-              <PostForm />
-              <ul>{userPosts}</ul>
-              <span className="sentinels-1">.</span>
+            <div className="user-intro">
+              <div className="profile-icon photo"><p>Photos</p></div>
+              <div className="album">
+                {userPhotos}
+              </div>
             </div>
+          </div>
+          <div className="profile-content">
+            <PostForm />
+            <ul>{userPosts}</ul>
+            <span className="sentinels-1">.</span>
+          </div>
         </div>
       </div>
     );
