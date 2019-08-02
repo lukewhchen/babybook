@@ -166,17 +166,16 @@
  }
  .search-bar {
    width: 400px;
-   height: 25px;
    color: black;
-   font-size: 22px;
+   font-size: 20px;
    background: #fff;
    border-radius: 3px;
    border: 1px solid #3b5998;
  }
 
  .search-bar > input {
-   font-size: 15px;
-   padding-left: 5px;
+   padding-left: 7px;
+   font-size: 14px;
    width: 395px;
  }
 
@@ -221,15 +220,16 @@
    color: #FBFCFE;
    background-color: #4e70b6;
    border: 1px solid #325aa3;
+   border-radius: 3px;
    text-align: center;
    font-size: 12px;
    border-radius: 2px;
    width: 60px;
-   margin-bottom: 7px;
+   padding: 5px 0px;
  }
 
  .logout-button:hover {
-   background-color: #2a477b;
+   background-color: #365A9D;
    cursor: pointer;
  }
 
@@ -586,11 +586,6 @@
     margin-bottom: 5px;
   }
 
-  .nav-left {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 8px;
-  }
   .nav-bar {
     display: flex;
     width: 1013px;
@@ -598,10 +593,13 @@
     justify-content: space-between;
   }
 
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
   .nav-right {
     display: flex;
-    justify-content: flex-start;
-    margin-top: 8px;
+    align-items: center;
   }
 
   .user-link{
@@ -620,20 +618,23 @@
     display: flex;
   }
 
+  .user-link2:hover {
+    background-color: #365A9D;
+    border-radius: 3px;
+    cursor: pointer;
+  }
   .user-link2 > i {
     color: white;
-    margin-top: 2px;
-    margin-left: 45px;
     font-size: 24px;
   }
 
    .home {
     color: #FBFCFE;
-    line-height: 30px;
     font-size: 12px;
-    min-width: 70px;
-    align-items: center;
     text-align: center;
+    white-space: nowrap;
+    padding: 6px 8px;
+    margin: 0px 4px;
    }
 
    .home:hover {
