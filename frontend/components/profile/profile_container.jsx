@@ -77,8 +77,8 @@ class ProfileContainer extends React.Component {
                   <Link to={`/users/${this.props.currentUser.id}`}><p className="nav-text">{this.props.currentUser.fullName}</p></Link>
                 </div>
                 <Link to="/"><p className="nav-text">Home</p></Link>
-                <Link to="/"><p className="nav-text">Find Friends</p></Link>
-                <Link to="/"><p className="nav-text">Create</p></Link>
+                <div><p className="nav-text">Find Friends</p></div>
+                <div><p className="nav-text">Create</p></div>
                 <div className="nav-icon friends"></div>
                 <div className="nav-icon messages"></div>
                 <div className="nav-icon alert"></div>

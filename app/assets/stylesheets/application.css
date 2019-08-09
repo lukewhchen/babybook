@@ -859,6 +859,7 @@
 
   .nav-icon {
     display: flex;
+    font-size: 0px;
     width: 32px;
     height: 26px;
     background-repeat: no-repeat;
@@ -1003,6 +1004,51 @@
     object-fit: cover;
   }
 
-  .sentinels-1{
+  .sentinels-1 {
     color: #e9ebee;
+  }
+
+  .modal {
+    position: fixed;
+    margin-top: -10px;
+    font-size: 12px;
+    color: #1C1E21;
+    left: 800px;
+    width: 400px;
+    height: 125px;
+    z-index: 1;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+  }
+
+  .modal-header {
+    font-weight: bold;
+    background-clip: padding-box;
+    background-color: #fff;
+    border-bottom: solid 1px #dddfe2;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 8px 12px 6px;
+    position: relative;
+  }
+
+  .modal-body {
+    background-color: #f5f6f7;
+    color: #90949C;
+    padding: 8px 12px 6px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #dfe1e5;
+  }
+
+  .modal-footer {
+    color: #385898;
+    font-weight: bold;
+    padding: 8px 12px 6px;
+    text-align: center;
+    vertical-align: middle;
   }
