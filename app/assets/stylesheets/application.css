@@ -403,6 +403,10 @@
     font-family: "Helvetica Neue", Arial, sans-serif; */
  }
 
+ .left-side .left-icon {
+   
+ }
+
   .left-side i{
     color: #0077b5;
     font-size: 22px;
@@ -410,7 +414,7 @@
 
  .left-side li{
     display: flex;
-    /* align-items: flex-start; */
+    align-items: center;
     width: 180px;
     border: 1px solid transparent;
  }
@@ -439,7 +443,7 @@
 
   .left-side label{
     font-size: 13px;
-    line-height: 28px;
+    line-height: 24px;
     margin-left: 6px;
     white-space: nowrap;
   }

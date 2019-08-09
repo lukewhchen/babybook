@@ -54,7 +54,7 @@ class ProfileContainer extends React.Component {
     this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchPosts(this.props.match.params.userId);
   }
-// <img src={post.image_url}/>
+
   render() {
     const personalPosts = this.props.posts.filter( post => post.author_id === this.props.user.id)
     const userPosts = personalPosts.slice(0,this.state.shownPosts).map(post => {
