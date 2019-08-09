@@ -37,7 +37,7 @@ class ProfileContainer extends React.Component {
     }
   }
 
-  handleScroll() {
+  handleScroll(e) {
     const observer = new IntersectionObserver(
           checkPoint => {
             if ( checkPoint[0].intersectionRatio <= 0) return;
@@ -61,7 +61,7 @@ class ProfileContainer extends React.Component {
         return <PostItem key={post.id} post={post} />;
     });
     const userPhotos = personalPosts.slice(0,9).map(post => {
-        return <div className="single-photo"><img src={post.image_url}/></div>;
+        return <div key={post.id} className="single-photo"><img src={post.image_url}/></div>;
     });
     return (
       <div>

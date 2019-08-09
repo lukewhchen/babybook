@@ -404,7 +404,7 @@
  }
 
  .left-side .left-icon {
-   
+
  }
 
   .left-side i{
@@ -771,6 +771,17 @@
     width: 933px;
     margin-top: 15px;
   }
+
+  .profile-info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  /* .profile-content { */
+    /* padding-left: 402px; */
+  /* } */
 
   .user-intro {
     background-color: white;
