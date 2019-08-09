@@ -74,15 +74,15 @@ class ProfileContainer extends React.Component {
               <div className="nav-right">
                 <div className="user-link2">
                   <i className="fa fa-user-circle" aria-hidden="true"/>
-                  <Link to={`/users/${this.props.currentUser.id}`}><p className="home">{this.props.currentUser.fullName}</p></Link>
+                  <Link to={`/users/${this.props.currentUser.id}`}><p className="nav-text">{this.props.currentUser.fullName}</p></Link>
                 </div>
-                <Link to="/"><p className="home">Home</p></Link>
-                <Link to="/"><p className="home">Find Friends</p></Link>
-                <Link to="/"><p className="home">Create</p></Link>
-                <div className="header-icon friends"></div>
-                <div className="header-icon messages"></div>
-                <div className="header-icon alert"></div>
-                <div className="header-icon questions"></div>
+                <Link to="/"><p className="nav-text">Home</p></Link>
+                <Link to="/"><p className="nav-text">Find Friends</p></Link>
+                <Link to="/"><p className="nav-text">Create</p></Link>
+                <div className="nav-icon friends"></div>
+                <div className="nav-icon messages"></div>
+                <div className="nav-icon alert"></div>
+                <div className="nav-icon questions"></div>
                 <button className="logout-button" onClick={this.props.logout}>Log Out</button>
               </div>
           </div>

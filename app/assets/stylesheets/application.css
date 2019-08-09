@@ -632,7 +632,7 @@
     font-size: 24px;
   }
 
-   .home {
+   .nav-text {
     color: #FBFCFE;
     font-size: 12px;
     text-align: center;
@@ -641,7 +641,7 @@
     margin: 0px 4px;
    }
 
-   .home:hover {
+   .nav-text:hover {
      background-color: #365A9D;
      border-radius: 3px;
      cursor: pointer;
@@ -857,35 +857,35 @@
     padding-left: 10px;
   }
 
-  .header-icon {
+  .nav-icon {
     display: flex;
     width: 32px;
     height: 26px;
     background-repeat: no-repeat;
     opacity: 0.5;
   }
-  .header-icon:hover{
+  .nav-icon:hover{
     cursor: pointer;
     opacity: 1;
   }
 
   .friends {
-    background-image: url("header-icons.png");
+    background-image: url("nav-icons.png");
     background-size: auto;
     background-position: 5px -316px;
   }
   .messages {
-    background-image: url("header-icons.png");
+    background-image: url("nav-icons.png");
     background-size: auto;
     background-position: 5px -40px;
   }
   .alert {
-    background-image: url("header-icons.png");
+    background-image: url("nav-icons.png");
     background-size: auto;
     background-position: 5px -91px;
   }
   .questions {
-    background-image: url("header-icons.png");
+    background-image: url("nav-icons.png");
     background-size: auto;
     background-position: 5px -991px;
   }
