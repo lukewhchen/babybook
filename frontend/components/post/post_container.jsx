@@ -41,11 +41,11 @@ class PostContainer extends React.Component {
     }
   }
 
-  // closeModal() {
-  //   this.setState(() => ({
-  //     displayModal: false,
-  //   }));
-  // }
+  closeModal() {
+    this.setState(() => ({
+      displayModal: false,
+    }));
+  }
 
   handleScroll() {
     const observer = new IntersectionObserver(
@@ -71,6 +71,11 @@ class PostContainer extends React.Component {
 
     return (
         <div>
+          <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
+            <div className="modal-header">{this.state.title}</div>
+            <div className="modal-body">No New Requests</div>
+            <div className="modal-footer">See All</div>
+          </div>
           <header className="nav-container" onClick={this.handleClick}>
             <div className="nav-bar">
                 <div className="nav-left">
@@ -93,11 +98,6 @@ class PostContainer extends React.Component {
                 </div>
             </div>
           </header>
-          <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
-            <div className="modal-header">{this.state.title}</div>
-            <div className="modal-body">No New Requests</div>
-            <div className="modal-footer">See All</div>
-          </div>
           <div className="mainpage-body" >
             <LeftSidebar currentUser={currentUser}/>
             <main className="mainpage-content">

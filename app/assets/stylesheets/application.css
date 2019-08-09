@@ -1010,7 +1010,7 @@
 
   .modal {
     position: fixed;
-    margin-top: -10px;
+    top: 45px;
     font-size: 12px;
     color: #1C1E21;
     left: 800px;

@@ -14,10 +14,11 @@ import SearchBarContainer from './search_bar_container';
 class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = { shownPosts: 3 };
+    this.state = { shownPosts: 3, displayModal: false, title: "Default Title"};
     // this.toggleDropdown = this.toggleDropdown.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleModal = this.handleModal.bind(this);
     // this.clearSearchResults = this.clearSearchResults.bind(this);
   }
 
@@ -47,6 +48,20 @@ class ProfileContainer extends React.Component {
     observer.observe(document.querySelector('.sentinels-1'));
   }
 
+  handleModal(e) {
+    const nextTitle = e.target.textContent;
+    if (nextTitle !== this.state.title) {
+      this.setState(() => ({
+        displayModal: true,
+        title: nextTitle
+      }));
+    } else {
+      this.setState(prevState => ({
+        displayModal: !prevState.displayModal
+      }));
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.handleClick();
@@ -65,6 +80,11 @@ class ProfileContainer extends React.Component {
     });
     return (
       <div>
+        <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
+          <div className="modal-header">{this.state.title}</div>
+          <div className="modal-body">No New Requests</div>
+          <div className="modal-footer">See All</div>
+        </div>
         <header className="nav-container" onClick={this.handleClick}>
           <div className="nav-bar">
               <div className="nav-left">
@@ -77,17 +97,16 @@ class ProfileContainer extends React.Component {
                   <Link to={`/users/${this.props.currentUser.id}`}><p className="nav-text">{this.props.currentUser.fullName}</p></Link>
                 </div>
                 <Link to="/"><p className="nav-text">Home</p></Link>
-                <div><p className="nav-text">Find Friends</p></div>
-                <div><p className="nav-text">Create</p></div>
-                <div className="nav-icon friends"></div>
-                <div className="nav-icon messages"></div>
-                <div className="nav-icon alert"></div>
-                <div className="nav-icon questions"></div>
+                  <div ><p className="nav-text" onClick={this.handleModal}>Find Friends</p></div>
+                  <div><p className="nav-text" onClick={this.handleModal}>Create</p></div>
+                  <div className="nav-icon friends" onClick={this.handleModal}>Friend Requests</div>
+                  <div className="nav-icon messages" onClick={this.handleModal}>Messenger</div>
+                  <div className="nav-icon alert" onClick={this.handleModal}>Notifications</div>
+                  <div className="nav-icon questions" onClick={this.handleModal}>Quick Help</div>
                 <button className="logout-button" onClick={this.props.logout}>Log Out</button>
               </div>
           </div>
         </header>
-
         <div className="profile-image">
           <img src={this.props.user.cover_photo_url}/>
           <img src={this.props.user.profile_photo_url}/>
