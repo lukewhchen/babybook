@@ -14,7 +14,7 @@ import SearchBarContainer from '../profile/search_bar_container';
 class PostContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = { shownPosts: 1, displayModal: false, title: "Default Title"};
+    this.state = { shownPosts: 1, displayModal: false, title: "Default Title", offsetX: 31};
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleModal = this.handleModal.bind(this);
@@ -29,16 +29,27 @@ class PostContainer extends React.Component {
 
   handleModal(e) {
     const nextTitle = e.target.textContent;
+    const mapTitleToX = {
+      "Find Friends":31,
+      "Create":52,
+      "Friend Requests": 63,
+      "Messenger": 71,
+      "Notifications": 79,
+      "Quick Help": 87
+    };
     if (nextTitle !== this.state.title) {
       this.setState(() => ({
         displayModal: true,
-        title: nextTitle
+        title: nextTitle,
+        offsetX: mapTitleToX[nextTitle]
       }));
     } else {
       this.setState(prevState => ({
-        displayModal: !prevState.displayModal
+        displayModal: !prevState.displayModal,
+        offsetX: mapTitleToX[nextTitle]
       }));
     }
+    console.log(e.clientX);
   }
 
   closeModal() {
@@ -72,6 +83,7 @@ class PostContainer extends React.Component {
     return (
         <div>
           <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
+            <div className="modal-from" style={{ left: this.state.offsetX + "%"}}></div>
             <div className="modal-header">{this.state.title}</div>
             <div className="modal-body">No New Requests</div>
             <div className="modal-footer">See All</div>
