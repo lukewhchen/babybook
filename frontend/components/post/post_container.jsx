@@ -55,7 +55,6 @@ class PostContainer extends React.Component {
         offsetX: mapTitleToX[nextTitle]
       }));
     }
-    // console.log(e.clientX);
   }
 
   closeModal(e) {
@@ -79,6 +78,8 @@ class PostContainer extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchPosts();
+    this.props.clearSearchResults();
+    this.handleClick();
     this.handleScroll();
   }
 
@@ -90,7 +91,7 @@ class PostContainer extends React.Component {
 
     return (
         <div onClick={this.closeModal}>
-          <header className="nav-container" onClick={this.handleClick}>
+          <header className="nav-container">
             <div className="nav-bar">
                 <div className="nav-left">
                   <Link to="/"><p className="bb-logo">b</p></Link>

@@ -20,6 +20,7 @@ class ProfileContainer extends React.Component {
       title: "Default Title",
       offsetX: 31
     };
+    this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleModal = this.handleModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -38,12 +39,11 @@ class ProfileContainer extends React.Component {
   //   };
   // }
 
-  // closeSearch() {
-  //   console.log(this);
-  //   if (this.props.searchResults.length > 0) {
-  //     this.props.clearSearchResults();
-  //   }
-  // }
+  handleClick() {
+    if (this.props.searchResults.length > 0) {
+      this.props.clearSearchResults();
+    }
+  }
 
   handleScroll(e) {
     const observer = new IntersectionObserver(
@@ -90,6 +90,7 @@ class ProfileContainer extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.handleScroll();
+    this.props.clearSearchResults();
     this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchPosts(this.props.match.params.userId);
   }

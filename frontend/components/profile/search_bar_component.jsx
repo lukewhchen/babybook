@@ -6,8 +6,8 @@ class SearchBarComponent extends React.Component {
   constructor(props) {
     super(props);
       this.handleSearch = this.handleSearch.bind(this);
-      this.clearInput = this.clearInput.bind(this);
       this.handleKeyDown = this.handleKeyDown.bind(this);
+      this.clearInput = this.clearInput.bind(this);
       this.state = {
         input: '',
         searchResults: this.props.searchResults,
@@ -52,11 +52,11 @@ class SearchBarComponent extends React.Component {
 
     if (this.props.location.pathname !== nextProps.location.pathname) {
       this.props.clearSearchResults();
-      this.clearInput();
     }
   }
 
   clearInput() {
+    this.props.clearSearchResults();
     this.setState({ input: '' });
   }
 
@@ -67,7 +67,7 @@ class SearchBarComponent extends React.Component {
         const searchResultItems = this.state.searchResults.map((user, idx) => {
           return(
             <li className={cursorIdx === idx ? 'selected' : null} key={user.id}>
-              <Link to={`/users/${user.id}`} className='search-result-content'>
+              <Link to={`/users/${user.id}`} className='search-result-content' onClick={this.clearInput}>
                 <i className="fa fa-user-circle" aria-hidden="true"/><p>{user.first_name} {user.last_name}</p>
               </Link>
             </li>
@@ -87,7 +87,7 @@ class SearchBarComponent extends React.Component {
           <input
             onChange={this.handleSearch}
             onKeyDown={this.handleKeyDown}
-            onClick={this.props.clearSearchResults}
+            onClick={this.clearInput}
             type='text'
             placeholder='Search'
             value={this.state.input}

@@ -871,6 +871,10 @@
     color: #333333;
   }
 
+  .search-result-content:hover {
+    background-color: #cddffd;
+    cursor: pointer;
+  }
   .search-result-content p{
     padding-left: 10px;
   }
