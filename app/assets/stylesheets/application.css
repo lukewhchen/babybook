@@ -214,6 +214,24 @@
 
   .dropdown {
     position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
   }
 
  .logout-button {
@@ -632,7 +650,7 @@
     font-size: 24px;
   }
 
-   .nav-text {
+   .dd-text {
     color: #FBFCFE;
     font-size: 12px;
     text-align: center;
@@ -641,7 +659,7 @@
     margin: 0px 4px;
    }
 
-   .nav-text:hover {
+   .dd-text:hover {
      background-color: #365A9D;
      border-radius: 3px;
      cursor: pointer;
@@ -857,7 +875,7 @@
     padding-left: 10px;
   }
 
-  .nav-icon {
+  .dd-icon {
     display: flex;
     font-size: 0px;
     width: 32px;
@@ -865,30 +883,61 @@
     background-repeat: no-repeat;
     opacity: 0.5;
   }
-  .nav-icon:hover{
+
+  .dd-icon:hover{
     cursor: pointer;
     opacity: 1;
   }
 
+  .dd-icon:focus{
+    color: white;
+    background-color: white;
+  }
+
   .friends {
-    background-image: url("nav-icons.png");
+    background-image: url("dd-icons.png");
     background-size: auto;
     background-position: 5px -316px;
   }
+
+  .friends:hover{
+    background-position: 5px -338px;
+  }
+
   .messages {
-    background-image: url("nav-icons.png");
+    background-image: url("dd-icons.png");
     background-size: auto;
     background-position: 5px -40px;
   }
+
+  .messages-w {
+    background-image: url("dd-icons.png");
+    background-size: auto;
+    background-position: 5px -66px;
+  }
+
   .alert {
-    background-image: url("nav-icons.png");
+    background-image: url("dd-icons.png");
     background-size: auto;
     background-position: 5px -91px;
   }
+
+  .alert-w {
+    background-image: url("dd-icons.png");
+    background-size: auto;
+    background-position: 5px -116px;
+  }
+
   .questions {
-    background-image: url("nav-icons.png");
+    background-image: url("dd-icons.png");
     background-size: auto;
     background-position: 5px -991px;
+  }
+
+  .questions-w {
+    background-image: url("dd-icons.png");
+    background-size: auto;
+    background-position: 5px -966px;
   }
 
   .icon {
@@ -1009,13 +1058,13 @@
   }
 
   .modal {
-    position: fixed;
-    top: 43px;
+    position: absolute;
+    top: 22px;
     font-size: 12px;
     color: #1C1E21;
-    left: 55%;
+    left: 64px;
     width: 400px;
-    height: 125px;
+    height: 130px;
     z-index: 2;
     background-clip: padding-box;
     background-color: #fff;
@@ -1041,7 +1090,7 @@
     border-bottom: solid 1px #dddfe2;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    padding: 8px 12px 6px;
+    padding: 6px 12px 10px;
     position: relative;
   }
 

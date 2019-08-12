@@ -14,10 +14,16 @@ import SearchBarContainer from '../profile/search_bar_container';
 class PostContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = { shownPosts: 1, displayModal: false, title: "Default Title", offsetX: 31};
+    this.state = {
+      shownPosts: 1,
+      displayModal: false,
+      title: "Default Title",
+      offsetX: 31
+    };
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleModal = this.handleModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleClick() {
@@ -49,13 +55,15 @@ class PostContainer extends React.Component {
         offsetX: mapTitleToX[nextTitle]
       }));
     }
-    console.log(e.clientX);
+    // console.log(e.clientX);
   }
 
-  closeModal() {
-    this.setState(() => ({
-      displayModal: false,
-    }));
+  closeModal(e) {
+    if (e.target.className.indexOf('dd') === -1) {
+      this.setState(() => ({
+        displayModal: false,
+      }));
+    }
   }
 
   handleScroll() {
@@ -81,13 +89,7 @@ class PostContainer extends React.Component {
     });
 
     return (
-        <div>
-          <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
-            <div className="modal-from" style={{ left: this.state.offsetX + "%"}}></div>
-            <div className="modal-header">{this.state.title}</div>
-            <div className="modal-body">No New Requests</div>
-            <div className="modal-footer">See All</div>
-          </div>
+        <div onClick={this.closeModal}>
           <header className="nav-container" onClick={this.handleClick}>
             <div className="nav-bar">
                 <div className="nav-left">
@@ -95,17 +97,25 @@ class PostContainer extends React.Component {
                   <SearchBarContainer />
                 </div>
                 <div className="nav-right">
+                  <div className="dropdown">
+                      <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
+                        <div className="modal-from" style={{ left: this.state.offsetX + "%"}}></div>
+                        <div className="modal-header">{this.state.title}</div>
+                        <div className="modal-body">No New Requests</div>
+                        <div className="modal-footer">See All</div>
+                      </div>
+                  </div>
                   <div className="user-link2">
                     <i className="fa fa-user-circle" aria-hidden="true"/>
-                    <Link to={`/users/${currentUser.id}`}><p className="nav-text">{currentUser.fullName}</p></Link>
+                    <Link to={`/users/${currentUser.id}`}><p className="dd-text">{currentUser.fullName}</p></Link>
                   </div>
-                  <Link to="/"><p className="nav-text">Home</p></Link>
-                  <div ><p className="nav-text" onClick={this.handleModal}>Find Friends</p></div>
-                  <div><p className="nav-text" onClick={this.handleModal}>Create</p></div>
-                  <div className="nav-icon friends" onClick={this.handleModal}>Friend Requests</div>
-                  <div className="nav-icon messages" onClick={this.handleModal}>Messenger</div>
-                  <div className="nav-icon alert" onClick={this.handleModal}>Notifications</div>
-                  <div className="nav-icon questions" onClick={this.handleModal}>Quick Help</div>
+                  <Link to="/"><p className="dd-text">Home</p></Link>
+                  <div><p className="dd-text" onClick={this.handleModal}>Find Friends</p></div>
+                  <div><p className="dd-text" onClick={this.handleModal}>Create</p></div>
+                  <div className="dd-icon friends" onClick={this.handleModal}>Friend Requests</div>
+                  <div className="dd-icon messages" onClick={this.handleModal}>Messenger</div>
+                  <div className="dd-icon alert" onClick={this.handleModal}>Notifications</div>
+                  <div className="dd-icon questions" onClick={this.handleModal}>Quick Help</div>
                   <button className="logout-button" onClick={this.props.logout}>Log Out</button>
                 </div>
             </div>
