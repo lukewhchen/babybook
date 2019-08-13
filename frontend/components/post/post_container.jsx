@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-import PostItem from './post_item';
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { fetchUsers } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
+import { clearSearchResults } from '../../actions/search_actions';
+import PostItem from './post_item';
 import PostForm from './post_form';
 import LeftSidebar from './left_sidebar';
 import RightSidebar from './right_sidebar';
-import { clearSearchResults } from '../../actions/search_actions';
 import SearchBarContainer from '../profile/search_bar_container';
 
 class PostContainer extends React.Component {

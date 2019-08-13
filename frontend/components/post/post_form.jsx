@@ -60,20 +60,24 @@ class PostForm extends React.Component {
             <i className="fa fa-pencil" aria-hidden="true" />
             Share your cutest baby photo here. if you don't I will show you my favorite.
           </h2>
-          <textarea
-            placeholder={`Whats on your mind, ${name}?`}
-            onChange={this.handleChange()}
-            value={this.state.body}/>
-          {this.state.imageUrl &&
-            <img src={this.state.imageUrl}/>
-          }
-          <br/>
-          {this.handleErrors()}
-          <label htmlFor="up-image" className="custom-file-upload">
-            <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
-          </label>
-          <input id="up-image" type="file" onChange={this.updateFile}/>
-          <button className="post-button">Post</button>
+          <div className="new-post-body">
+            <textarea
+              placeholder={`Whats on your mind, ${name}?`}
+              onChange={this.handleChange()}
+              value={this.state.body}/>
+            {this.state.imageUrl &&
+              <img src={this.state.imageUrl}/>
+            }
+            <br/>
+          </div>
+          <div className="new-post-footer">
+            {this.handleErrors()}
+            <label htmlFor="up-image" className="custom-file-upload">
+              <i className="fa fa-picture-o" aria-hidden="true"> Photo</i>
+            </label>
+            <input id="up-image" type="file" onChange={this.updateFile}/>
+            <button className="post-button">Post</button>
+          </div>
         </form>
     );
   }

@@ -537,23 +537,16 @@
   }
 
   .new-post-form img {
-    position: absolute;
     height: 75px;
     width: 100px;
-    top: 102px;
-    left: 821px;
+    margin-top: 4px;
     border: 1px solid #dfe1e5;
     object-fit: contain;
   }
 
-  /* .image-preview {
-    position: absolute;
-    height: 75px;
-    width: 100px;
-    left: 820px;
-    top: 101px;
-    object-fit: contain;
-  } */
+  .new-post-body {
+    display: flex;
+  }
 
   .single-post {
     background-color: white;
