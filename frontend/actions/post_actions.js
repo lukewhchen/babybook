@@ -8,7 +8,7 @@ export const REMOVE_POST = 'REMOVE_POST';
 const receivePosts = payload => ({
   type: RECEIVE_POSTS,
   posts: payload.posts,
-  // comments: payload.comments
+  comments: payload.comments
 });
 
 const receivePost = payload => ({
