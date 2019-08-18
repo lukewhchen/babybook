@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
-
+import CommentForm from "./comment_form";
 
 function PostItem(props) {
   const timestamp = new Intl.DateTimeFormat('en-US', {
@@ -14,7 +14,6 @@ function PostItem(props) {
   const authorURL = `/users/${props.post.author_id}`;
   const postContent = props.post.body;
   const postImage = props.post.image_url;
-  const comment = props.post.comments;
   return (
     <div className="single-post">
       <div className="post-header">
@@ -37,17 +36,7 @@ function PostItem(props) {
           <i className="fa fa-share" aria-hidden="true">Share</i>
         </label>
       </div>
-      <div className="post-comment">
-        <p>Comment Here</p>
-        <p>{comment}</p>
-          <form className="comment-form">
-            <label>
-              <i className="fa fa-user-circle cc" aria-hidden="true"/>
-              <input type="text" name="name" placeholder="Write a comment..."/>
-            </label>
-            <p>Press Enter to post.</p>
-          </form>
-      </div>
+      <CommentForm />
     </div>
   );
 }
