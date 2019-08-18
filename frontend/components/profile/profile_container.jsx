@@ -3,27 +3,21 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
-import { logout } from '../../actions/session_actions';
 import PostForm from '../post/post_form';
 import PostItem from '../post/post_item';
 // import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
 import { clearSearchResults } from '../../actions/search_actions';
 import SearchBarContainer from './search_bar_container';
-// import NavBar from '../nav/nav_bar';
+import NavBar from '../nav/nav_bar';
 
 class ProfileContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      shownPosts: 3,
-      displayModal: false,
-      title: "Default Title",
-      offsetX: 31
+      shownPosts: 3
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.handleModal = this.handleModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
     // this.toggleDropdown = this.toggleDropdown.bind(this);
     // this.closeSearch = this.closeSearch.bind(this);
     // this.clearSearchResults = this.clearSearchResults.bind(this);
@@ -55,38 +49,6 @@ class ProfileContainer extends React.Component {
     observer.observe(document.querySelector('.sentinels-1'));
   }
 
-  handleModal(e) {
-    const nextTitle = e.target.textContent;
-    const mapTitleToX = {
-      "Find Friends":31,
-      "Create":52,
-      "Friend Requests": 63,
-      "Messenger": 71,
-      "Notifications": 79,
-      "Quick Help": 87
-    };
-    if (nextTitle !== this.state.title) {
-      this.setState(() => ({
-        displayModal: true,
-        title: nextTitle,
-        offsetX: mapTitleToX[nextTitle]
-      }));
-    } else {
-      this.setState(prevState => ({
-        displayModal: !prevState.displayModal,
-        offsetX: mapTitleToX[nextTitle]
-      }));
-    }
-  }
-
-  closeModal(e) {
-    if (e.target.className.indexOf('dd') === -1) {
-      this.setState(() => ({
-        displayModal: false,
-      }));
-    }
-  }
-
   componentDidMount() {
     window.scrollTo(0, 0);
     this.handleScroll();
@@ -104,37 +66,8 @@ class ProfileContainer extends React.Component {
         return <div key={post.id} className="single-photo"><img src={post.image_url}/></div>;
     });
     return (
-      <div onClick={this.closeModal}>
-        <header className="nav-container" onClick={this.closeSearch}>
-          <div className="nav-bar">
-              <div className="nav-left">
-                <Link to="/"><p className="bb-logo">b</p></Link>
-                <SearchBarContainer />
-              </div>
-              <div className="nav-right">
-                <div className="dropdown">
-                    <div className="modal" style={{display: this.state.displayModal ? "block" : "none"}}>
-                      <div className="modal-from" style={{ left: this.state.offsetX + "%"}}></div>
-                      <div className="modal-header">{this.state.title}</div>
-                      <div className="modal-body">No New Requests</div>
-                      <div className="modal-footer">See All</div>
-                    </div>
-                </div>
-                <div className="user-link2">
-                  <i className="fa fa-user-circle" aria-hidden="true"/>
-                  <Link to={`/users/${this.props.currentUser.id}`}><p className="dd-text">{this.props.currentUser.fullName}</p></Link>
-                </div>
-                <Link to="/"><p className="dd-text">Home</p></Link>
-                  <div ><p className="dd-text" onClick={this.handleModal}>Find Friends</p></div>
-                  <div><p className="dd-text" onClick={this.handleModal}>Create</p></div>
-                  <div className="dd-icon friends" onClick={this.handleModal}>Friend Requests</div>
-                  <div className="dd-icon messages" onClick={this.handleModal}>Messenger</div>
-                  <div className="dd-icon alert" onClick={this.handleModal}>Notifications</div>
-                  <div className="dd-icon questions" onClick={this.handleModal}>Quick Help</div>
-                <button className="logout-button" onClick={this.props.logout}>Log Out</button>
-              </div>
-          </div>
-        </header>
+      <div>
+        <NavBar />
         <div className="profile-image">
           <img src={this.props.user.cover_photo_url}/>
           <img src={this.props.user.profile_photo_url}/>
@@ -194,7 +127,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
   fetchUser: userId => dispatch(fetchUser(userId)),
   // fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: userId => dispatch(fetchPosts(userId)),
