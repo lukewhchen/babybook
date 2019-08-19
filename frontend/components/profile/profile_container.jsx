@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
-import PostForm from '../post/post_form';
-import PostItem from '../post/post_item';
+import PostForm from '../form/post_form';
+import PostItem from '../feed/post_item';
 // import { showDropdown, hideDropdown } from '../../actions/dropdown_actions';
 import { clearSearchResults } from '../../actions/search_actions';
-import SearchBarContainer from './search_bar_container';
+import SearchBarContainer from '../nav/search_bar_container';
 import NavBar from '../nav/nav_bar';
 
 class ProfileContainer extends React.Component {

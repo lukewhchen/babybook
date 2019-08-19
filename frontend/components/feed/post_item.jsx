@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
-import CommentForm from "./comment_form";
+import CommentForm from "../form/comment_form";
 
 function PostItem(props) {
   const timestamp = new Intl.DateTimeFormat('en-US', {
