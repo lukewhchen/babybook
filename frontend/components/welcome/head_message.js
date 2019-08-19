@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SessionForm from '../session_form/session_form';
+import SessionForm from '../form/session_form';
 
 
 const HeadMessage = () => {

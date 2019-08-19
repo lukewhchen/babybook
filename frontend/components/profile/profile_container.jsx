@@ -112,7 +112,7 @@ class ProfileContainer extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "lest", posts:[]};
+  const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "last", posts:[]};
   const dropdownDisplayed = (
     state.ui.dropdown.displayed
   );

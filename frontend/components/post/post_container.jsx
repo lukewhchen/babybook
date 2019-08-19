@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
-import { fetchUsers } from '../../actions/user_actions';
+// import { fetchUsers } from '../../actions/user_actions';
 import { clearSearchResults } from '../../actions/search_actions';
 import PostItem from './post_item';
 import PostForm from './post_form';
@@ -54,7 +54,7 @@ class PostContainer extends React.Component {
 
     return (
         <div>
-          <NavBar />
+          <NavBar/>
           <div className="mainpage-body" >
             <LeftSidebar currentUser={currentUser}/>
             <main className="mainpage-content">
@@ -78,7 +78,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchUsers: () => dispatch(fetchUsers()),
+  // fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: () => dispatch(fetchPosts()),
   clearSearchResults: () => dispatch(clearSearchResults()),
 });
