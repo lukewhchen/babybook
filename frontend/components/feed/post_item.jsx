@@ -36,7 +36,7 @@ function PostItem(props) {
           <i className="fa fa-share" aria-hidden="true">Share</i>
         </label>
       </div>
-      <CommentForm />
+      <CommentForm post={props.post}/>
     </div>
   );
 }
