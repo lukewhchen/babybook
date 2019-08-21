@@ -8,7 +8,6 @@ const mapStateToProps = state => {
       state.ui.dropdown.component === 'search'
   );
 
-
   const searchResults = state.ui.searchResults.map(id => {
     return state.entities.users[id];
   });

@@ -6,28 +6,37 @@ class SearchBarComponent extends React.Component {
   constructor(props) {
     super(props);
       this.handleSearch = this.handleSearch.bind(this);
-      this.handleKeyDown = this.handleKeyDown.bind(this);
+      this.naviSearchResults = this.naviSearchResults.bind(this);
       this.clearInput = this.clearInput.bind(this);
       this.state = {
         input: '',
-        searchResults: this.props.searchResults,
+        searchResults: '',
         cursorIdx: 0
       };
   }
 
+  // handleSearch(e) {
+  //   e.preventDefault();
+  //   this.setState({ input: e.target.value }, () => {
+  //     if (this.state.input.length > 0) {
+  //       this.props.fetchSearchResults(this.state.input);
+  //     } else {
+  //       this.props.clearSearchResults();
+  //     }
+  //   });
+  // }
+
   handleSearch(e) {
     e.preventDefault();
-    this.setState({ input: e.target.value }, () => {
-      if (this.state.input.length > 0) {
-        this.props.fetchSearchResults(this.state.input);
-      } else {
-        this.props.clearSearchResults();
-      }
+    let searchItem = e.target.value;
+    let results = this.props.fetchSearchResults(searchItem);
+    this.setState({
+      input: searchItem,
+      searchResults: results
     });
   }
 
-
-  handleKeyDown(e) {
+  naviSearchResults(e) {
     const { cursorIdx, searchResults } = this.state;
     const lastIdx = searchResults.length-1;
     if (e.keyCode === 38) {
@@ -39,9 +48,8 @@ class SearchBarComponent extends React.Component {
         cursorIdx: cursorIdx < lastIdx ? prevState.cursorIdx + 1 : 0
       }));
     } else if (e.keyCode === 13) {
-      this.props.clearSearchResults();
       this.props.history.push(`/users/${searchResults[cursorIdx].id}`);
-      this.setState( {cursorIdx:0});
+      this.clearInput();
     }
   }
 
@@ -51,13 +59,16 @@ class SearchBarComponent extends React.Component {
     }
 
     if (this.props.location.pathname !== nextProps.location.pathname) {
-      this.props.clearSearchResults();
+      this.clearInput();
     }
   }
 
   clearInput() {
-    this.props.clearSearchResults();
-    this.setState({ input: '' });
+    this.setState({
+      input: '',
+      searchResults: '',
+      cursorIdx: 0
+     });
   }
 
   render() {
@@ -86,8 +97,7 @@ class SearchBarComponent extends React.Component {
         <div className='search-bar'>
           <input
             onChange={this.handleSearch}
-            onKeyDown={this.handleKeyDown}
-            onClick={this.clearInput}
+            onKeyDown={this.naviSearchResults}
             type='text'
             placeholder='Search'
             value={this.state.input}
