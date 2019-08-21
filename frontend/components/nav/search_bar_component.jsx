@@ -37,6 +37,7 @@ class SearchBarComponent extends React.Component {
   }
 
   naviSearchResults(e) {
+    e.preventDefault();    
     const { cursorIdx, searchResults } = this.state;
     const lastIdx = searchResults.length-1;
     if (e.keyCode === 38) {
