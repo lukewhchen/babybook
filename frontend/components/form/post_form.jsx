@@ -30,6 +30,7 @@ class PostForm extends React.Component {
   }
 
   updateFile(e) {
+    e.preventDefault();
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () =>
