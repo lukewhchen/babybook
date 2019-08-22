@@ -11,20 +11,9 @@ class SearchBarComponent extends React.Component {
       this.state = {
         input: '',
         searchResults: '',
-        cursorIdx: 0
+        cursorIdx: 0,
       };
   }
-
-  // handleSearch(e) {
-  //   e.preventDefault();
-  //   this.setState({ input: e.target.value }, () => {
-  //     if (this.state.input.length > 0) {
-  //       this.props.fetchSearchResults(this.state.input);
-  //     } else {
-  //       this.props.clearSearchResults();
-  //     }
-  //   });
-  // }
 
   handleSearch(e) {
     e.preventDefault();
@@ -37,7 +26,6 @@ class SearchBarComponent extends React.Component {
   }
 
   naviSearchResults(e) {
-    e.preventDefault();    
     const { cursorIdx, searchResults } = this.state;
     const lastIdx = searchResults.length-1;
     if (e.keyCode === 38) {
@@ -45,12 +33,12 @@ class SearchBarComponent extends React.Component {
           cursorIdx: cursorIdx > 0 ? prevState.cursorIdx - 1 : lastIdx
         }));
     } else if (e.keyCode === 40) {
-      this.setState( prevState => ({
+        this.setState( prevState => ({
         cursorIdx: cursorIdx < lastIdx ? prevState.cursorIdx + 1 : 0
       }));
     } else if (e.keyCode === 13) {
-      this.props.history.push(`/users/${searchResults[cursorIdx].id}`);
-      this.clearInput();
+        this.props.history.push(`/users/${searchResults[cursorIdx].id}`);
+        this.clearInput();
     }
   }
 
@@ -74,9 +62,9 @@ class SearchBarComponent extends React.Component {
 
   render() {
     let displayedSearchResults = null;
-    let cursorIdx = this.state.cursorIdx;
-    if (this.state.searchResults.length >= 1) {
-        const searchResultItems = this.state.searchResults.map((user, idx) => {
+    const { cursorIdx, searchResults } = this.state;
+    if (searchResults.length >= 1) {
+        const searchResultItems = searchResults.map((user, idx) => {
           return(
             <li className={cursorIdx === idx ? 'selected' : null} key={user.id}>
               <Link to={`/users/${user.id}`} className='search-result-content' onClick={this.clearInput}>
