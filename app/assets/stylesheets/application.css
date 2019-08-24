@@ -1139,3 +1139,30 @@
     border: 1px solid #ccd0d5;
     border-radius: 16px;
   }
+
+  .single-comment {
+    display: flex;
+    line-height: 32px;
+    margin-bottom: 5px;    
+  }
+
+  .comment-body {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 32px;
+    background-color: #f2f3f5;
+    border: 1px solid #ccd0d5;
+    border-radius: 16px;
+  }
+
+  .comment-body i {
+    line-height: 32px;
+  }
+
+  .comment-body span {
+    padding-left: 5px;
+    color: #1C1E21;
+  }
+  .comment-body label {
+    color: #385898;
+  }

@@ -8,7 +8,7 @@ import { RECEIVE_SEARCH_RESULTS } from '../actions/search_actions';
 const usersReducer =  (state = {}, action) => {
   Object.freeze(state);
   let newState = merge({}, state);
-
+  // debugger;
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return merge({}, state, {[action.user.id]: action.user});

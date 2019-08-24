@@ -3,7 +3,7 @@ class Api::PostsController < ApplicationController
   PhotoLibrary = ["youcan.jpg", "hithere.jpeg", "cutebaby.jpg", "bestfriend.jpg", "george.jpg", "kobebaby.jpg", "bear.jpg", "happyhalloween.jpg"]
 
   def index
-    @posts = Post.all.includes(:author)
+    @posts = Post.all.includes(:author, :comments)
     # @posts = Post.order("id DESC").includes(:author).limit(10)s
     render :index
   end

@@ -4,7 +4,6 @@ import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comments_actions';
 
 const postsReducer = (state = {}, action) => {
   Object.freeze(state);
-
   switch (action.type) {
     case RECEIVE_POSTS:
       return action.posts;

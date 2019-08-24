@@ -1,4 +1,5 @@
 import React from "react";
+import CommentItem from "../feed/comment_item";
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -6,10 +7,14 @@ class CommentForm extends React.Component {
   }
 
   render() {
+    const author = this.props.post.author;
+    const allComments = this.props.post.comment;
+    const comment = allComments.map( com => {
+      return <CommentItem key={com.id} body={com.body} author="userName"/>;
+    });
     return (
       <div className="post-comment">
-        <p>Comment Here</p>
-        <p>{this.props.post.id}</p>
+          <ul>{comment}</ul>
           <form className="comment-form">
             <label>
               <i className="fa fa-user-circle cc" aria-hidden="true"/>
