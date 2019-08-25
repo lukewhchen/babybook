@@ -1143,13 +1143,14 @@
   .single-comment {
     display: flex;
     line-height: 32px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
   }
 
   .comment-body {
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
-    height: 32px;
+    height: auto;
     background-color: #f2f3f5;
     border: 1px solid #ccd0d5;
     border-radius: 16px;
@@ -1159,7 +1160,7 @@
     line-height: 32px;
   }
 
-  .comment-body span {
+  .comment-body p {
     padding-left: 5px;
     color: #1C1E21;
   }

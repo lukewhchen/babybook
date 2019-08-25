@@ -6,7 +6,7 @@ function commentItem(props) {
       <i className="fa fa-user-circle cc" aria-hidden="true"/>
       <div className="comment-body">
         <label>{props.author}</label>
-        <span>{props.body}</span>
+        <p>{props.body}</p>
       </div>
     </div>
   );
