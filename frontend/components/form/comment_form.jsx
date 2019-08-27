@@ -22,19 +22,21 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const comment = {"body": this.state.body, "post_id": this.props.post.id};
-    this.props.createComment(comment).then(() => {
-        this.props.fetchPost(this.props.post.id);
-    });
+    this.props.createComment(comment);
+    // this.props.createComment(comment).then(() => {
+    //     this.props.fetchPost(this.props.post.id);
+    // });
     return (
       this.setState({ body: "" })
     );
   }
-
+//  如果 createCommment 沒有繼續用 promise call fetchPost 的話，input 會清空但是
+//  新的 comment 不會 show 出來
   render() {
-    const author = this.props.post.author;
+    const author = this.props.post.author_name;
     const allComments = this.props.post.comment;
     const comment = allComments.map( com => {
-      return <CommentItem key={com.id} body={com.body} author="userName"/>;
+      return <CommentItem key={com.id} body={com.body} author={author}/>;
     });
     return (
       <div className="post-comment" onSubmit={this.handleSubmit}>

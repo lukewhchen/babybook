@@ -1148,6 +1148,7 @@
 
   .comment-body {
     display: flex;
+    font-size: 13px;
     padding-left: 10px;
     padding-right: 10px;
     height: auto;
@@ -1166,4 +1167,5 @@
   }
   .comment-body label {
     color: #385898;
+    white-space: nowrap;    
   }
