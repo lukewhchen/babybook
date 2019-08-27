@@ -15,17 +15,17 @@ class CommentForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange() {
-    return e => this.setState({ body: e.target.value });
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({ body: e.target.value });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const comment = {"body": this.state.body, "post_id": this.props.post.id};
-    this.props.createComment(comment);
-    // this.props.createComment(comment).then(() => {
-    //     this.props.fetchPost(this.props.post.id);
-    // });
+    this.props.createComment(comment).then(() => {
+        this.props.fetchPost(this.props.post.id);
+    });
     return (
       this.setState({ body: "" })
     );
@@ -33,10 +33,11 @@ class CommentForm extends React.Component {
 //  如果 createCommment 沒有繼續用 promise call fetchPost 的話，input 會清空但是
 //  新的 comment 不會 show 出來
   render() {
-    const author = this.props.post.author_name;
+    // const author = this.props.commenter;
     const allComments = this.props.post.comment;
     const comment = allComments.map( com => {
-      return <CommentItem key={com.id} body={com.body} author={author}/>;
+      debugger;
+      return <CommentItem key={com.id} body={com.body} authorId={com.author_id}/>;
     });
     return (
       <div className="post-comment" onSubmit={this.handleSubmit}>
@@ -46,7 +47,7 @@ class CommentForm extends React.Component {
               <i className="fa fa-user-circle cc" aria-hidden="true"/>
             </label>
             <input type="text" name="name" placeholder="Write a comment..."
-              onChange={this.handleChange()} value={this.state.body}/>
+              onChange={this.handleChange} value={this.state.body}/>
             <p>Press Enter to post.</p>
           </form>
       </div>
@@ -54,6 +55,12 @@ class CommentForm extends React.Component {
   }
 }
 
+// const mapStateToProps = (state, ownProps) => {
+//   debugger;
+//   return {
+//     commenter: state.entities.users[ownProps.post.comment.author_id]
+//   };
+// };
 
 const mapDispatchToProps = dispatch => {
   return {

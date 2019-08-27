@@ -1,2 +1,2 @@
-json.commentId @comment.id
-json.postId @comment.post_id
+# json.commentId @comment.id
+# json.postId @comment.post_id

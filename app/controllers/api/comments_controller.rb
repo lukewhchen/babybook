@@ -3,10 +3,12 @@ class Api::CommentsController < ApplicationController
 
   def index
     @comments = Post.find(params[:post_id]).comments
+    render :index
   end
 
   def show
     @comment = Comment.find(params[:id])
+    render :show
   end
 
   def create
