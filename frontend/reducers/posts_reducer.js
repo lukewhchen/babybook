@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_POSTS, RECEIVE_POST, REMOVE_POST} from '../actions/post_actions';
-import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comments_actions';
+// import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comments_actions';
 
 const postsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -8,6 +8,7 @@ const postsReducer = (state = {}, action) => {
     case RECEIVE_POSTS:
       return merge({}, state, action.posts);
     case RECEIVE_POST:
+      debugger;
       return merge({}, state, { [action.post.id]: action.post });
     case REMOVE_POST:
       const newState = merge({}, state);

@@ -3,10 +3,12 @@ import { receiveErrors } from './session_actions';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-const receiveComment = comment => ({
-  type: RECEIVE_COMMENT,
-  comment
-});
+const receiveComment = comment => {
+  return {
+    type: RECEIVE_COMMENT,
+    comment: comment
+  };
+};
 
 const removeComment = comment => ({
   type: REMOVE_COMMENT,
@@ -15,7 +17,14 @@ const removeComment = comment => ({
 
 export const createComment = comment => dispatch => {
   return CommentAPIUtil.createComment(comment).then(
-    comment => dispatch(receiveComment(comment)),
+    payload => dispatch(receiveComment(payload)),
+    errors => dispatch(receiveErrors(errors, 'comments'))
+  );
+};
+
+export const fetchComments = postId => dispatch => {
+  return CommentAPIUtil.fetchComments(postId).then(
+    payload => dispatch(receiveComment(payload)),
     errors => dispatch(receiveErrors(errors, 'comments'))
   );
 };

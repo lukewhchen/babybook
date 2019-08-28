@@ -54,7 +54,7 @@ class ProfileContainer extends React.Component {
     this.handleScroll();
     this.props.clearSearchResults();
     this.props.fetchUser(this.props.match.params.userId);
-    this.props.fetchPosts(this.props.match.params.userId);
+    this.props.fetchPosts();
   }
 
   render() {
@@ -129,7 +129,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   fetchUser: userId => dispatch(fetchUser(userId)),
   // fetchUsers: () => dispatch(fetchUsers()),
-  fetchPosts: userId => dispatch(fetchPosts(userId)),
+  fetchPosts: () => dispatch(fetchPosts()),
   clearSearchResults: () => dispatch(clearSearchResults()),
   // showDropdown: component => dispatch(showDropdown(component)),
   // hideDropdown: () => dispatch(hideDropdown()),

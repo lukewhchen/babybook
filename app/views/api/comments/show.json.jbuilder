@@ -1,5 +1,4 @@
-# json.partial! '/api/comments/comment', comment: @comment
-
+json.partial! '/api/comments/comment', comment: @comment
 
 # json.comment do
 #   json.partial! 'api/comments/comment', comment: @comment

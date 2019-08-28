@@ -14,7 +14,6 @@ function PostItem(props) {
   const authorURL = `/users/${props.post.author_id}`;
   const postContent = props.post.body;
   const postImage = props.post.image_url;
-  debugger;
   return (
     <div className="single-post">
       <div className="post-header">

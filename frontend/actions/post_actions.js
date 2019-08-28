@@ -5,18 +5,32 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
-const receivePosts = payload => ({
-  type: RECEIVE_POSTS,
-  posts: payload.posts,
-  comments: payload.comments
-});
+const receivePosts = payload => {
+  const comments = {};
+    Object.keys(payload.posts).map( key => {
+      let postComments = payload.posts[key].comment;
+      if ( postComments.length !== 0) {
+        let commentId = postComments.map( e => e.id);
+        commentId.forEach((id, idx) => {
+        comments[id] = postComments[idx];
+      });
+    }
+  });
+  return {
+    type: RECEIVE_POSTS,
+    posts: payload.posts,
+    comments: comments
+  };
+};
 
-const receivePost = payload => ({
-  type: RECEIVE_POST,
-  post: payload.post,
-  author: payload.author,
-  comments: payload.comments
-});
+const receivePost = payload => {
+  return {
+    type: RECEIVE_POST,
+    post: payload.post,
+    author: payload.author,
+    comments: payload.comments
+  };
+};
 
 const removePost = payload => ({
   type: REMOVE_POST,
@@ -25,8 +39,8 @@ const removePost = payload => ({
 });
 
 
-export const fetchPosts = userId => dispatch => {
-  return PostAPIUtil.fetchPosts(userId).then(
+export const fetchPosts = () => dispatch => {
+  return PostAPIUtil.fetchPosts().then(
     payload => dispatch(receivePosts(payload)),
     errors => dispatch(receiveErrors(errors, 'posts'))
   );

@@ -8,7 +8,6 @@ import { RECEIVE_SEARCH_RESULTS } from '../actions/search_actions';
 const usersReducer =  (state = {}, action) => {
   Object.freeze(state);
   let newState = merge({}, state);
-  // debugger;
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return merge({}, state, {[action.user.id]: action.user});
@@ -16,10 +15,10 @@ const usersReducer =  (state = {}, action) => {
       return merge({}, state, action.users);
     case RECEIVE_USER:
       return merge({}, state, {[action.user.id]: action.user});
-    case RECEIVE_POSTS:
-      return merge({}, state, action.authors);
-    case RECEIVE_POST:
-      return merge({}, state, {[action.author.id]: action.author});
+    // case RECEIVE_POSTS:
+    //   return merge({}, state, action.authors);
+    // case RECEIVE_POST:
+    //   return merge({}, state, {[action.author.id]: action.author});
     case RECEIVE_SEARCH_RESULTS:
       return merge({}, state, action.users);
       // Object.values(action.users).forEach(id => {

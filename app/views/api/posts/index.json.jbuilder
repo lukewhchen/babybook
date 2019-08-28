@@ -5,3 +5,5 @@ json.posts do
     end
   end
 end
+
+# 'api/posts/post' 代表去找 path -> views/api/posts 裡面的 _post.json.jbuilder 檔案

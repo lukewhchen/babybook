@@ -2,12 +2,12 @@ class Api::CommentsController < ApplicationController
   before_action :ensure_logged_in
 
   def index
-    @comments = Post.find(params[:post_id]).comments
+    @comments = Post.find(params[:post_id]).comments.include(:author)
     render :index
   end
 
   def show
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find(params[:id]).include(:author)
     render :show
   end
 

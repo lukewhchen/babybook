@@ -596,6 +596,11 @@
     margin: 10px 12px;
   }
 
+  .post-footer {
+    border-bottom: 1px solid #dfe1e5;
+    margin-bottom: 10px;
+  }
+
   .single-post img {
     width: 528px;
     margin-bottom: 5px;
@@ -1110,16 +1115,18 @@
   }
 
   .comment-form {
-    height: 60px;
-    border-top: 1px solid #dddfe2;
+    display: flex;
+    height: 50px;
+    margin: 10px 10px 5px;
   }
   .comment-form label {
     line-height: 50px;
     padding-left: 15px;
   }
   .comment-form p {
-    padding-left: 70px;
-    margin-top: -5px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 46px;
     font-size: 9px;
     color: #90949C;
   }
@@ -1127,12 +1134,13 @@
   .comment-form i {
     color: #8D949E;
     font-size: 30px;
+    vertical-align: middle;
   }
 
   .comment-form input{
     font-size: 13px;
-    width: 430px;
-    margin-left: 10px;
+    width: -webkit-fill-available;
+    margin-left: 5px;
     padding-left: 10px;
     height: 30px;
     background-color: #f2f3f5;
@@ -1143,7 +1151,13 @@
   .single-comment {
     display: flex;
     line-height: 32px;
-    margin-bottom: 5px;
+    margin: 10px 10px 5px;
+  }
+
+  .single-comment > i {
+    color: #8D949E;
+    font-size: 30px;
+    vertical-align: middle;
   }
 
   .comment-body {
@@ -1151,7 +1165,7 @@
     font-size: 13px;
     padding-left: 10px;
     padding-right: 10px;
-    height: auto;
+    margin-left: 5px;
     background-color: #f2f3f5;
     border: 1px solid #ccd0d5;
     border-radius: 16px;
@@ -1167,5 +1181,5 @@
   }
   .comment-body label {
     color: #385898;
-    white-space: nowrap;    
+    white-space: nowrap;
   }

@@ -20,3 +20,10 @@ export const deleteComment = commentId => {
     url: `api/comments/${commentId}`
   });
 };
+
+export const fetchComments = postId => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/posts/${postId}`,
+  });
+};
