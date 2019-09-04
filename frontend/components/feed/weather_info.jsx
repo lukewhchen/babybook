@@ -5,7 +5,7 @@ const WeatherInfo = (props) => {
   let url = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <div className='card'>
-      <div className="weather-title">
+      <div className="card-title">
         <div className="left-icon weather"></div>
         <span>{props.weatherData.city}, {props.weatherData.country}</span>
       </div>

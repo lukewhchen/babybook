@@ -7,9 +7,9 @@ class Weather extends React.Component{
     this.state = {
       city: 'San Francisco',
       country: 'US',
-      temp: 50,
-      tempMax: 100,
-      tempMin: 20,
+      temp: 82,
+      tempMax: 91,
+      tempMin: 72,
       description: "Update local weather...",
       icon: "03d"
     };
@@ -33,7 +33,6 @@ class Weather extends React.Component{
     xmlHttp.onreadystatechange = () => {
       if (xmlHttp.status === 200 && xmlHttp.readyState === XMLHttpRequest.DONE) {
         const weatherData = JSON.parse(xmlHttp.responseText);
-        console.log(weatherData);
         this.setState({
           city: weatherData.name,
           country: weatherData.sys.country,

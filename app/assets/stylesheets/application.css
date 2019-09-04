@@ -485,9 +485,18 @@
    margin-bottom: 10px;
  }
 
- .weather-title span {
+ .card-footer {
+   padding-left: 12px;
+   padding-bottom: 10px;
+   color: navy;
+ }
+
+ .card-title span {
    margin-left: 10px;
    margin-top: 5px;
+   color: #616770;
+   font-size: 13px;
+   font-weight: bold;
  }
 
  .weather-body p {
@@ -497,8 +506,9 @@
    text-transform: capitalize;
  }
 
- .weather-title {
+ .card-title {
    display: flex;
+   margin-bottom: 2px;
  }
 
  .weather-body {
@@ -530,25 +540,29 @@
    font-size: 14px;
  }
 
- .right-side h4 {
-    padding-left: 20px;
+ .ad-body {
+   display: flex;
+   background-color: pink;
  }
 
+ /* .right-side h4 {
+    padding-left: 20px;
+ } */
 /* small fa fa logo */
- .right-side i {
+ /* .right-side i {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
- }
+ } */
 /* text */
-  .right-side a {
+  /* .right-side a {
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
  .right-side a:hover {
     background-color: #cddffd;
- }
+ } */
 
 
  h2 > i {
@@ -610,6 +624,11 @@
     overflow: hidden;
   }
 
+  .single-post img {
+    width: 528px;
+    margin-bottom: 5px;
+  }
+
   .post-header {
     display: flex;
     margin: 10px 12px;
@@ -650,11 +669,6 @@
   .post-footer {
     border-bottom: 1px solid #dfe1e5;
     margin-bottom: 10px;
-  }
-
-  .single-post img {
-    width: 528px;
-    margin-bottom: 5px;
   }
 
   .nav-bar {
@@ -1061,6 +1075,10 @@
     background-image: url("feed-icons.png");
     background-position: 2px -1073px;
   }
+  .play {
+    background-image: url("feed-icons.png");
+    background-position: 2px -232px;
+  }
   .update {
     background-image: url("updates.png");
   }
@@ -1069,6 +1087,37 @@
   }
   .more {
     background-image: url("more.png");
+  }
+
+  .cas {
+    background-image: url("cas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .aquarium {
+    background-image: url("aquarium.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .legoland {
+    background-image: url("legoland.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .kidspace {
+    background-image: url("kidspace.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .zoo {
+    background-image: url("zoo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .disney {
+    background-image: url("disney.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .fineprint {
@@ -1098,6 +1147,12 @@
     flex-wrap: wrap;
   }
 
+  .album-ad {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 8px;
+  }
+
   .single-photo {
     width: 31%;
     height: 114px;
@@ -1109,6 +1164,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .advert {
+    width: 47%;
+    height: 120px;
+    transition: transform .5s ease;
+  }
+
+  .advert:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .advert p {
+    text-align: center;
+    padding-left: 2px;
+    padding-bottom: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: black;
+    opacity: 0.5;
   }
 
   .sentinels-1 {
