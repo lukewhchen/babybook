@@ -471,12 +471,63 @@
   }
 
  .right-side {
-  position: fixed;
-  background-color: white;
-  width: 292px;
-  border-radius: 3px;
-  border: 1px solid #dfe1e5;
-  font-size: 14px;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .card {
+   background-color: white;
+   width: 292px;
+   border-radius: 3px;
+   border: 1px solid #dfe1e5;
+   font-size: 14px;
+   margin-bottom: 10px;
+ }
+
+ .weather-title span {
+   margin-left: 10px;
+   margin-top: 5px;
+ }
+
+ .weather-body p {
+   position: relative;
+   padding: 5% 10%;
+   text-align: center;
+   text-transform: capitalize;
+ }
+
+ .weather-title {
+   display: flex;
+ }
+
+ .weather-body {
+   display: flex;
+   flex-direction: column;
+   padding: 0 5%;
+   background-image: linear-gradient(#3b5bdb,#59b6e6);
+ }
+
+ .weather-show {
+   display: flex;
+ }
+
+ .weather-show > img{
+   padding: 5% 5%;
+   flex-grow: 1;
+ }
+
+ .temp {
+   padding: 10% 5% 5% 5%;
+   flex-grow: 1;
+ }
+
+ .temp h1 {
+   font-size: 46px;
+ }
+
+ .temp span {
+   font-size: 14px;
  }
 
  .right-side h4 {
@@ -1004,6 +1055,11 @@
   .marketplace {
     background-image: url("feed-icons.png");
     background-position: 2px -713px;
+  }
+
+  .weather {
+    background-image: url("feed-icons.png");
+    background-position: 2px -1073px;
   }
   .update {
     background-image: url("updates.png");

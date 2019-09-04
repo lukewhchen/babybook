@@ -2,7 +2,7 @@ import React from "react";
 
 const Advertise = () => {
   return (
-    <div>
+    <div className="card">
       <li>
         <h4>Best Things to Do With Kids in the Bay Area This Weekend</h4>
         <i className="fa fa-child" aria-hidden="true" />
