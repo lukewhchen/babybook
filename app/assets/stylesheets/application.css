@@ -421,10 +421,6 @@
     font-family: "Helvetica Neue", Arial, sans-serif; */
  }
 
- .left-side .left-icon {
-
- }
-
   .left-side i{
     color: #0077b5;
     font-size: 22px;
@@ -1169,11 +1165,11 @@
   .advert {
     width: 47%;
     height: 120px;
-    transition: transform .5s ease;
+    opacity: 0.8;
   }
 
   .advert:hover {
-    transform: scale(1.05);
+    opacity: 1;
     cursor: pointer;
   }
 
