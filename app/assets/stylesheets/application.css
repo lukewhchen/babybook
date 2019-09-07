@@ -723,26 +723,40 @@
      border-radius: 3px;
      cursor: pointer;
    }
+   .like-comment-share {
+     display: flex;
+     padding: 0 10px;
+   }
 
   .like-comment-share > i{
     color: #606E87;
-    display: inline-flex;
     font-size: 20px;
-    justify-content: center;
-    width: 168px;
-    height: 30px;
-    margin-top: 5px;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
  }
 
  .like-comment-share > i:hover {
-   color: #3578E5;
+   background-color: #F2F3F1;
    cursor: pointer;
  }
 
  .like-comment-share > i:active {
-   color: blue;
+   color: #3578E5;
    cursor: pointer;
  }
+
+ /* .like-comment-share > i:focus {
+   background-color: yellow;
+   cursor: pointer;
+ }
+
+ .like-comment-share > i:visited {
+   background-color: red;
+   cursor: pointer;
+ } */
 
   header {
     position: fixed;
