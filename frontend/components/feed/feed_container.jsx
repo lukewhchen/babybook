@@ -27,6 +27,12 @@ class FeedContainer extends React.Component {
   //     this.props.clearSearchResults();
   //   }
   // }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    this.props.fetchPosts();
+    this.props.clearSearchResults();
+    this.handleScroll();
+  }
 
   handleScroll() {
     const observer = new IntersectionObserver(
@@ -38,13 +44,6 @@ class FeedContainer extends React.Component {
     observer.observe(document.querySelector('.sentinels'));
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    this.props.fetchPosts();
-    this.props.clearSearchResults();
-    // this.handleClick();
-    this.handleScroll();
-  }
 
   render() {
     const currentUser = this.props.currentUser;
