@@ -17,13 +17,13 @@ Babybook is a full-stack, single page web application that makes it easy for par
 
 # Features and Implementation
 
-## Authentication - User Log-in/out and Sign-up/out
-When visiting babybook if you already have an account, you can easily login through the navigation bar. You can always create a new account using the signup form. The user's account information are protected by the Auth pattern. Only the valid user can log-in and see all the features.
+## Authentication
+When visiting babybook, you can use the Demo button on the navigation bar to login on the fly. You can also create a new account using the signup form and login with your personal password. The user's account information are protected by the Auth pattern. Only the valid user can log-in and see all the features.
 
 ![Welcome Page](https://github.com/lukewhchen/babybook/blob/master/docs/welcome1.png)
 
 ## News Feed
-Once the user signs up for an account, they can see all the posts/comments/news on the main page. Users can post their cutest baby photos through the Post button. The main purpose of babybook is to share baby's photo, if you don't have one for now, the algorithm will automatically pick one for you. Photos are hosted using an AWS S3 bucket and uploaded and stored reference into the database.
+Once users sign up for an account, they can see all the posts/comments/news on the main page. Users can post their cutest baby photos through the Post button. The main purpose of babybook is to share baby's photo, if you don't have one for now, the algorithm will automatically pick one for you. Photos are hosted using an AWS S3 bucket and stored references into the database.
 
 ![Main Page](https://github.com/lukewhchen/babybook/blob/master/docs/main.png)
 
