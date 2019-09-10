@@ -16,7 +16,6 @@ class Weather extends React.Component{
     this.fetchWeatherData = this.fetchWeatherData.bind(this);
   }
 
-// 搞清楚
   componentDidMount(){
     navigator.geolocation.getCurrentPosition(this.fetchWeatherData);
   }

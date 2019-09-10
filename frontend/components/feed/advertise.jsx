@@ -3,8 +3,6 @@ import AdvertiseContent from "./advertise_content";
 
 const Advertise = () => {
 
-
-
   return (
     <div className="card">
         <div className="card-title">

@@ -17,16 +17,9 @@ class FeedContainer extends React.Component {
     this.state = {
       shownPosts: 1
     };
-    // this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  // handleClick() {
-  //   let results = this.props.searchResults;
-  //   if (results) {
-  //     this.props.clearSearchResults();
-  //   }
-  // }
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchPosts();
@@ -77,7 +70,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  // fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: () => dispatch(fetchPosts()),
   clearSearchResults: () => dispatch(clearSearchResults()),
 });
