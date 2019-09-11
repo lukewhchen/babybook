@@ -29,16 +29,16 @@ function PostItem(props) {
         <ul>{postContent}</ul>
         <img src={postImage}/>
       </div>
-      <div className="post-footer">
-        <label className="like-comment-share">
-          <i className="fa fa-thumbs-o-up" aria-hidden="true">Like</i>
-          <i className="fa fa-commenting-o" aria-hidden="true">Comment</i>
-          <i className="fa fa-share" aria-hidden="true">Share</i>
-        </label>
-      </div>
       <CommentForm post={props.post}/>
     </div>
   );
 }
 
 export default withRouter((PostItem));
+// <div className="post-footer">
+//   <label className="like-comment-share">
+//     <i className="fa fa-thumbs-o-up" aria-hidden="true">Like</i>
+//     <i className="fa fa-commenting-o" aria-hidden="true">Comment</i>
+//     <i className="fa fa-share" aria-hidden="true">Share</i>
+//   </label>
+// </div>

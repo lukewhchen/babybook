@@ -42,13 +42,18 @@ class CommentForm extends React.Component {
     });
     return (
       <div className="post-comment" onSubmit={this.handleSubmit}>
-          <ul>{comment}</ul>
-          <form className="comment-form">
-            <i className="fa fa-user-circle cc" aria-hidden="true"/>
-            <input type="text" name="name" placeholder="Write a comment..."
-              onChange={this.handleChange} value={this.state.body}/>
-            <p>Press Enter to post.</p>
-          </form>
+        <label className="like-comment-share">
+          <a className="fa fa-thumbs-o-up" aria-hidden="true">Like</a>
+          <a className="fa fa-commenting-o" aria-hidden="true">Comment</a>
+          <a className="fa fa-share" aria-hidden="true">Share</a>
+        </label>
+        <ul>{comment}</ul>
+        <form className="comment-form">
+          <i className="fa fa-user-circle cc" aria-hidden="true"/>
+          <input type="text" name="name" placeholder="Write a comment..."
+            onChange={this.handleChange} value={this.state.body}/>
+          <p>Press Enter to post.</p>
+        </form>
       </div>
     );
   }

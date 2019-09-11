@@ -662,10 +662,10 @@
     margin: 10px 12px;
   }
 
-  .post-footer {
+  /* .post-footer {
     border-bottom: 1px solid #dfe1e5;
     margin-bottom: 10px;
-  }
+  } */
 
   .nav-bar {
     display: flex;
@@ -726,9 +726,11 @@
    .like-comment-share {
      display: flex;
      padding: 0 10px;
+     border-bottom: 1px solid #dfe1e5;
+     margin-bottom: 10px;
    }
 
-  .like-comment-share > i{
+  .like-comment-share > a{
     color: #606E87;
     font-size: 20px;
     flex: 1;
@@ -738,12 +740,12 @@
     margin-bottom: 5px;
  }
 
- .like-comment-share > i:hover {
+ .like-comment-share > a:hover {
    background-color: #F2F3F1;
    cursor: pointer;
  }
 
- .like-comment-share > i:active {
+ .like-comment-share > a:active {
    color: #3578E5;
    cursor: pointer;
  }
