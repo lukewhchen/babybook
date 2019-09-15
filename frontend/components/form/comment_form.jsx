@@ -38,7 +38,8 @@ class CommentForm extends React.Component {
     const comment = allComments.map( com => {
       return <CommentItem key={com.id}
                           body={com.body}
-                          author={com.author_name}/>;
+                          author={com.author_name}
+                        />;
     });
     return (
       <div className="post-comment" onSubmit={this.handleSubmit}>
