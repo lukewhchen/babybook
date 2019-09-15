@@ -6,7 +6,13 @@ import { Link } from 'react-router-dom';
 class SignupForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = { first_name: "", last_name: "", email: "", password: "", gender: null };
+    this.state = {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      gender: null
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createUserObject = this.createUserObject.bind(this);
     this.handleErrors = this.handleErrors.bind(this);

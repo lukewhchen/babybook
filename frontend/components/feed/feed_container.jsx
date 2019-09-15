@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { fetchPosts, fetchPost } from '../../actions/post_actions';
-// import { fetchUsers } from '../../actions/user_actions';
 import { clearSearchResults } from '../../actions/search_actions';
 import PostItem from './post_item';
 import PostForm from '../form/post_form';
