@@ -19,13 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   const root = document.getElementById('root');
-
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-
   ReactDOM.render(<Root store={store}/>, root);
 });
-//
-// window.login = SessionAPIUtil.login;
-// window.logout = SessionAPIUtil.logout;
-// window.signup = SessionAPIUtil.signup;
