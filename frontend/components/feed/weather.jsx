@@ -20,6 +20,12 @@ class Weather extends React.Component{
     navigator.geolocation.getCurrentPosition(this.fetchWeatherData);
   }
 
+  // handleWeatherSearch(e) {
+  //   e.preventDefault();
+  //   let weatherParams = e.target;
+  //   this.fetchWeatherData(weatherParams);
+  // }
+
   fetchWeatherData(e) {
     let url = 'http://api.openweathermap.org/data/2.5/weather?';
     let params = { lat: e.coords.latitude, lon: e.coords.longitude};
