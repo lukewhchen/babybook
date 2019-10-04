@@ -125,10 +125,9 @@ const mapStateToProps = (state, ownProps) => {
     dropdownDisplayed,
   };
 };
-
+// check fetchPost function on backend
 const mapDispatchToProps = dispatch => ({
   fetchUser: userId => dispatch(fetchUser(userId)),
-  // fetchUsers: () => dispatch(fetchUsers()),
   fetchPosts: () => dispatch(fetchPosts()),
   clearSearchResults: () => dispatch(clearSearchResults()),
   // showDropdown: component => dispatch(showDropdown(component)),
