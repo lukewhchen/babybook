@@ -25,6 +25,7 @@ class Weather extends React.Component{
   //   let weatherParams = e.target;
   //   this.fetchWeatherData(weatherParams);
   // }
+  // chack apikey
 
   fetchWeatherData(e) {
     let url = 'http://api.openweathermap.org/data/2.5/weather?';
