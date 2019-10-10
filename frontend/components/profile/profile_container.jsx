@@ -112,6 +112,7 @@ class ProfileContainer extends React.Component {
 }
 // direct return reverse order on backend
 // check user users needed ?
+
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.userId] || {"last_name": "last", posts:[]};
   const dropdownDisplayed = (
