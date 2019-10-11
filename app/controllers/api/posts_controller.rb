@@ -4,7 +4,8 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:author, :comments)
-    # @posts = Post.order("id DESC").includes(:author).limit(10)s
+    # @posts = Post.order("id DESC").includes(:author, :comments).limit(10)
+    # plus offset to add different posts
     render :index
   end
 
