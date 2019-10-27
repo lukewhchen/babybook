@@ -28,9 +28,7 @@ class CommentForm extends React.Component {
       this.setState({ body: "" })
     );
   }
-//  如果 createCommment 沒有繼續用 promise call fetchPost 的話，input 會清空但是
-//  新的 comment 不會 show 出來
-//  應該可以不用接 fetchPost, 直接用 postId receiveComment re-render
+  
   render() {
     const allComments = this.props.post.comment;
     const comment = allComments.map( com => {
