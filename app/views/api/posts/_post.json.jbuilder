@@ -9,9 +9,3 @@ json.comment post.comments
 json.comment post.comments.each do |comment|
     json.partial! 'api/comments/comment', comment: comment
 end
-
-# json testing
-# 有抓到 author first name
-# json.title post.comments.each do |comment|
-#   json.people comment.author.first_name
-# end
