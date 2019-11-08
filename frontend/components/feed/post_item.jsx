@@ -35,10 +35,3 @@ function PostItem(props) {
 }
 
 export default withRouter((PostItem));
-// <div className="post-footer">
-//   <label className="like-comment-share">
-//     <i className="fa fa-thumbs-o-up" aria-hidden="true">Like</i>
-//     <i className="fa fa-commenting-o" aria-hidden="true">Comment</i>
-//     <i className="fa fa-share" aria-hidden="true">Share</i>
-//   </label>
-// </div>
