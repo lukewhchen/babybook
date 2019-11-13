@@ -31,12 +31,12 @@ class SignupForm extends React.Component {
   }
 
   createUserObject(){
-    const first_name = this.first_name.value;
-    const last_name = this.last_name.value;
+    const firstName = this.first_name.value;
+    const lastName = this.last_name.value;
     const email = this.email.value;
     const password = this.password.value;
     const gender = this.gender.value;
-    return { first_name, last_name, email, password, gender };
+    return { firstName, lastName, email, password, gender };
   }
 
   render(){

@@ -28,14 +28,12 @@ class CommentForm extends React.Component {
       this.setState({ body: "" })
     );
   }
-  
+
   render() {
     const allComments = this.props.post.comment;
     const comment = allComments.map( com => {
-      return <CommentItem key={com.id}
-                          body={com.body}
-                          author={com.author_name}
-                        />;
+      return <CommentItem key={com.id} body={com.body}
+        author={com.author_name} />;
     });
     return (
       <div className="post-comment" onSubmit={this.handleSubmit}>
