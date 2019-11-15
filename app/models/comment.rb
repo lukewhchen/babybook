@@ -11,3 +11,4 @@ class Comment < ApplicationRecord
     class_name: :Post
 
 end
+# create new migration!
