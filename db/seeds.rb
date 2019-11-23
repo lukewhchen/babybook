@@ -33,7 +33,6 @@ mark = User.create!(email: 'mark@gmail.com', first_name: 'Mark', last_name: 'Zuc
   hometown:'White Plains', workplace:'facebook', school:'Harvard', gender:'male',
   cover_photo: File.open(Rails.root.join('app', 'assets', 'images', 'coverhighway.jpg')))
 
-
 PostBody = [
   "My little princess.",
   "I Love YOU so much Baby!! Every day I wake up and fall in love with YOU all over again!!",
@@ -44,7 +43,6 @@ PostBody = [
   "Here is the answer you are looking for!",
   "Let's make the world a better place."
 ]
-
 
 Post.destroy_all
 Post.create!(body: PostBody[0] ,author_id:luke.id, image: File.open(File.join(Rails.root, 'app', 'assets', 'images', 'cutebaby.jpg')))
