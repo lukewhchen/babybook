@@ -12,3 +12,4 @@ class Comment < ApplicationRecord
 
 end
 # create new migration!
+# commentable polymorphism
