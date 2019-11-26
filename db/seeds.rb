@@ -53,3 +53,5 @@ Post.create!(body: PostBody[4] ,author_id:kobe.id, image: File.open(Rails.root.j
 Post.create!(body: PostBody[5] ,author_id:jon.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'youknownot.jpg')))
 Post.create!(body: PostBody[6] ,author_id:taylor.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'youcan.jpg')))
 Post.create!(body: PostBody[7] ,author_id:mark.id, image: File.open(Rails.root.join('app', 'assets', 'images', 'mark.jpg')))
+
+# add new seed data
